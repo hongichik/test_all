@@ -1,0 +1,94 @@
+---
+description: Quy ước workspace NCS — chọn thư mục bài toán, vị trí Log và Data
+alwaysApply: true
+---
+
+# NCS workspace conventions
+
+Nguồn: `AI_ALL.md`. Áp dụng cho mọi task trong repo `NCS_serve`.
+
+## 1. Chọn thư mục bài toán trước khi chạy
+
+Khi yêu cầu đến từ thư mục gốc repo mà **không nói rõ** chạy thư mục nào:
+
+1. **Hỏi** user thuộc bài toán/thư mục nào (ví dụ: `nhom1/GCE-GNN`, `nhom2/DHCN`, `nhom3/DuoRec`, `MyProject/thucnghiem`, …).
+2. Chỉ chạy lệnh, sửa file, và tham chiếu path **trong thư mục dự án đó**.
+3. Không tự ý chạy lệnh ở nhiều thư mục bài toán cùng lúc trừ khi user yêu cầu rõ.
+
+### Nhóm dự án
+
+| Thư mục | Nội dung |
+|---------|----------|
+| `nhom1/` | GNN session nền tảng: `SR-GNN`, `GCE-GNN` |
+| `nhom2/` | GNN session SSL: `DHCN`, `COTREC`, `CSGNN` |
+| `nhom3/` | Còn lại: `DuoRec`, `SelfContrastiveLearningRecSys` |
+| `MyProject/` | Dự án cá nhân: `thucnghiem`, `thucnghiem2` |
+
+Code nằm trong nhóm (`nhom1/GCE-GNN/`, …); `Data/`, `Log/`, `LogMins/` vẫn dùng tên bài toán ở root (`Data/GCE-GNN/`, …). Dùng `ncs_paths.project_code_dir("<tên bài toán>")` để lấy path code.
+
+## 2. Quy tắc lưu log
+
+Log chia **2 loại**, cùng cấu trúc thư mục, khác nội dung:
+
+### 2a. Log quá trình — `Log/`
+
+Ghi **toàn bộ output** của lệnh chạy (mỗi dòng stdout/stderr đều lưu).
+
+```
+Log/<tên bài toán>/<bộ dữ liệu>/<ngày-tháng-năm>.log
+```
+
+Ví dụ: `Log/DuoRec/ml-100k/23-05-2026.log`
+
+### 2b. Log kết quả — `LogMins/`
+
+Chỉ ghi **kết quả cuối cùng** (best valid, test result, metric tổng kết, …).
+
+```
+LogMins/<tên bài toán>/<bộ dữ liệu>/<ngày-tháng-năm>.log
+```
+
+Ví dụ: `LogMins/DHCN/retailrocket/23-05-2026.log`
+
+Quy ước chung:
+
+- `<tên bài toán>`: tên thư mục bài toán (ví dụ `DuoRec`, `DHCN`, `SelfContrastiveLearningRecSys`).
+- `<bộ dữ liệu>`: tên dataset viết thường (ví dụ `ml-100k`, `retailrocket`).
+- `<ngày-tháng-năm>`: định dạng `DD-MM-YYYY`.
+
+Không ghi log rải rác trong thư mục bài toán. Dùng helper `ncs_paths.py` và `ncs_logging.py` ở root repo.
+
+## 3. Quy tắc tập trung data
+
+Mọi data phải nằm tại:
+
+```
+Data/<tên bài toán>/<tên bộ dữ liệu>/...
+```
+
+- `<tên bộ dữ liệu>`: **viết thường**, không viết hoa (ví dụ `ml-100k`, `retailrocket`, không dùng `ML-100K`).
+- Các file con của bộ dữ liệu nằm trực tiếp trong thư mục dataset đó.
+
+Ví dụ:
+
+```
+Data/DuoRec/ml-100k/ml-100k.inter
+Data/DuoRec/ml-100k/ml-100k.item
+Data/DHCN/retailrocket/train.csv
+```
+
+Khi tạo script, config, hoặc chạy thí nghiệm: trỏ path data về `Data/`, log quá trình về `Log/`, log kết quả về `LogMins/` ở root repo.
+
+## 4. Bộ dữ liệu test gốc — `Data/Test/`
+
+Một bộ RetailRocket nhỏ dùng chung để convert sang format từng bài toán khi cần smoke test:
+
+```
+Data/Test/
+  testall.csv                    # events (view) — file gốc canonical
+  category_tree.csv
+  item_properties_part1.csv
+  item_properties_part2.csv
+  events.csv                     # alias → testall.csv (legacy preprocessors)
+  <tên bài toán>/              # file đã convert trực tiếp (train.txt, …)
+```

@@ -1,0 +1,5 @@
+CCT-GNN - Collaborative Category and Time-aware Graph Neural Networks for Session-based Recommendation
+Venue: World Wide Web (WWW), 2025, Vol. 28, Article 26
+DOI: https://doi.org/10.1007/s11280-025-01340-4
+GitHub: https://github.com/Moosazadeh/CCT-GNN (đã clone tại papers_only/CCT-GNN/)
+Note: PDF đầy đủ cần truy cập qua Springer Link.

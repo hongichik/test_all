@@ -1,0 +1,10 @@
+# Dataset local — không push Git (tải về Data/datagoc/ khi cần)
+Data/
+Data_goc/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

@@ -1,0 +1,5 @@
+CSGNN - Category-aware Self-supervised Graph Neural Network for Session-based Recommendation
+Venue: World Wide Web (WWW), 2024
+DOI: https://doi.org/10.1007/s11280-024-01258-2
+GitHub: https://github.com/HduDBSI/CSGNN (đã clone tại nhom2/CSGNN/)
+Note: PDF đầy đủ cần truy cập qua Springer Link.

@@ -1,0 +1,5 @@
+HGCAN - Global Heterogeneous Graph Enhanced Category-aware Attention Network for Session-based Recommendation
+Venue: Expert Systems with Applications (ScienceDirect)
+DOI: https://doi.org/10.1016/j.eswa.2023.034097
+GitHub: https://github.com/resistzzz/HGCAN (đã clone tại papers_only/HGCAN/)
+Note: PDF đầy đủ cần truy cập qua Elsevier ScienceDirect.
