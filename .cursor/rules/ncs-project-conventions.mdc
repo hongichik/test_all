@@ -21,7 +21,8 @@ Khi yêu cầu đến từ thư mục gốc repo mà **không nói rõ** chạy 
 |---------|----------|
 | `nhom1/` | GNN session nền tảng: `SR-GNN`, `GCE-GNN` |
 | `nhom2/` | GNN session SSL: `DHCN`, `COTREC`, `CSGNN` |
-| `nhom3/` | Còn lại: `DuoRec`, `SelfContrastiveLearningRecSys` |
+| `nhom3/` | `DuoRec`, `CORE`, `SCLRS` (data: `SelfContrastiveLearningRecSys`) |
+| `papers_only/` | `FGNN`, `CM-HGNN`, `CCT-GNN`, `HGCAN` |
 | `MyProject/` | Dự án cá nhân: `thucnghiem`, `thucnghiem2` |
 
 Code nằm trong nhóm (`nhom1/GCE-GNN/`, …); `Data/`, `Log/`, `LogMins/` vẫn dùng tên bài toán ở root (`Data/GCE-GNN/`, …). Dùng `ncs_paths.project_code_dir("<tên bài toán>")` để lấy path code.

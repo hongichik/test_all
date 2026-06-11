@@ -15,6 +15,44 @@ from scripts.retailrocket_base import (
     save_gce_graph,
     save_pickle_session,
 )
+from scripts.retailrocket_papers import (
+    link_papers_datasets,
+    save_cct_gnn,
+    save_cm_hgnn,
+    save_fgnn,
+    save_hgcan,
+)
+
+NHOM_MODELS = [
+    "SR-GNN",
+    "GCE-GNN",
+    "DHCN",
+    "COTREC",
+    "CSGNN",
+    "DuoRec",
+    "CORE",
+    "SCL-DHCN",
+    "SCL-COTREC",
+    "SCL-GCE-GNN",
+]
+
+PAPER_MODELS = [
+    "FGNN",
+    "CM-HGNN",
+    "CCT-GNN",
+    "HGCAN",
+]
+
+PICKLE_MODELS = [
+    "SR-GNN",
+    "GCE-GNN",
+    "DHCN",
+    "COTREC",
+    "CSGNN",
+    "SCL-DHCN",
+    "SCL-COTREC",
+    "SCL-GCE-GNN",
+]
 
 MODELS = {
     "SR-GNN": lambda: save_pickle_session(data_dir("SR-GNN", "retailrocket")),
@@ -37,9 +75,20 @@ MODELS = {
         save_pickle_session(data_dir("SelfContrastiveLearningRecSys", "retailrocket") / "GCE-GNN"),
         save_gce_graph(data_dir("SelfContrastiveLearningRecSys", "retailrocket") / "GCE-GNN", 12),
     ),
+    "FGNN": lambda: save_fgnn(),
+    "CM-HGNN": lambda: save_cm_hgnn(),
+    "CCT-GNN": lambda: save_cct_gnn(),
+    "HGCAN": lambda: save_hgcan(),
     "all-pickle": None,
+    "all-papers": None,
     "all": None,
 }
+
+
+def _run(names):
+    for name in names:
+        print(f"\n=== {name} ===")
+        MODELS[name]()
 
 
 def main():
@@ -48,26 +97,37 @@ def main():
         "--model", "-m",
         required=True,
         choices=list(MODELS.keys()),
-        help="Model cần chuyển đổi (hoặc all / all-pickle)",
+        help="Model cần chuyển đổi (all / all-papers / all-pickle / từng tên)",
+    )
+    parser.add_argument(
+        "--link-papers",
+        action="store_true",
+        help="Tạo symlink papers_only/*/datasets/retailrocket -> Data/<Paper>/retailrocket",
     )
     args = parser.parse_args()
 
     if args.model == "all":
-        for name in ["SR-GNN", "GCE-GNN", "DHCN", "COTREC", "CSGNN", "DuoRec", "CORE",
-                     "SCL-DHCN", "SCL-COTREC", "SCL-GCE-GNN"]:
-            print(f"\n=== {name} ===")
-            MODELS[name]()
-        print("\nHoàn tất tất cả model.")
+        _run(NHOM_MODELS + PAPER_MODELS)
+        if args.link_papers:
+            print("\n=== symlink papers_only ===")
+            link_papers_datasets()
+        print("\nHoàn tất tất cả model (nhom + papers_only).")
+        return
+
+    if args.model == "all-papers":
+        _run(PAPER_MODELS)
+        if args.link_papers:
+            print("\n=== symlink papers_only ===")
+            link_papers_datasets()
         return
 
     if args.model == "all-pickle":
-        for name in ["SR-GNN", "GCE-GNN", "DHCN", "COTREC", "CSGNN",
-                     "SCL-DHCN", "SCL-COTREC", "SCL-GCE-GNN"]:
-            print(f"\n=== {name} ===")
-            MODELS[name]()
+        _run(PICKLE_MODELS)
         return
 
     MODELS[args.model]()
+    if args.link_papers and args.model in PAPER_MODELS:
+        link_papers_datasets()
     print("Xong.")
 
 

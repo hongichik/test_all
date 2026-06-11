@@ -5,20 +5,47 @@
 # Output    : Data/<TênBàiToán>/retailrocket/
 #
 # Chạy mọi lệnh từ thư mục gốc repo test_all/
+#
+# Repo chỉ giữ 12 thư mục bài toán chạy được RetailRocket (14 target huấn luyện):
+#   nhom1: SR-GNN, GCE-GNN
+#   nhom2: DHCN, COTREC, CSGNN
+#   nhom3: DuoRec, CORE, SCLRS (DHCN + COTREC + GCE-GNN)
+#   papers_only: FGNN, CM-HGNN, CCT-GNN, HGCAN
 # =============================================================================
 
 
-# --- BƯỚC 0: Chuẩn bị data gốc (local, không có trong Git) ---
-# Tải RetailRocket về Data/datagoc/Retailrocket/
-# Cần có: events.csv, item_properties_part1.csv, item_properties_part2.csv, category_tree.csv
+# --- BƯỚC 1: Tải data gốc từ Kaggle (local, không push Git) ---
+# Output: Data/datagoc/Retailrocket/
+#   events.csv, item_properties_part1.csv, item_properties_part2.csv, category_tree.csv
+#
+# Auth Kaggle tự động: config/kaggle/ (sao chép từ ~/.kaggle/ nếu có)
+# RetailRocket là dataset public — tải được kể cả khi chưa có key
+# Nếu cần key riêng: đặt config/kaggle/access_token hoặc config/kaggle/kaggle.json
+
+python3 scripts/download_retailrocket.py
+# Tải lại: python3 scripts/download_retailrocket.py --force
+# Kiểm tra: python3 scripts/download_retailrocket.py --verify
 
 ls -lh Data/datagoc/Retailrocket/
 
 
-# --- BƯỚC 1: Chuyển đổi TẤT CẢ model (khuyến nghị) ---
+# --- BƯỚC 2: Chuyển đổi TẤT CẢ model (khuyến nghị) ---
+# Điều kiện: BƯỚC 1 xong (đủ 4 file CSV ở trên)
+# Chạy một lần -> output tại Data/<TênBàiToán>/retailrocket/
 
-python3 scripts/preprocess_retailrocket.py -m all
-
+python3 scripts/preprocess_retailrocket.py -m all --link-papers
+# nhom1/2/3 (10 target):
+#   SR-GNN, GCE-GNN, DHCN, COTREC, CSGNN, DuoRec, CORE,
+#   SCL-DHCN, SCL-COTREC, SCL-GCE-GNN
+# papers_only (4 target):
+#   FGNN, CM-HGNN, CCT-GNN, HGCAN
+# --link-papers: symlink papers_only/*/datasets/retailrocket -> Data/<Paper>/retailrocket
+#
+# Chỉ nhom (bỏ papers_only):
+#   python3 scripts/preprocess_retailrocket.py -m all-pickle   # chỉ pickle, bỏ DuoRec/CORE
+# Chỉ papers_only:
+#   python3 scripts/preprocess_retailrocket.py -m all-papers --link-papers
+#
 # Hoặc chuyển từng model:
 
 
@@ -111,15 +138,15 @@ python main.py --model trm --dataset retailrocket
 cd ../..
 
 
-# SelfContrastiveLearningRecSys (SCL — 3 sub-model)
-python3 nhom3/SelfContrastiveLearningRecSys/preprocess_retailrocket.py
+# SCLRS (SCL — 3 sub-model; data tại Data/SelfContrastiveLearningRecSys/)
+python3 nhom3/SCLRS/preprocess_retailrocket.py
 # Output:
 #   Data/SelfContrastiveLearningRecSys/retailrocket/DHCN/
 #   Data/SelfContrastiveLearningRecSys/retailrocket/COTREC/
 #   Data/SelfContrastiveLearningRecSys/retailrocket/GCE-GNN/
 
 # SCL/DHCN:
-cd nhom3/SelfContrastiveLearningRecSys/DHCN
+cd nhom3/SCLRS/DHCN
 python main.py --dataset retailrocket --epoch 30
 
 # SCL/COTREC:
@@ -133,11 +160,25 @@ cd ../../..
 
 
 # =============================================================================
-# NCL — KHÔNG ÁP DỤNG TRỰC TIẾP
+# PAPERS_ONLY — FGNN, CM-HGNN, CCT-GNN, HGCAN
 # =============================================================================
-# NCL là Graph Collaborative Filtering (user-item), không phải session-based.
-# RetailRocket session data không phù hợp trực tiếp với NCL.
-# Dùng dataset RecBole chuẩn: ml-1m, yelp, amazon-books, ...
+# Data: Data/<Paper>/retailrocket/ (symlink qua --link-papers)
+
+cd papers_only/FGNN
+python main.py --dataset retailrocket --epoch 30
+cd ../..
+
+cd papers_only/CM-HGNN
+python main.py --dataset retailrocket --epoch 20
+cd ../..
+
+cd papers_only/CCT-GNN
+python main.py --dataset retailrocket --epoch 20
+cd ../..
+
+cd papers_only/HGCAN
+python main.py --dataset retailrocket --epochs 20
+cd ../..
 
 
 # =============================================================================
@@ -168,6 +209,25 @@ cd ../../..
 #
 # Data/SelfContrastiveLearningRecSys/retailrocket/
 #   DHCN/, COTREC/, GCE-GNN/  (cùng format pickle như trên)
+#
+# Data/FGNN/retailrocket/
+#   train.txt, test.txt                             (pickle, giống SR-GNN)
+#
+# Data/CM-HGNN/retailrocket/
+#   train.txt, test.txt, category.txt, adj_12.pkl, num_12.pkl
+#
+# Data/CCT-GNN/retailrocket/
+#   train.txt, test.txt, all_train_seq.txt, category.txt
+#   train_neighbors.txt, test_neighbors.txt, train_adjs.txt, test_adjs.txt
+#
+# Data/HGCAN/retailrocket/
+#   train.txt, test.txt, train_cat.txt, test_cat.txt
+#   all_train_seq.txt, all_train_seq_cate.txt
+#   cate2item.txt, item2cate.txt, parm.pkl
+#   adj_12.pkl, num_12.pkl, adj_cate_12.pkl, num_cate_12.pkl, adj_c2i_12.pkl, num_c2i_12.pkl
+#
+# papers_only: sau --link-papers, chạy từ thư mục paper với --dataset retailrocket
+# (cần thêm nhánh retailrocket + num_item/num_cat trong main.py của từng paper)
 #
 # =============================================================================
 # QUY TẮC TIỀN XỬ LÝ (scripts/retailrocket_base.py)

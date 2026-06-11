@@ -1,5 +1,0 @@
-CDT-GNN - Category-integrated Dual-Task Graph Neural Networks for Session-based Recommendation
-Authors: Yuhan Ding, Zizhuo Zhang, Bang Wang
-Venue: Expert Systems with Applications, Vol. 263, Article 125784, 2025
-DOI: https://doi.org/10.1016/j.eswa.2024.125784
-Note: Không có mã nguồn công khai. PDF đầy đủ cần truy cập qua Elsevier ScienceDirect (có thể cần subscription).

@@ -13,9 +13,12 @@ PROJECT_DIRS = {
     "COTREC": REPO_ROOT / "nhom2" / "COTREC",
     "CSGNN": REPO_ROOT / "nhom2" / "CSGNN",
     "DuoRec": REPO_ROOT / "nhom3" / "DuoRec",
-    "SelfContrastiveLearningRecSys": REPO_ROOT / "nhom3" / "SelfContrastiveLearningRecSys",
+    "SelfContrastiveLearningRecSys": REPO_ROOT / "nhom3" / "SCLRS",
     "CORE": REPO_ROOT / "nhom3" / "CORE",
-    "NCL": REPO_ROOT / "nhom3" / "NCL",
+    "FGNN": REPO_ROOT / "papers_only" / "FGNN",
+    "CM-HGNN": REPO_ROOT / "papers_only" / "CM-HGNN",
+    "CCT-GNN": REPO_ROOT / "papers_only" / "CCT-GNN",
+    "HGCAN": REPO_ROOT / "papers_only" / "HGCAN",
 }
 
 

@@ -28,7 +28,7 @@ optional arguments:
   --dataset DATASET  dataset name: diginetica/yoochoose/sample
 ```
 
-Then you can run the file `pytorch_code/main.py` or `tensorflow_code/main.py` to train the model.
+Then you can run `pytorch_code/main.py` to train the model (RetailRocket: `--dataset retailrocket`).
 
 For example: `cd pytorch_code; python main.py --dataset=sample`
 
