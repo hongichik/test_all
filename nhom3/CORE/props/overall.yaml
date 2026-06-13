@@ -18,3 +18,5 @@ eval_args:
     RS: [0.8, 0.1, 0.1]
 
 neg_sampling: ~
+training_neg_sample_num: 0
+train_neg_sample_args: ~

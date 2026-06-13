@@ -52,7 +52,10 @@ def run_single_model(args):
         str(_CORE_ROOT / 'props/overall.yaml'),
         str(_CORE_ROOT / f'props/core_{args.model}.yaml'),
     ]
-    config_dict = {'data_path': str(_CORE_ROOT / 'dataset') + '/'}
+    config_dict = {
+        'data_path': str(_CORE_ROOT / 'dataset') + '/',
+        'train_neg_sample_args': None,
+    }
     if os.environ.get('NCS_SMOKE'):
         config_files.append(str(_REPO / 'config' / 'smoke_1epoch.yaml'))
         config_dict = {
