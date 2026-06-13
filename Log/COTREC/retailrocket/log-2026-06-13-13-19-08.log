@@ -1,0 +1,50 @@
+Namespace(dataset='retailrocket', epoch=1, batchSize=100, embSize=100, l2=1e-05, lr=0.001, layer=2, beta=0.005, lam=0.005, eps=0.2)
+/home/hongnguyen/test_all/nhom2/COTREC/util.py:37: RuntimeWarning: divide by zero encountered in divide
+  self.adjacency = adj.multiply(1.0/adj.sum(axis=0).reshape(1, -1))
+/home/hongnguyen/test_all/nhom2/COTREC/model.py:118: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  self.adv_item = torch.cuda.FloatTensor(self.n_node, self.emb_size).fill_(0).requires_grad_(True)
+-------------------------------------------------------
+epoch:  0
+start training:  2026-06-13 13:19:10.565518
+/home/hongnguyen/test_all/nhom2/COTREC/model.py:45: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:644.)
+  adjacency = torch.sparse.FloatTensor(i, v, torch.Size(shape))
+[0/7963] train loss: 7.5875
+[398/7963] train loss: 5.6751
+[796/7963] train loss: 5.3184
+[1194/7963] train loss: 5.7032
+[1592/7963] train loss: 5.1931
+[1990/7963] train loss: 5.4437
+[2388/7963] train loss: 5.3501
+[2786/7963] train loss: 5.8201
+[3184/7963] train loss: 5.3014
+[3582/7963] train loss: 5.3656
+[3980/7963] train loss: 5.0926
+[4378/7963] train loss: 5.0471
+[4776/7963] train loss: 5.0291
+[5174/7963] train loss: 5.1928
+[5572/7963] train loss: 5.1847
+[5970/7963] train loss: 5.4763
+[6368/7963] train loss: 4.9512
+[6766/7963] train loss: 4.9470
+[7164/7963] train loss: 5.2118
+[7562/7963] train loss: 5.3692
+[7960/7963] train loss: 5.3929
+[7962/7963] train loss: 5.0872
+	Loss:	43672.040
+start predicting:  2026-06-13 13:50:21.977415
+[0/754] predicting...
+[75/754] predicting...
+[150/754] predicting...
+[225/754] predicting...
+[300/754] predicting...
+[375/754] predicting...
+[450/754] predicting...
+[525/754] predicting...
+[600/754] predicting...
+[675/754] predicting...
+[750/754] predicting...
+[753/754] predicting...
+{'hit5': np.float64(47.37665782493369), 'mrr5': np.float64(35.65742705570291), 'hit10': np.float64(54.97480106100796), 'mrr10': np.float64(36.671506989179406), 'hit20': np.float64(62.31167108753316), 'mrr20': np.float64(37.182034277619074)}
+train_loss:	43672.0400	Recall@5: 47.3767	MRR5: 35.6574	Epoch: 0,  0
+train_loss:	43672.0400	Recall@10: 54.9748	MRR10: 36.6715	Epoch: 0,  0
+train_loss:	43672.0400	Recall@20: 62.3117	MRR20: 37.1820	Epoch: 0,  0
