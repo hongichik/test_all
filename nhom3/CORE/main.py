@@ -10,7 +10,8 @@ from pathlib import Path
 
 import sys
 
-_REPO = Path(__file__).resolve().parents[2]
+_CORE_ROOT = Path(__file__).resolve().parent
+_REPO = _CORE_ROOT.parents[2]
 sys.path.insert(0, str(_REPO))
 from ncs_numpy_compat import apply_numpy_recbole_compat
 
@@ -47,10 +48,13 @@ def _smoke_data_path(dataset: str) -> str:
 
 def run_single_model(args):
     # configurations initialization
-    config_files = ['props/overall.yaml', f'props/core_{args.model}.yaml']
-    config_dict = None
+    config_files = [
+        str(_CORE_ROOT / 'props/overall.yaml'),
+        str(_CORE_ROOT / f'props/core_{args.model}.yaml'),
+    ]
+    config_dict = {'data_path': str(_CORE_ROOT / 'dataset') + '/'}
     if os.environ.get('NCS_SMOKE'):
-        config_files.append(str(Path(__file__).resolve().parents[2] / 'config' / 'smoke_1epoch.yaml'))
+        config_files.append(str(_REPO / 'config' / 'smoke_1epoch.yaml'))
         config_dict = {
             'data_path': _smoke_data_path(args.dataset),
             'use_gpu': False,
@@ -59,7 +63,7 @@ def run_single_model(args):
             'alias_of_item_id': ['item_id_list'],
         }
     elif os.environ.get('NCS_EPOCH1'):
-        config_files.append(str(Path(__file__).resolve().parents[2] / 'config' / 'full_1epoch.yaml'))
+        config_files.append(str(_REPO / 'config' / 'full_1epoch.yaml'))
     config = Config(
         model=COREave if args.model == 'ave' else COREtrm,
         dataset=args.dataset,
