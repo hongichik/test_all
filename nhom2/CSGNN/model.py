@@ -163,18 +163,15 @@ class LineConv(Module):
         self.layers = layers
 
     def forward(self, item_embedding, D, A, session_item, session_len, session_item_cat):
-        zeros = torch.cuda.FloatTensor(1, self.emb_size).fill_(0)
-        # zeros = torch.zeros([1,self.emb_size])
+        device = item_embedding.device
+        zeros = torch.zeros(1, self.emb_size, device=device)
         item_embedding = torch.cat([zeros, item_embedding], 0)
-        seq_h = []
-        for i in torch.arange(len(session_item)):
-            session_i = session_item[i] + session_item_cat[i]
-            seq_h.append(torch.index_select(item_embedding, 0, session_i))
-            # seq_h.append(torch.index_select(item_embedding, 0, session_item[i]))
-        seq_h1 = trans_to_cuda(torch.tensor([item.cpu().detach().numpy() for item in seq_h]))
-        # 注意力机制
-        # session_emb_lgcn = torch.div(torch.sum(seq_h1, 1), (session_len * 2))
-        session_emb_lgcn = torch.div(torch.sum(seq_h1, 1), session_len)
+        combined = session_item + session_item_cat
+        seq_h1 = item_embedding[combined]
+        slen = session_len.float()
+        if slen.dim() == 1:
+            slen = slen.unsqueeze(-1)
+        session_emb_lgcn = seq_h1.sum(1) / slen.clamp(min=1)
         session = [session_emb_lgcn]
         DA = torch.mm(D, A).float()
         for i in range(self.layers):
@@ -226,31 +223,28 @@ class DHCN(Module):
 
     def generate_sess_emb(self, item_embedding, cat_embedding, session_item, session_item_cat, session_len,
                           reversed_sess_item, mask):
-        zeros = torch.cuda.FloatTensor(1, self.emb_size).fill_(0)
-        # zeros = torch.zeros(1, self.emb_size)
+        device = item_embedding.device
+        zeros = torch.zeros(1, self.emb_size, device=device)
         item_embedding = torch.cat([zeros, item_embedding], 0)
         cat_embedding = torch.cat([zeros, cat_embedding], 0)
-        get = lambda i: item_embedding[reversed_sess_item[i]]
-        get_cat = lambda i: cat_embedding[session_item_cat[i]]
-        seq_h = torch.cuda.FloatTensor(self.batch_size, list(reversed_sess_item.shape)[1], self.emb_size).fill_(0)
-        seq_l = torch.cuda.FloatTensor(self.batch_size, self.K, self.emb_size).fill_(0)
-        seq_h_cat = torch.cuda.FloatTensor(self.batch_size, list(reversed_sess_item.shape)[1], self.emb_size).fill_(0)
-        # seq_h = torch.zeros(self.batch_size, list(reversed_sess_item.shape)[1], self.emb_size)
-        for i in torch.arange(session_item.shape[0]):
-            seq_h[i] = get(i)
-        for i in torch.arange(session_item.shape[0]):
-            seq_l[i] = item_embedding[reversed_sess_item[i][:self.K]]
-        for i in torch.arange(session_item.shape[0]):
-            seq_h_cat[i] = get_cat(i)
-        hs = torch.div(torch.sum(seq_h, 1), session_len)
+        batch_size = reversed_sess_item.shape[0]
+        seq_h = item_embedding[reversed_sess_item]
+        seq_h_cat = cat_embedding[session_item_cat]
+        seq_l = item_embedding[reversed_sess_item[:, :self.K]]
+        hs = seq_h.sum(1) / session_len.float().clamp(min=1)
         mask = mask.float().unsqueeze(-1)
-        len = seq_h.shape[1]
-        pos_emb = self.pos_embedding.weight[:len]
-        pos_emb = pos_emb.unsqueeze(0).repeat(self.batch_size, 1, 1)
+        seq_len = seq_h.shape[1]
+        max_pos = self.pos_embedding.num_embeddings
+        if seq_len > max_pos:
+            seq_h = seq_h[:, :max_pos, :]
+            seq_h_cat = seq_h_cat[:, :max_pos, :]
+            mask = mask[:, :max_pos, :]
+            seq_len = max_pos
+        pos_emb = self.pos_embedding.weight[:seq_len].unsqueeze(0).expand(batch_size, -1, -1)
         # pos_emb_cate = self.pos_embedding_cate.weight[:len]
         # pos_emb_cate = pos_emb_cate.unsqueeze(0).repeat(self.batch_size, 1, 1)
 
-        hs = hs.unsqueeze(-2).repeat(1, len, 1)
+        hs = hs.unsqueeze(-2).expand(-1, seq_len, -1)
         attention_seq_h = self.ISA(seq_h)
         attention_seq_h_cat = self.CSA(seq_h_cat)
         # nh = torch.matmul(torch.cat([pos_emb, attention_seq_h], -1), self.w_1)
@@ -327,33 +321,38 @@ def forward(model, i, data):
 
 
 def train_test(model, train_data, test_data):
-    print('start training: ', datetime.datetime.now())
+    print('start training: ', datetime.datetime.now(), flush=True)
     torch.autograd.set_detect_anomaly(True)
     total_loss = 0.0
     slices = train_data.generate_batch(model.batch_size)
-    for i, j in zip(slices, np.arange(len(slices))):
+    n_batches = len(slices)
+    log_step = max(1, n_batches // 20)
+    for j, i in enumerate(slices):
         model.zero_grad()
         targets, scores, con_loss = forward(model, i, train_data)
         loss = model.loss_function(scores + 1e-8, targets)
         loss = loss + con_loss
         loss.backward()
-        #        print(loss.item())
-        model.optimizer.step()                                               
+        model.optimizer.step()
         total_loss += loss
-        if j % int(len(slices) / 5 + 1) == 0:
-            print('[%d/%d] Loss: %.4f' % (j, len(slices), loss.item()))
-    print('\tLoss:\t%.3f' % total_loss)
+        if j % log_step == 0 or j == n_batches - 1:
+            print('[%d/%d] train loss: %.4f' % (j, n_batches, loss.item()), flush=True)
+    print('\tLoss:\t%.3f' % total_loss, flush=True)
     top_K = [1, 3, 5, 10, 15, 20, 25, 30]
     metrics = {}
     for K in top_K:
         metrics['hit%d' % K] = []
         metrics['mrr%d' % K] = []
-    print('start predicting: ', datetime.datetime.now())
+    print('start predicting: ', datetime.datetime.now(), flush=True)
 
     model.eval()
     slices = test_data.generate_batch(model.batch_size)
-    for i in slices:
+    n_test = len(slices)
+    log_step = max(1, n_test // 10)
+    for j, i in enumerate(slices):
         tar, scores, con_loss = forward(model, i, test_data)
+        if j % log_step == 0 or j == n_test - 1:
+            print('[%d/%d] predicting...' % (j, n_test), flush=True)
         # tar, scores = forward(model, i, test_data)
         scores = trans_to_cpu(scores).detach().numpy()
         index = np.argsort(-scores, 1)

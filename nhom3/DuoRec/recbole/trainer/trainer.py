@@ -18,6 +18,7 @@ recbole.trainer.trainer
 """
 
 import os
+import sys
 from logging import getLogger
 from time import time
 
@@ -33,6 +34,10 @@ from recbole.evaluator import ProxyEvaluator
 from recbole.utils import ensure_dir, get_local_time, early_stopping, calculate_valid_score, dict2str, \
     DataLoaderType, KGDataLoaderState
 from recbole.utils.utils import set_color
+
+
+def _progress_log_step(total, n_parts=20):
+    return max(1, total // n_parts)
 
 
 class AbstractTrainer(object):
@@ -153,12 +158,15 @@ class Trainer(AbstractTrainer):
         self.model.train()
         loss_func = loss_func or self.model.calculate_loss
         total_loss = None
+        n_batches = len(train_data)
+        log_step = _progress_log_step(n_batches)
+        use_tqdm = show_progress and sys.stdout.isatty()
         iter_data = (
             tqdm(
                 enumerate(train_data),
-                total=len(train_data),
+                total=n_batches,
                 desc=set_color(f"Train {epoch_idx:>5}", 'pink'),
-            ) if show_progress else enumerate(train_data)
+            ) if use_tqdm else enumerate(train_data)
         )
         # ave_align = []
         # ave_uni = []
@@ -181,6 +189,9 @@ class Trainer(AbstractTrainer):
             if self.clip_grad_norm:
                 clip_grad_norm_(self.model.parameters(), **self.clip_grad_norm)
             self.optimizer.step()
+            if show_progress and not use_tqdm:
+                if batch_idx % log_step == 0 or batch_idx == n_batches - 1:
+                    print('Train %d: [%d/%d] loss=%.4f' % (epoch_idx, batch_idx, n_batches, loss.item()), flush=True)
         # self.align.append(np.mean(ave_align))
         # self.uni.append(np.mean(ave_uni))
         return total_loss
@@ -431,14 +442,20 @@ class Trainer(AbstractTrainer):
             self.tot_item_num = eval_data._dataset.item_num
 
         batch_matrix_list = []
+        n_batches = len(eval_data)
+        log_step = _progress_log_step(n_batches, n_parts=10)
+        use_tqdm = show_progress and sys.stdout.isatty()
         iter_data = (
             tqdm(
                 enumerate(eval_data),
-                total=len(eval_data),
+                total=n_batches,
                 desc=set_color(f"Evaluate   ", 'pink'),
-            ) if show_progress else enumerate(eval_data)
+            ) if use_tqdm else enumerate(eval_data)
         )
         for batch_idx, batched_data in iter_data:
+            if show_progress and not use_tqdm:
+                if batch_idx % log_step == 0 or batch_idx == n_batches - 1:
+                    print('Evaluate: [%d/%d]' % (batch_idx, n_batches), flush=True)
             if is_full_sort:
                 interaction, scores = self._full_sort_batch_eval(batched_data)
                 interaction.interaction["user_len_list"] = [self.tot_item_num] * scores.shape[0]

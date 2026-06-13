@@ -58,6 +58,8 @@ def run_single_model(args):
             'train_neg_sample_args': None,
             'alias_of_item_id': ['item_id_list'],
         }
+    elif os.environ.get('NCS_EPOCH1'):
+        config_files.append(str(Path(__file__).resolve().parents[2] / 'config' / 'full_1epoch.yaml'))
     config = Config(
         model=COREave if args.model == 'ave' else COREtrm,
         dataset=args.dataset,
