@@ -11,7 +11,7 @@ from pathlib import Path
 import sys
 
 _CORE_ROOT = Path(__file__).resolve().parent
-_REPO = _CORE_ROOT.parents[2]
+_REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_REPO))
 from ncs_numpy_compat import apply_numpy_recbole_compat
 
