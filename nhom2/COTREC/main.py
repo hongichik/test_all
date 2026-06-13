@@ -38,7 +38,7 @@ def main():
     elif opt.dataset == 'Tmall':
         n_node = 40727
     elif opt.dataset == 'retailrocket':
-        n_node = count_nodes_from_pickle(train_data, all_train)
+        n_node = count_nodes_from_pickle(train_data, test_data, all_train)
     else:
         n_node = 309
     train_data = Data(train_data,all_train, shuffle=True, n_node=n_node)

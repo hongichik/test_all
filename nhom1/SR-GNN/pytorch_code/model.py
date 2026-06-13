@@ -10,6 +10,7 @@ import datetime
 import math
 import numpy as np
 import torch
+from tqdm import tqdm
 from torch import nn
 from torch.nn import Module, Parameter
 import torch.nn.functional as F
@@ -122,11 +123,11 @@ def forward(model, i, data):
 
 def train_test(model, train_data, test_data):
     model.scheduler.step()
-    print('start training: ', datetime.datetime.now())
+    print('start training: ', datetime.datetime.now(), flush=True)
     model.train()
     total_loss = 0.0
     slices = train_data.generate_batch(model.batch_size)
-    for i, j in zip(slices, np.arange(len(slices))):
+    for i in tqdm(slices, desc='train', mininterval=1.0):
         model.optimizer.zero_grad()
         targets, scores = forward(model, i, train_data)
         targets = trans_to_cuda(torch.Tensor(targets).long())
@@ -134,15 +135,13 @@ def train_test(model, train_data, test_data):
         loss.backward()
         model.optimizer.step()
         total_loss += loss
-        if j % int(len(slices) / 5 + 1) == 0:
-            print('[%d/%d] Loss: %.4f' % (j, len(slices), loss.item()))
-    print('\tLoss:\t%.3f' % total_loss)
+    print('\tLoss:\t%.3f' % total_loss, flush=True)
 
-    print('start predicting: ', datetime.datetime.now())
+    print('start predicting: ', datetime.datetime.now(), flush=True)
     model.eval()
     hit, mrr = [], []
     slices = test_data.generate_batch(model.batch_size)
-    for i in slices:
+    for i in tqdm(slices, desc='test', mininterval=1.0):
         targets, scores = forward(model, i, test_data)
         sub_scores = scores.topk(20)[1]
         sub_scores = trans_to_cpu(sub_scores).detach().numpy()

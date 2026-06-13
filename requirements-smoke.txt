@@ -1,0 +1,10 @@
+# Phụ thuộc cho smoke test (DuoRec, CORE, FGNN, …)
+pandas
+protobuf
+scikit-learn
+colorama
+colorlog
+plotly
+tabulate
+tensorboard
+texttable

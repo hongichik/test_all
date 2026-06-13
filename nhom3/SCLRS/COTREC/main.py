@@ -44,8 +44,7 @@ opt = parser.parse_args()
 
 
 def main():
-    if not os.path.exists(opt.saved_models_path):
-        os.mkdir(opt.saved_models_path)
+    os.makedirs(opt.saved_models_path, exist_ok=True)
 
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
@@ -73,7 +72,7 @@ def main():
     elif opt.dataset == 'Tmall':
         n_node = 40727
     elif opt.dataset == 'retailrocket':
-        n_node = count_nodes_from_pickle(train_data, all_train)
+        n_node = count_nodes_from_pickle(train_data, test_data, all_train)
     else:
         n_node = 309
     train_data = Data(train_data, all_train, shuffle=True, n_node=n_node)

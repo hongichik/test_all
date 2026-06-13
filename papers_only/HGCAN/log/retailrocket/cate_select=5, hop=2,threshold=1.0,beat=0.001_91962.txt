@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/hongnguyen/test_all/papers_only/HGCAN/main.py", line 409, in <module>
+    main()
+    ~~~~^^
+  File "/home/hongnguyen/test_all/papers_only/HGCAN/main.py", line 129, in main
+    adj_items, weight_items = handle_adj(adj_items, weight_items, num_items, opt.sample_num)
+                              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hongnguyen/test_all/papers_only/HGCAN/data.py", line 17, in handle_adj
+    adj_entity = np.zeros((n_items, sample_num), dtype=np.int)
+                                                       ^^^^^^
+  File "/opt/miniconda3/lib/python3.13/site-packages/numpy/__init__.py", line 775, in __getattr__
+    raise AttributeError(__former_attrs__[attr], name=None)
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations

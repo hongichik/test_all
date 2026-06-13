@@ -4,6 +4,7 @@ Created on 31/3/2019
 @author: RuihongQiu
 """
 
+import os
 import pickle
 import torch
 import collections
@@ -16,7 +17,12 @@ class MultiSessionsGraph(InMemoryDataset):
         assert phrase in ['train', 'test']
         self.phrase = phrase
         super(MultiSessionsGraph, self).__init__(root, transform, pre_transform)
-        self.data, self.slices = torch.load(self.processed_paths[0])
+        self.load(self.processed_paths[0])
+
+    @property
+    def raw_dir(self):
+        """Data retailrocket nằm thẳng trong root/, không có thư mục raw/."""
+        return self.root
      
     @property
     def raw_file_names(self):
@@ -32,8 +38,11 @@ class MultiSessionsGraph(InMemoryDataset):
     def process(self):
         data = pickle.load(open(self.raw_dir + '/' + self.raw_file_names[0], 'rb'))
         data_list = []
-        
-        for sequence, y in zip(data[0], data[1]):
+        limit = int(os.environ.get('NCS_SMOKE_SAMPLES', '0')) if os.environ.get('NCS_SMOKE') else 0
+
+        for i, (sequence, y) in enumerate(zip(data[0], data[1])):
+            if limit and i >= limit:
+                break
             # sequence = [1, 3, 2, 2, 1, 3, 4]
             i = 0
             nodes = {}    # dict{15: 0, 16: 1, 18: 2, ...}
@@ -87,5 +96,4 @@ class MultiSessionsGraph(InMemoryDataset):
                                  out_degree_inv=out_degree_inv, in_degree_inv=in_degree_inv)
             data_list.append(session_graph)
             
-        data, slices = self.collate(data_list)
-        torch.save((data, slices), self.processed_paths[0])
+        self.save(data_list, self.processed_paths[0])

@@ -23,7 +23,7 @@ class CCT_GNN(Module):
         self.dropout_global = opt.dropout_global
         self.num_layer = opt.num_layer
 
-        # self.num_item = num_item
+        self.num_item = num_item
         self.num_cat = num_cat
         self.num_total = num_total
         self.category = category
@@ -65,7 +65,7 @@ class CCT_GNN(Module):
         self.reset_parameters()
         
         all_cats = []
-        for c in range(1, num_total-num_cat+1):
+        for c in range(1, num_item):
             all_cats += [category[c]]
         all_cats = np.asarray(all_cats)  
         self.all_cats =  trans_to_cuda(torch.Tensor(all_cats).long())
@@ -131,7 +131,7 @@ class CCT_GNN(Module):
         coll_att_sess_emb = torch.sum(beta * coll_emb, 1)   
 
         # Concatenate the embedding of all items and their corresponding categories
-        all_itm_emb = self.embedding.weight[1: self.num_total-self.num_cat+1]
+        all_itm_emb = self.embedding.weight[1:self.num_item]
         all_cat_emb = self.embedding(self.all_cats)
         all_itm_cat_emb = torch.cat([all_itm_emb, all_cat_emb],-1)
 

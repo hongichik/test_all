@@ -15,9 +15,13 @@ Reference:
 
 """
 
+import random
+
+import numpy as np
 import torch
 from torch import nn
 
+from recbole.data.interaction import Interaction
 from recbole.model.abstract_recommender import SequentialRecommender
 from recbole.model.layers import TransformerEncoder
 from recbole.model.loss import BPRLoss
@@ -35,6 +39,8 @@ class DuoRec(SequentialRecommender):
 
     def __init__(self, config, dataset):
         super(DuoRec, self).__init__(config, dataset)
+        self.dataset = dataset
+        self.same_item_index = self._get_same_item_index(dataset)
 
         # load parameters info
         self.n_layers = config['n_layers']
@@ -86,6 +92,43 @@ class DuoRec(SequentialRecommender):
 
         # parameters initialization
         self.apply(self._init_weights)
+
+    def _get_same_item_index(self, dataset):
+        target_item = dataset.inter_feat[self.ITEM_ID].numpy()
+        same_target_index = {}
+        for item_id in np.unique(target_item):
+            same_target_index[item_id] = np.where(target_item == item_id)[0]
+        return same_target_index
+
+    def _add_sem_aug(self, interaction):
+        sem_pos_lengths = []
+        sem_pos_seqs = []
+        device = interaction[self.ITEM_SEQ].device
+        target_items = interaction[self.ITEM_ID]
+        for i, item_id in enumerate(target_items):
+            item_id = item_id.item()
+            targets_index = self.same_item_index.get(item_id, np.array([]))
+            if len(targets_index) == 0:
+                sem_pos_lengths.append(interaction[self.ITEM_SEQ_LEN][i])
+                sem_pos_seqs.append(interaction[self.ITEM_SEQ][i])
+                continue
+            while True:
+                sample_index = int(random.choice(targets_index))
+                cur_item_list = interaction[self.ITEM_SEQ][i].cpu()
+                sample_item_list = self.dataset.inter_feat[self.ITEM_SEQ][sample_index]
+                sample_item_length = self.dataset.inter_feat[self.ITEM_SEQ_LEN][sample_index]
+                if not torch.equal(cur_item_list, sample_item_list) or len(targets_index) == 1:
+                    sem_pos_lengths.append(sample_item_length)
+                    sem_pos_seqs.append(sample_item_list)
+                    break
+        interaction.update(
+            Interaction(
+                {
+                    "sem_aug": torch.stack(sem_pos_seqs).to(device),
+                    "sem_aug_lengths": torch.stack(sem_pos_lengths).to(device),
+                }
+            )
+        )
 
     def _init_weights(self, module):
         """ Initialize the weights """
@@ -154,6 +197,8 @@ class DuoRec(SequentialRecommender):
         return output  # [B H]
 
     def calculate_loss(self, interaction):
+        if self.ssl in ["us", "su", "us_x"]:
+            self._add_sem_aug(interaction)
         item_seq = interaction[self.ITEM_SEQ]
         item_seq_len = interaction[self.ITEM_SEQ_LEN]
         seq_output = self.forward(item_seq, item_seq_len)

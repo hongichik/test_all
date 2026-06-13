@@ -54,8 +54,7 @@ opt = parser.parse_args()
 
 
 def main():
-    if not os.path.exists(opt.saved_models_path):
-        os.mkdir(opt.saved_models_path)
+    os.makedirs(opt.saved_models_path, exist_ok=True)
 
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
@@ -102,10 +101,16 @@ def main():
     else:
         test_data = load_pickle('SelfContrastiveLearningRecSys', ds_key, 'test.txt', f'{legacy}/test.txt')
 
-    adj = load_pickle('SelfContrastiveLearningRecSys', ds_key, f'adj_{opt.n_sample_all}.pkl', f'{legacy}/adj_{opt.n_sample_all}.pkl')
-    num = load_pickle('SelfContrastiveLearningRecSys', ds_key, f'num_{opt.n_sample_all}.pkl', f'{legacy}/num_{opt.n_sample_all}.pkl')
+    adj = load_pickle(
+        'SelfContrastiveLearningRecSys', ds_key, f'adj_{opt.n_sample_all}.pkl',
+        f'{legacy}/adj_{opt.n_sample_all}.pkl', subsample=False,
+    )
+    num = load_pickle(
+        'SelfContrastiveLearningRecSys', ds_key, f'num_{opt.n_sample_all}.pkl',
+        f'{legacy}/num_{opt.n_sample_all}.pkl', subsample=False,
+    )
     if num_node is None:
-        num_node = count_nodes_from_pickle(train_data)
+        num_node = count_nodes_from_pickle(train_data, test_data)
     train_data = Data(train_data)
     test_data = Data(test_data)
 

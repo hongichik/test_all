@@ -13,6 +13,9 @@ def process_adj (global_adjs, bch_sess_idxs, bch_suitems, bch_sess_len, itm_adj_
             if itm == 0:
                 bch_global_adj_item_mat.append([0]*itm_adj_sample)
                 bch_global_adj_weight_mat.append([0]*itm_adj_sample)
+            elif itm not in sess_adjs:
+                bch_global_adj_item_mat.append([0] * itm_adj_sample)
+                bch_global_adj_weight_mat.append([0] * itm_adj_sample)
             else:
                 sess_adj_itm = sess_adjs[itm][0][:itm_adj_sample]
                 sess_adj_weight = sess_adjs[itm][1][:itm_adj_sample]
@@ -50,6 +53,7 @@ def process_cats(category, rev_sess_itms):
 
 class Data(Dataset):
     def __init__(self, data, category):
+        self.sess_ids = data[0]
         all_rev_sess_itms, mask, max_len = process_data(data[1])
         self.category = category
         self.all_rev_sess_itms = np.asarray(all_rev_sess_itms)
@@ -58,8 +62,9 @@ class Data(Dataset):
         self.length = len(data[1])
         self.max_len = max_len
 
-    def __getitem__(self, sess_idxs):
-        rev_sess_itms, mask, target = self.all_rev_sess_itms[sess_idxs], self.mask[sess_idxs], self.targets[sess_idxs]
+    def __getitem__(self, index):
+        sess_id = self.sess_ids[index]
+        rev_sess_itms, mask, target = self.all_rev_sess_itms[index], self.mask[index], self.targets[index]
         rev_sess_cats = process_cats(self.category, rev_sess_itms)
         rev_sess_nods = np.append(rev_sess_itms, rev_sess_cats)
         rev_sess_nods = rev_sess_nods[rev_sess_nods > 0]
@@ -146,7 +151,7 @@ class Data(Dataset):
         alias_rev_sess_cats = [np.where(urev_cats == i)[0][0] for i in rev_sess_cats]
         
         
-        return [torch.tensor(sess_idxs), torch.tensor(alias_rev_sess_itms), torch.tensor(adj_itms), torch.tensor(urev_sess_itms),
+        return [torch.tensor(sess_id), torch.tensor(alias_rev_sess_itms), torch.tensor(adj_itms), torch.tensor(urev_sess_itms),
                 torch.tensor(mask), torch.tensor(target), torch.tensor(rev_sess_itms),
                 torch.tensor(alias_rev_sess_cats), torch.tensor(adj_cats), torch.tensor(urev_sess_cats),
                 torch.tensor(alias_cat_itms),torch.tensor(alias_itm_cats),torch.tensor(adj_nods),torch.tensor(urev_sess_nods)]

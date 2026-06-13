@@ -1,8 +1,15 @@
+import sys
 import time
 import argparse
 import pickle
+from pathlib import Path
+
 from model import *
 from utils import *
+
+_REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_REPO))
+from ncs_data import subsample_session_data
 
 
 def init_seed(seed=None):
@@ -54,15 +61,20 @@ def main():
         opt.dropout_local = 0.5
        # opt.dropout_local = 0
         n_category = 712 #711 + 1
+    elif opt.dataset == 'retailrocket':
+        category = pickle.load(open('datasets/retailrocket/category.txt', 'rb'))
+        num_node = max(category.keys()) + 1
+        n_category = max(category.values()) + 1
+        opt.dropout_local = 0.0
     else:
         num_node = 310
 
-    train_data = pickle.load(open('datasets/' + opt.dataset + '/train.txt', 'rb'))
+    train_data = subsample_session_data(pickle.load(open('datasets/' + opt.dataset + '/train.txt', 'rb')))
     if opt.validation:
         train_data, valid_data = split_validation(train_data, opt.valid_portion)
         test_data = valid_data
     else:
-        test_data = pickle.load(open('datasets/' + opt.dataset + '/test.txt', 'rb'))
+        test_data = subsample_session_data(pickle.load(open('datasets/' + opt.dataset + '/test.txt', 'rb')))
         
 
     category = pickle.load(open('datasets/' + opt.dataset + '/category.txt', 'rb'))   #读出商品的类别信息

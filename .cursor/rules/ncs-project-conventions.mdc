@@ -36,10 +36,10 @@ Log chia **2 loại**, cùng cấu trúc thư mục, khác nội dung:
 Ghi **toàn bộ output** của lệnh chạy (mỗi dòng stdout/stderr đều lưu).
 
 ```
-Log/<tên bài toán>/<bộ dữ liệu>/<ngày-tháng-năm>.log
+Log/<tên bài toán>/<bộ dữ liệu>/log-YYYY-MM-DD-HH-MM-SS.log
 ```
 
-Ví dụ: `Log/DuoRec/ml-100k/23-05-2026.log`
+Ví dụ: `Log/DuoRec/ml-100k/log-2026-05-23-14-30-00.log` (sort tên file = thứ tự thời gian, mới nhất ở dưới)
 
 ### 2b. Log kết quả — `LogMins/`
 

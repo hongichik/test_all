@@ -87,8 +87,14 @@ def main():
         n_node = 540
         c_node = 171
     elif opt.dataset == 'retailrocket':
-        n_node = max(max(seq) for seq in train_data[0] if seq) + 1
-        c_node = max(max(seq) for seq in train_cate[0] if seq) + 1
+        n_node = max(
+            max(max(seq) for seq in train_data[0] if seq),
+            max(max(seq) for seq in test_data[0] if seq),
+        ) + 1
+        c_node = max(
+            max(max(seq) for seq in train_cate[0] if seq),
+            max(max(seq) for seq in test_cate[0] if seq),
+        ) + 1
     else:
         n_node = 309
         c_node = 5694

@@ -1,5 +1,28 @@
+import os
+import tempfile
+
+if os.environ.get('NCS_SMOKE'):
+    os.environ['CUDA_VISIBLE_DEVICES'] = ''
+
 import argparse
 from logging import getLogger
+from pathlib import Path
+
+import sys
+
+_REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_REPO))
+from ncs_numpy_compat import apply_numpy_recbole_compat
+
+apply_numpy_recbole_compat()
+
+try:
+    import pandas as pd
+
+    pd.options.mode.copy_on_write = False
+except ImportError:
+    pass
+
 from recbole.config import Config
 from recbole.data import create_dataset, data_preparation
 from recbole.utils import init_logger, get_trainer, init_seed, set_color
@@ -8,12 +31,38 @@ from core_ave import COREave
 from core_trm import COREtrm
 
 
+def _smoke_data_path(dataset: str) -> str:
+    """Tạo bản .inter nhỏ (train/valid/test) cho smoke test."""
+    n = int(os.environ.get("NCS_SMOKE_SAMPLES", "2000"))
+    base = Path(tempfile.mkdtemp(prefix="core_smoke_"))
+    dst = base / dataset
+    dst.mkdir(parents=True)
+    src = Path(__file__).resolve().parent / "dataset" / dataset
+    train_lines = (src / f"{dataset}.train.inter").read_text(encoding="utf-8").splitlines()
+    subset = "\n".join(train_lines[: n + 1]) + "\n"
+    for split in ("train", "valid", "test"):
+        (dst / f"{dataset}.{split}.inter").write_text(subset, encoding="utf-8")
+    return str(base) + "/"
+
+
 def run_single_model(args):
     # configurations initialization
+    config_files = ['props/overall.yaml', f'props/core_{args.model}.yaml']
+    config_dict = None
+    if os.environ.get('NCS_SMOKE'):
+        config_files.append(str(Path(__file__).resolve().parents[2] / 'config' / 'smoke_1epoch.yaml'))
+        config_dict = {
+            'data_path': _smoke_data_path(args.dataset),
+            'use_gpu': False,
+            'gpu_id': '',
+            'train_neg_sample_args': None,
+            'alias_of_item_id': ['item_id_list'],
+        }
     config = Config(
         model=COREave if args.model == 'ave' else COREtrm,
-        dataset=args.dataset, 
-        config_file_list=['props/overall.yaml', f'props/core_{args.model}.yaml']
+        dataset=args.dataset,
+        config_file_list=config_files,
+        config_dict=config_dict,
     )
     init_seed(config['seed'], config['reproducibility'])
     # logger initialization
@@ -30,10 +79,11 @@ def run_single_model(args):
     train_data, valid_data, test_data = data_preparation(config, dataset)
 
     # model loading and initialization
+    device = 'cpu' if os.environ.get('NCS_SMOKE') else config['device']
     if args.model == 'ave':
-        model = COREave(config, train_data.dataset).to(config['device'])
+        model = COREave(config, train_data.dataset).to(device)
     elif args.model == 'trm':
-        model = COREtrm(config, train_data.dataset).to(config['device'])
+        model = COREtrm(config, train_data.dataset).to(device)
     else:
         raise ValueError('model can only be "ave" or "trm".')
     logger.info(model)

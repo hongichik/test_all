@@ -139,7 +139,7 @@ for i in range(num_cate):
 
 # Store an item adjacency matrix
 counter_nonzero = 0
-adj_item_numpy = np.identity(num , dtype= np.int)
+adj_item_numpy = np.identity(num , dtype=np.int64)
 degree_adj_item = np.zeros((num, num) , dtype = np.int)
 for i in range(1, num):
     for idx, val in adj1[i].items():
@@ -151,7 +151,7 @@ print('item-item sparse rate：%0.6f %%' % (100. * ratio))
 
 # Store an category adjacency matrix
 counter_nonzero = 0
-adj_cate_numpy = np.identity(num_cate , dtype= np.int)
+adj_cate_numpy = np.identity(num_cate , dtype=np.int64)
 for i in range(1, num_cate):
     for idx, val in adj1_cate[i].items():
         adj_item_numpy[i][idx] = 1
@@ -162,7 +162,7 @@ print('cate-cate sparse rate：%0.6f %%' % (100. * ratio))
 
 # Store an category2item adjacency matrix
 counter_nonzero = 0
-adj_c2i_numpy = np.zeros((num_cate , num) , dtype= np.int)
+adj_c2i_numpy = np.zeros((num_cate , num) , dtype=np.int64)
 for i in range(1, num_cate):
     for idx in adj_c2i[i]:
         adj_c2i_numpy[i][idx] = 1

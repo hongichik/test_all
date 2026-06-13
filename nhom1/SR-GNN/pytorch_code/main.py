@@ -45,19 +45,16 @@ def main():
         test_data = valid_data
     else:
         test_data = load_pickle('SR-GNN', opt.dataset, 'test.txt', f'{legacy}/test.txt')
-    # all_train_seq = pickle.load(open('../datasets/' + opt.dataset + '/all_train_seq.txt', 'rb'))
-    # g = build_graph(all_train_seq)
-    train_data = Data(train_data, shuffle=True)
-    test_data = Data(test_data, shuffle=False)
-    # del all_train_seq, g
     if opt.dataset == 'diginetica':
         n_node = 43098
     elif opt.dataset == 'yoochoose1_64' or opt.dataset == 'yoochoose1_4':
         n_node = 37484
     elif opt.dataset == 'retailrocket':
-        n_node = count_nodes_from_pickle(train_data)
+        n_node = count_nodes_from_pickle(train_data, test_data)
     else:
         n_node = 310
+    train_data = Data(train_data, shuffle=True)
+    test_data = Data(test_data, shuffle=False)
 
     model = trans_to_cuda(SessionGraph(opt, n_node))
 

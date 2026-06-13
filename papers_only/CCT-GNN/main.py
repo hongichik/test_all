@@ -1,10 +1,17 @@
+import sys
 import time
 import argparse
 import pickle
 import gc
+from pathlib import Path
+
 from model import *
 from utils import *
 from tqdm import tqdm
+
+_REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_REPO))
+from ncs_data import subsample_session_data
 
 
 def init_seed(seed=None):
@@ -38,6 +45,7 @@ opt = parser.parse_args()
 
 def main():
     init_seed(2021)
+    yy = ''
 
     if opt.dataset == 'diginetica':
         num_item = 43098     #(43097+1)
@@ -51,17 +59,24 @@ def main():
         num_item = 40728     #40727 + 1
         num_cat = 712        #711 + 1
         opt.num_layer = 1
-    
+    elif opt.dataset == 'retailrocket':
+        category = pickle.load(open('datasets/retailrocket/category.txt', 'rb'))
+        num_item = max(category.keys()) + 1
+        num_cat = max(category.values()) - num_item + 1
+        opt.num_layer = 2
+    else:
+        raise ValueError(f'Unsupported dataset: {opt.dataset}')
+
     print(opt)
-    train_data = pickle.load(open('datasets/' + opt.dataset + '/train.txt', 'rb'))
-    test_data = pickle.load(open('datasets/' + opt.dataset + '/test.txt', 'rb'))
+    train_data = subsample_session_data(pickle.load(open('datasets/' + opt.dataset + '/train.txt', 'rb')))
+    test_data = subsample_session_data(pickle.load(open('datasets/' + opt.dataset + '/test.txt', 'rb')))
     category = pickle.load(open('datasets/' + opt.dataset + '/category.txt', 'rb'))
     global_train_adjs = pickle.load(open('datasets/' + opt.dataset +'/train_adjs'+yy+'.txt', 'rb'))
     global_test_adjs = pickle.load(open('datasets/' + opt.dataset +'/test_adjs'+yy+'.txt', 'rb'))
     
     train_data = Data(train_data, category)
     test_data = Data(test_data, category)
-    num_total = num_item + num_cat -1
+    num_total = max(category.values()) + 1
     
     result_map = {}
 

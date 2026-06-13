@@ -8,8 +8,7 @@ import torch.nn.functional as F
 import torch.sparse
 from scipy.sparse import coo
 import time
-from numba import jit
-import heapq
+from tqdm import tqdm
 
 def trans_to_cuda(variable):
     if torch.cuda.is_available():
@@ -30,16 +29,12 @@ class HyperConv(Module):
         self.dataset = dataset
 
     def forward(self, adjacency, embedding):
-        item_embeddings = embedding
-        item_embedding_layer0 = item_embeddings
-        final = [item_embedding_layer0]
-        for i in range(self.layers):
-            item_embeddings = torch.sparse.mm(trans_to_cuda(adjacency), item_embeddings)
-            final.append(item_embeddings)
-      #  final1 = trans_to_cuda(torch.tensor([item.cpu().detach().numpy() for item in final]))
-      #  item_embeddings = torch.sum(final1, 0)
-        item_embeddings = np.sum(final, 0) / (self.layers+1)
-        return item_embeddings
+        acc = embedding
+        out = embedding
+        for _ in range(self.layers):
+            acc = torch.sparse.mm(adjacency, acc)
+            out = out + acc
+        return out / (self.layers + 1)
 
 
 class LineConv(Module):
@@ -49,14 +44,10 @@ class LineConv(Module):
         self.batch_size = batch_size
         self.layers = layers
     def forward(self, item_embedding, D, A, session_item, session_len):
-        zeros = torch.cuda.FloatTensor(1,self.emb_size).fill_(0)
-        # zeros = torch.zeros([1,self.emb_size])
+        zeros = torch.zeros(1, self.emb_size, device=item_embedding.device)
         item_embedding = torch.cat([zeros, item_embedding], 0)
-        seq_h = []
-        for i in torch.arange(len(session_item)):
-            seq_h.append(torch.index_select(item_embedding, 0, session_item[i]))
-        seq_h1 = trans_to_cuda(torch.tensor([item.cpu().detach().numpy() for item in seq_h]))
-        session_emb_lgcn = torch.div(torch.sum(seq_h1, 1), session_len)
+        seq_h1 = item_embedding[session_item]
+        session_emb_lgcn = seq_h1.sum(1) / session_len.float().clamp(min=1)
         session = [session_emb_lgcn]
         DA = torch.mm(D, A).float()
         for i in range(self.layers):
@@ -64,7 +55,7 @@ class LineConv(Module):
             session.append(session_emb_lgcn)
         #session1 = trans_to_cuda(torch.tensor([item.cpu().detach().numpy() for item in session]))
         #session_emb_lgcn = torch.sum(session1, 0)
-        session_emb_lgcn = np.sum(session, 0)/ (self.layers+1)
+        session_emb_lgcn = torch.stack(session, dim=0).sum(0) / (self.layers + 1)
         return session_emb_lgcn
 
 
@@ -93,6 +84,8 @@ class DHCN(Module):
         shape = adjacency.shape
         adjacency = torch.sparse.FloatTensor(i, v, torch.Size(shape))
         self.adjacency = adjacency
+        if torch.cuda.is_available():
+            self.adjacency = self.adjacency.cuda()
         self.embedding = nn.Embedding(self.n_node, self.emb_size)
         self.pos_embedding = nn.Embedding(200, self.emb_size)
         self.HyperGraph = HyperConv(self.layers,dataset)
@@ -112,21 +105,22 @@ class DHCN(Module):
 
      
     def generate_sess_emb(self,item_embedding, session_item, session_len, reversed_sess_item, mask):
-        zeros = torch.cuda.FloatTensor(1, self.emb_size).fill_(0)
-        # zeros = torch.zeros(1, self.emb_size)
+        device = item_embedding.device
+        zeros = torch.zeros(1, self.emb_size, device=device)
         item_embedding = torch.cat([zeros, item_embedding], 0)
-        get = lambda i: item_embedding[reversed_sess_item[i]]
-        seq_h = torch.cuda.FloatTensor(self.batch_size, list(reversed_sess_item.shape)[1], self.emb_size).fill_(0)
-        # seq_h = torch.zeros(self.batch_size, list(reversed_sess_item.shape)[1], self.emb_size)
-        for i in torch.arange(session_item.shape[0]):
-            seq_h[i] = get(i)
-        hs = torch.div(torch.sum(seq_h, 1), session_len)
+        batch_size = reversed_sess_item.shape[0]
+        seq_h = item_embedding[reversed_sess_item]
+        hs = seq_h.sum(1) / session_len.float().clamp(min=1)
         mask = mask.float().unsqueeze(-1)
-        len = seq_h.shape[1]
-        pos_emb = self.pos_embedding.weight[:len]
-        pos_emb = pos_emb.unsqueeze(0).repeat(self.batch_size, 1, 1)
+        seq_len = seq_h.shape[1]
+        max_pos = self.pos_embedding.num_embeddings
+        if seq_len > max_pos:
+            seq_h = seq_h[:, :max_pos, :]
+            mask = mask[:, :max_pos, :]
+            seq_len = max_pos
+        pos_emb = self.pos_embedding.weight[:seq_len].unsqueeze(0).expand(batch_size, -1, -1)
 
-        hs = hs.unsqueeze(-2).repeat(1, len, 1)
+        hs = hs.unsqueeze(-2).expand(-1, seq_len, -1)
         nh = self.w_1(torch.cat([pos_emb, seq_h], -1))
         nh = torch.tanh(nh)
         nh = torch.sigmoid(self.glu1(nh) + self.glu2(hs))
@@ -136,21 +130,15 @@ class DHCN(Module):
         return select
 
     def generate_sess_emb_npos(self,item_embedding, session_item, session_len, reversed_sess_item, mask):
-        zeros = torch.cuda.FloatTensor(1, self.emb_size).fill_(0)
-        # zeros = torch.zeros(1, self.emb_size)
+        device = item_embedding.device
+        zeros = torch.zeros(1, self.emb_size, device=device)
         item_embedding = torch.cat([zeros, item_embedding], 0)
-        get = lambda i: item_embedding[reversed_sess_item[i]]
-        seq_h = torch.cuda.FloatTensor(self.batch_size, list(reversed_sess_item.shape)[1], self.emb_size).fill_(0)
-        # seq_h = torch.zeros(self.batch_size, list(reversed_sess_item.shape)[1], self.emb_size)
-        for i in torch.arange(session_item.shape[0]):
-            seq_h[i] = get(i)
-        hs = torch.div(torch.sum(seq_h, 1), session_len)
+        seq_h = item_embedding[reversed_sess_item]
+        hs = seq_h.sum(1) / session_len.float().clamp(min=1)
         mask = mask.float().unsqueeze(-1)
-        len = seq_h.shape[1]
-        # pos_emb = self.pos_embedding.weight[:len]
-        # pos_emb = pos_emb.unsqueeze(0).repeat(self.batch_size, 1, 1)
+        seq_len = seq_h.shape[1]
 
-        hs = hs.unsqueeze(-2).repeat(1, len, 1)
+        hs = hs.unsqueeze(-2).expand(-1, seq_len, -1)
         nh = seq_h
         nh = torch.tanh(nh)
         nh = torch.sigmoid(self.glu1(nh) + self.glu2(hs))
@@ -172,8 +160,7 @@ class DHCN(Module):
 
         pos = score(sess_emb_hgnn, sess_emb_lgcn)
         neg1 = score(sess_emb_lgcn, row_column_shuffle(sess_emb_hgnn))
-        one = torch.cuda.FloatTensor(neg1.shape[0]).fill_(1)
-        # one = zeros = torch.ones(neg1.shape[0])
+        one = torch.ones(neg1.shape[0], device=neg1.device)
         con_loss = torch.sum(-torch.log(1e-8 + torch.sigmoid(pos))-torch.log(1e-8 + (one - torch.sigmoid(neg1))))
         return con_loss
 
@@ -188,74 +175,55 @@ class DHCN(Module):
         return item_embeddings_hg, sess_emb_hgnn, self.beta*con_loss
 
 
-@jit(nopython=True)
-def find_k_largest(K, candidates):
-    n_candidates = []
-    for iid, score in enumerate(candidates[:K]):
-        n_candidates.append((score, iid))
-    heapq.heapify(n_candidates)
-    for iid, score in enumerate(candidates[K:]):
-        if score > n_candidates[0][0]:
-            heapq.heapreplace(n_candidates, (score, iid + K))
-    n_candidates.sort(key=lambda d: d[0], reverse=True)
-    ids = [item[1] for item in n_candidates]
-    # k_largest_scores = [item[0] for item in n_candidates]
-    return ids#, k_largest_scores
-
 def forward(model, i, data):
     tar, session_len, session_item, reversed_sess_item, mask = data.get_slice(i)
-    A_hat, D_hat = data.get_overlap(session_item)
-    session_item = trans_to_cuda(torch.Tensor(session_item).long())
-    session_len = trans_to_cuda(torch.Tensor(session_len).long())
-    A_hat = trans_to_cuda(torch.Tensor(A_hat))
-    D_hat = trans_to_cuda(torch.Tensor(D_hat))
-    tar = trans_to_cuda(torch.Tensor(tar).long())
-    mask = trans_to_cuda(torch.Tensor(mask).long())
-    reversed_sess_item = trans_to_cuda(torch.Tensor(reversed_sess_item).long())
+    device = next(model.parameters()).device
+    A_hat, D_hat = data.get_overlap_tensors(i, device=device)
+    session_item = torch.as_tensor(session_item, dtype=torch.long, device=device)
+    session_len = torch.as_tensor(session_len, dtype=torch.long, device=device)
+    tar = torch.as_tensor(tar, dtype=torch.long, device=device)
+    mask = torch.as_tensor(mask, dtype=torch.long, device=device)
+    reversed_sess_item = torch.as_tensor(reversed_sess_item, dtype=torch.long, device=device)
     item_emb_hg, sess_emb_hgnn, con_loss = model(session_item, session_len, D_hat, A_hat, reversed_sess_item, mask)
     scores = torch.mm(sess_emb_hgnn, torch.transpose(item_emb_hg, 1,0))
     return tar, scores, con_loss
 
 
 def train_test(model, train_data, test_data):
-    print('start training: ', datetime.datetime.now())
-    torch.autograd.set_detect_anomaly(True)
+    print('start training: ', datetime.datetime.now(), flush=True)
     total_loss = 0.0
     slices = train_data.generate_batch(model.batch_size)
-    for i in slices:
+    for i in tqdm(slices, desc='train', mininterval=1.0):
         model.zero_grad()
         targets, scores, con_loss = forward(model, i, train_data)
         loss = model.loss_function(scores + 1e-8, targets)
         loss = loss + con_loss
         loss.backward()
-#        print(loss.item())
         model.optimizer.step()
         total_loss += loss
-    print('\tLoss:\t%.3f' % total_loss)
+    print('\tLoss:\t%.3f' % total_loss, flush=True)
     top_K = [5, 10, 20]
     metrics = {}
     for K in top_K:
         metrics['hit%d' % K] = []
         metrics['mrr%d' % K] = []
-    print('start predicting: ', datetime.datetime.now())
+    print('start predicting: ', datetime.datetime.now(), flush=True)
 
     model.eval()
     slices = test_data.generate_batch(model.batch_size)
-    for i in slices:
-        tar, scores, con_loss = forward(model, i, test_data)
-        scores = trans_to_cpu(scores).detach().numpy()
-        index = []
-        for idd in range(model.batch_size):
-            index.append(find_k_largest(20, scores[idd]))
-        index = np.array(index)
-        tar = trans_to_cpu(tar).detach().numpy()
-        for K in top_K:
-            for prediction, target in zip(index[:, :K], tar):
-                metrics['hit%d' %K].append(np.isin(target, prediction))
-                if len(np.where(prediction == target)[0]) == 0:
-                    metrics['mrr%d' %K].append(0)
-                else:
-                    metrics['mrr%d' %K].append(1 / (np.where(prediction == target)[0][0]+1))
+    with torch.inference_mode():
+        for i in tqdm(slices, desc='test', mininterval=1.0):
+            tar, scores, _ = forward(model, i, test_data)
+            sub_scores = scores.topk(20, dim=1).indices.cpu().numpy()
+            tar = tar.cpu().numpy()
+            for K in top_K:
+                for prediction, target in zip(sub_scores[:, :K], tar):
+                    metrics['hit%d' % K].append(np.isin(target, prediction))
+                    hit_pos = np.where(prediction == target)[0]
+                    if len(hit_pos) == 0:
+                        metrics['mrr%d' % K].append(0)
+                    else:
+                        metrics['mrr%d' % K].append(1 / (hit_pos[0] + 1))
     return metrics, total_loss
 
 

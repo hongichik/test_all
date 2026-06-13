@@ -151,7 +151,7 @@ class HyperConv(Module):
             # item_embeddings = self.dp(F.relu(item_embeddings))
             # item_embeddings = item_embeddings + input_embedding
             final.append(item_embeddings)
-        item_embeddings = np.sum(final, 0)
+        item_embeddings = torch.stack(final, dim=0).sum(0)
         return item_embeddings
 
 
@@ -180,7 +180,7 @@ class LineConv(Module):
         for i in range(self.layers):
             session_emb_lgcn = torch.mm(DA, session_emb_lgcn)
             session.append(session_emb_lgcn)
-        session_emb_lgcn = np.sum(session, 0)
+        session_emb_lgcn = torch.stack(session, dim=0).sum(0)
         return session_emb_lgcn
 
 

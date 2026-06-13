@@ -79,10 +79,16 @@ def main():
     else:
         test_data = load_pickle('GCE-GNN', opt.dataset, 'test.txt', f'{legacy}/test.txt')
 
-    adj = load_pickle('GCE-GNN', opt.dataset, f'adj_{opt.n_sample_all}.pkl', f'{legacy}/adj_{opt.n_sample_all}.pkl')
-    num = load_pickle('GCE-GNN', opt.dataset, f'num_{opt.n_sample_all}.pkl', f'{legacy}/num_{opt.n_sample_all}.pkl')
+    adj = load_pickle(
+        'GCE-GNN', opt.dataset, f'adj_{opt.n_sample_all}.pkl',
+        f'{legacy}/adj_{opt.n_sample_all}.pkl', subsample=False,
+    )
+    num = load_pickle(
+        'GCE-GNN', opt.dataset, f'num_{opt.n_sample_all}.pkl',
+        f'{legacy}/num_{opt.n_sample_all}.pkl', subsample=False,
+    )
     if num_node is None:
-        num_node = count_nodes_from_pickle(train_data)
+        num_node = count_nodes_from_pickle(train_data, test_data)
     train_data = Data(train_data)
     test_data = Data(test_data)
 

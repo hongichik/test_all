@@ -27,6 +27,7 @@ import torch.optim as optim
 from torch.nn.utils.clip_grad import clip_grad_norm_
 from tqdm import tqdm
 
+from recbole.data.dataloader.general_dataloader import FullSortEvalDataLoader
 from recbole.data.interaction import Interaction
 from recbole.evaluator import ProxyEvaluator
 from recbole.utils import ensure_dir, get_local_time, early_stopping, calculate_valid_score, dict2str, \
@@ -343,14 +344,38 @@ class Trainer(AbstractTrainer):
         return self.best_valid_score, self.best_valid_result
 
     def _full_sort_batch_eval(self, batched_data):
-        interaction, history_index, swap_row, swap_col_after, swap_col_before = batched_data
+        if len(batched_data) == 5:
+            interaction, history_index, swap_row, swap_col_after, swap_col_before = batched_data
+            try:
+                scores = self.model.full_sort_predict(interaction.to(self.device))
+            except NotImplementedError:
+                new_inter = interaction.to(self.device).repeat_interleave(self.tot_item_num)
+                batch_size = len(new_inter)
+                new_inter.update(self.item_tensor[:batch_size])
+                if batch_size <= self.test_batch_size:
+                    scores = self.model.predict(new_inter)
+                else:
+                    scores = self._spilt_predict(new_inter, batch_size)
+
+            scores = scores.view(-1, self.tot_item_num)
+            scores[:, 0] = -np.inf
+            if history_index is not None:
+                scores[history_index] = -np.inf
+
+            swap_row = swap_row.to(self.device)
+            swap_col_after = swap_col_after.to(self.device)
+            swap_col_before = swap_col_before.to(self.device)
+            scores[swap_row, swap_col_after] = scores[swap_row, swap_col_before]
+            return interaction, scores
+
+        interaction, history_index, positive_u, positive_i = batched_data
         try:
-            # Note: interaction without item ids
             scores = self.model.full_sort_predict(interaction.to(self.device))
         except NotImplementedError:
+            inter_len = len(interaction)
             new_inter = interaction.to(self.device).repeat_interleave(self.tot_item_num)
             batch_size = len(new_inter)
-            new_inter.update(self.item_tensor[:batch_size])
+            new_inter.update(self.item_tensor.repeat(inter_len))
             if batch_size <= self.test_batch_size:
                 scores = self.model.predict(new_inter)
             else:
@@ -360,12 +385,6 @@ class Trainer(AbstractTrainer):
         scores[:, 0] = -np.inf
         if history_index is not None:
             scores[history_index] = -np.inf
-
-        swap_row = swap_row.to(self.device)
-        swap_col_after = swap_col_after.to(self.device)
-        swap_col_before = swap_col_before.to(self.device)
-        scores[swap_row, swap_col_after] = scores[swap_row, swap_col_before]
-
         return interaction, scores
 
     @torch.no_grad()
@@ -391,17 +410,25 @@ class Trainer(AbstractTrainer):
                 checkpoint_file = model_file
             else:
                 checkpoint_file = self.saved_model_file
-            checkpoint = torch.load(checkpoint_file)
+            checkpoint = torch.load(checkpoint_file, map_location=self.device, weights_only=False)
             self.model.load_state_dict(checkpoint['state_dict'])
             message_output = 'Loading model structure and parameters from {}'.format(checkpoint_file)
             self.logger.info(message_output)
 
         self.model.eval()
 
-        if eval_data.dl_type == DataLoaderType.FULL:
+        is_full_sort = isinstance(eval_data, FullSortEvalDataLoader) or getattr(
+            eval_data, "dl_type", None
+        ) == DataLoaderType.FULL
+        if is_full_sort:
             if self.item_tensor is None:
-                self.item_tensor = eval_data.get_item_feature().to(self.device).repeat(eval_data.step)
-            self.tot_item_num = eval_data.dataset.item_num
+                if hasattr(eval_data, "get_item_feature"):
+                    self.item_tensor = eval_data.get_item_feature().to(self.device).repeat(
+                        eval_data.step
+                    )
+                else:
+                    self.item_tensor = eval_data._dataset.get_item_feature().to(self.device)
+            self.tot_item_num = eval_data._dataset.item_num
 
         batch_matrix_list = []
         iter_data = (
@@ -412,8 +439,9 @@ class Trainer(AbstractTrainer):
             ) if show_progress else enumerate(eval_data)
         )
         for batch_idx, batched_data in iter_data:
-            if eval_data.dl_type == DataLoaderType.FULL:
+            if is_full_sort:
                 interaction, scores = self._full_sort_batch_eval(batched_data)
+                interaction.interaction["user_len_list"] = [self.tot_item_num] * scores.shape[0]
             else:
                 interaction = batched_data
                 batch_size = interaction.length

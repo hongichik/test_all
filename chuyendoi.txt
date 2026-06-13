@@ -49,6 +49,17 @@ python3 scripts/preprocess_retailrocket.py -m all --link-papers
 # Hoặc chuyển từng model:
 
 
+# --- BƯỚC 3: Smoke test TẤT CẢ dự án (1 epoch, chạy ngầm lần lượt) ---
+# Log từng project : Log/<project>/retailrocket/log-YYYY-MM-DD-HH-MM-SS.log
+# Kết quả ngắn   : LogMins/<project>/retailrocket/DD-MM-YYYY.log
+# Tổng hợp        : Log/_smoke_all/retailrocket/log-YYYY-MM-DD-HH-MM-SS.log
+
+nohup python3 scripts/run_all_retailrocket_smoke.py > /dev/null 2>&1 &
+# Theo dõi:
+#   tail -f Log/_smoke_all/retailrocket/log-*.log
+#   grep -h '' LogMins/*/retailrocket/$(date +%d-%m-%Y).log
+
+
 # =============================================================================
 # NHÓM 1 — GNN session nền tảng
 # =============================================================================

@@ -25,7 +25,7 @@ parser.add_argument('--beta', type=float, default=0.01, help='ssl task maginitud
 parser.add_argument('--filter', type=bool, default=False, help='filter incidence matrix')
 
 opt = parser.parse_args()
-print(opt)
+print(opt, flush=True)
 # os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
 # torch.cuda.set_device(1)
 
@@ -41,7 +41,9 @@ def main():
     elif opt.dataset == 'Nowplaying':
         n_node = 60416
     elif opt.dataset == 'retailrocket':
-        n_node = count_nodes_from_pickle(train_data)
+        n_node = count_nodes_from_pickle(train_data, test_data)
+        if opt.batchSize == 100:
+            opt.batchSize = 256
     else:
         n_node = 309
     train_data = Data(train_data, shuffle=True, n_node=n_node)
@@ -55,8 +57,8 @@ def main():
         best_results['metric%d' % K] = [0, 0]
 
     for epoch in range(opt.epoch):
-        print('-------------------------------------------------------')
-        print('epoch: ', epoch)
+        print('-------------------------------------------------------', flush=True)
+        print('epoch: ', epoch, flush=True)
         metrics, total_loss = train_test(model, train_data, test_data)
         for K in top_K:
             metrics['hit%d' % K] = np.mean(metrics['hit%d' % K]) * 100
@@ -67,11 +69,11 @@ def main():
             if best_results['metric%d' % K][1] < metrics['mrr%d' % K]:
                 best_results['metric%d' % K][1] = metrics['mrr%d' % K]
                 best_results['epoch%d' % K][1] = epoch
-        print(metrics)
+        print(metrics, flush=True)
         for K in top_K:
             print('train_loss:\t%.4f\tRecall@%d: %.4f\tMRR%d: %.4f\tEpoch: %d,  %d' %
                   (total_loss, K, best_results['metric%d' % K][0], K, best_results['metric%d' % K][1],
-                   best_results['epoch%d' % K][0], best_results['epoch%d' % K][1]))
+                   best_results['epoch%d' % K][0], best_results['epoch%d' % K][1]), flush=True)
 
 
 if __name__ == '__main__':

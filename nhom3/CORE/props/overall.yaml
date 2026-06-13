@@ -1,6 +1,9 @@
 USER_ID_FIELD: session_id
+field_separator: "\t"
+seq_separator: " "
 benchmark_filename: [train, valid, test]
-alias_of_item_id: [item_id_list]
+# alias_of_item_id gây lỗi remap với RecBole 1.2 + NumPy 2 trên retailrocket
+# alias_of_item_id: [item_id_list]
 load_col:
   inter: [session_id, item_id_list, item_id]
 

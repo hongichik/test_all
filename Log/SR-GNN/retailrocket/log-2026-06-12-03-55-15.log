@@ -1,0 +1,188 @@
+nohup: ignoring input
+/home/hongnguyen/.local/lib/python3.13/site-packages/torch/optim/lr_scheduler.py:227: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/home/hongnguyen/test_all/nhom1/SR-GNN/pytorch_code/model.py:115: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+  A = trans_to_cuda(torch.Tensor(A).float())
+Namespace(dataset='retailrocket', batchSize=100, hiddenSize=100, epoch=30, lr=0.001, lr_dc=0.1, lr_dc_step=3, l2=1e-05, step=1, patience=10, nonhybrid=False, validation=False, valid_portion=0.1)
+-------------------------------------------------------
+epoch:  0
+start training:  2026-06-12 03:55:31.766039
+[0/7963] Loss: 10.8867
+[1593/7963] Loss: 8.0245
+[3186/7963] Loss: 7.0025
+[4779/7963] Loss: 5.9806
+[6372/7963] Loss: 5.2098
+	Loss:	53918.359
+start predicting:  2026-06-12 04:15:03.573844
+Best Result:
+	Recall@20:	53.4956	MMR@20:	30.3999	Epoch:	0,	0
+-------------------------------------------------------
+epoch:  1
+start training:  2026-06-12 04:15:37.049247
+[0/7963] Loss: 4.4632
+[1593/7963] Loss: 5.1925
+[3186/7963] Loss: 4.1663
+[4779/7963] Loss: 4.5302
+[6372/7963] Loss: 4.7722
+	Loss:	36998.840
+start predicting:  2026-06-12 04:35:55.992398
+Best Result:
+	Recall@20:	56.9613	MMR@20:	32.0618	Epoch:	1,	1
+-------------------------------------------------------
+epoch:  2
+start training:  2026-06-12 04:36:29.330558
+[0/7963] Loss: 4.9618
+[1593/7963] Loss: 3.7464
+[3186/7963] Loss: 3.7554
+[4779/7963] Loss: 3.0565
+[6372/7963] Loss: 4.1412
+	Loss:	29564.756
+start predicting:  2026-06-12 04:56:51.397104
+Best Result:
+	Recall@20:	59.3549	MMR@20:	35.3961	Epoch:	2,	2
+-------------------------------------------------------
+epoch:  3
+start training:  2026-06-12 04:57:24.710146
+[0/7963] Loss: 3.9480
+[1593/7963] Loss: 3.2772
+[3186/7963] Loss: 3.5459
+[4779/7963] Loss: 3.8509
+[6372/7963] Loss: 3.4746
+	Loss:	28131.605
+start predicting:  2026-06-12 05:17:55.271585
+Best Result:
+	Recall@20:	59.5738	MMR@20:	35.7093	Epoch:	3,	3
+-------------------------------------------------------
+epoch:  4
+start training:  2026-06-12 05:18:28.790312
+[0/7963] Loss: 3.6670
+[1593/7963] Loss: 3.8706
+[3186/7963] Loss: 3.1889
+[4779/7963] Loss: 3.4279
+[6372/7963] Loss: 3.6821
+	Loss:	27455.484
+start predicting:  2026-06-12 05:38:50.965949
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  5
+start training:  2026-06-12 05:39:24.347264
+[0/7963] Loss: 3.3417
+[1593/7963] Loss: 3.3625
+[3186/7963] Loss: 3.5956
+[4779/7963] Loss: 3.0028
+[6372/7963] Loss: 3.2918
+	Loss:	26136.434
+start predicting:  2026-06-12 05:59:53.330527
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  6
+start training:  2026-06-12 06:00:26.909081
+[0/7963] Loss: 3.9342
+[1593/7963] Loss: 3.6213
+[3186/7963] Loss: 3.3453
+[4779/7963] Loss: 3.0909
+[6372/7963] Loss: 3.8286
+	Loss:	26020.193
+start predicting:  2026-06-12 06:20:54.149894
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  7
+start training:  2026-06-12 06:21:27.652512
+[0/7963] Loss: 3.0885
+[1593/7963] Loss: 2.8431
+[3186/7963] Loss: 3.3562
+[4779/7963] Loss: 3.5513
+[6372/7963] Loss: 3.5061
+	Loss:	25935.162
+start predicting:  2026-06-12 06:41:59.903540
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  8
+start training:  2026-06-12 06:42:33.253940
+[0/7963] Loss: 3.3299
+[1593/7963] Loss: 3.2573
+[3186/7963] Loss: 3.5946
+[4779/7963] Loss: 3.1311
+[6372/7963] Loss: 3.4093
+	Loss:	25762.453
+start predicting:  2026-06-12 07:03:00.424442
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  9
+start training:  2026-06-12 07:03:33.715870
+[0/7963] Loss: 3.2843
+[1593/7963] Loss: 3.2515
+[3186/7963] Loss: 3.2431
+[4779/7963] Loss: 3.3236
+[6372/7963] Loss: 3.2950
+	Loss:	25754.137
+start predicting:  2026-06-12 07:24:03.975198
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  10
+start training:  2026-06-12 07:24:37.627186
+[0/7963] Loss: 3.0761
+[1593/7963] Loss: 3.1639
+[3186/7963] Loss: 3.0766
+[4779/7963] Loss: 3.5221
+[6372/7963] Loss: 2.8968
+	Loss:	25746.455
+start predicting:  2026-06-12 07:43:54.747728
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  11
+start training:  2026-06-12 07:44:26.375018
+[0/7963] Loss: 3.2987
+[1593/7963] Loss: 3.2540
+[3186/7963] Loss: 3.5078
+[4779/7963] Loss: 2.9527
+[6372/7963] Loss: 3.8482
+	Loss:	25728.420
+start predicting:  2026-06-12 08:03:36.327698
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  12
+start training:  2026-06-12 08:04:07.898835
+[0/7963] Loss: 3.0753
+[1593/7963] Loss: 3.3974
+[3186/7963] Loss: 3.4249
+[4779/7963] Loss: 3.5390
+[6372/7963] Loss: 2.9530
+	Loss:	25727.525
+start predicting:  2026-06-12 08:23:15.614962
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  13
+start training:  2026-06-12 08:23:47.266625
+[0/7963] Loss: 3.1837
+[1593/7963] Loss: 3.4650
+[3186/7963] Loss: 3.4033
+[4779/7963] Loss: 3.2319
+[6372/7963] Loss: 3.3954
+	Loss:	25726.764
+start predicting:  2026-06-12 08:42:54.844113
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+epoch:  14
+start training:  2026-06-12 08:43:26.493921
+[0/7963] Loss: 2.8118
+[1593/7963] Loss: 3.4819
+[3186/7963] Loss: 2.9778
+[4779/7963] Loss: 3.0312
+[6372/7963] Loss: 2.5194
+	Loss:	25724.918
+start predicting:  2026-06-12 09:02:34.236306
+Best Result:
+	Recall@20:	59.6335	MMR@20:	35.8607	Epoch:	4,	4
+-------------------------------------------------------
+Run time: 18454.095581 s

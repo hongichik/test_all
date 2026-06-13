@@ -31,7 +31,7 @@ def data_masks(all_sessions, n_node):
 
 class Data():
     def __init__(self, data, all_train, shuffle=False, n_node=None):
-        self.raw = np.asarray(data[0])
+        self.raw = np.array(data[0], dtype=object)
         adj = data_masks(all_train, n_node)
         # # print(adj.sum(axis=0))
         self.adjacency = adj.multiply(1.0/adj.sum(axis=0).reshape(1, -1))

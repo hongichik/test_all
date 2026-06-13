@@ -48,7 +48,7 @@ def run_recbole(model=None, dataset=None, config_file_list=None, config_dict=Non
     train_data, valid_data, test_data = data_preparation(config, dataset)
 
     # model loading and initialization
-    model = get_model(config['model'])(config, train_data).to(config['device'])
+    model = get_model(config['model'])(config, dataset).to(config['device'])
     logger.info(model)
 
     # trainer loading and initialization
@@ -59,52 +59,48 @@ def run_recbole(model=None, dataset=None, config_file_list=None, config_dict=Non
         train_data, valid_data, saved=saved, show_progress=config['show_progress']
     )
 
-    import numpy as np
-    import seaborn as sns
-    import matplotlib.pyplot as plt
-    from sklearn.decomposition import TruncatedSVD
+    try:
+        import numpy as np
+        import seaborn as sns
+        import matplotlib.pyplot as plt
+        from sklearn.decomposition import TruncatedSVD
 
-    embedding_matrix = model.item_embedding.weight[1:].cpu().detach().numpy()
-    svd = TruncatedSVD(n_components=2)
-    svd.fit(embedding_matrix)
-    comp_tr = np.transpose(svd.components_)
-    proj = np.dot(embedding_matrix, comp_tr)
-    
-    cnt = {}
-    for i in dataset['item_id']:
-        if i.item() in cnt:
-            cnt[i.item()] += 1
-        else:
-            cnt[i.item()] = 1
-    
-    freq = np.zeros(embedding_matrix.shape[0])
-    for i in cnt:
-        freq[i-1] = cnt[i]
-    
-    # freq /= freq.max()
+        embedding_matrix = model.item_embedding.weight[1:].cpu().detach().numpy()
+        svd = TruncatedSVD(n_components=2)
+        svd.fit(embedding_matrix)
+        comp_tr = np.transpose(svd.components_)
+        proj = np.dot(embedding_matrix, comp_tr)
 
-    sns.set(style='darkgrid')
-    sns.set_context("notebook", font_scale=1.8, rc={"lines.linewidth": 3, 'lines.markersize': 20})
-    plt.figure(figsize=(6, 4.5))
-    plt.scatter(proj[:, 0], proj[:, 1], s=1, c=freq, cmap='viridis_r')
-    plt.colorbar()
-    plt.xlim(-2, 2)
-    plt.ylim(-2, 2)
-    # plt.axis('square')
-    # plt.show()
-    plt.savefig(log_dir + '/' + config['model'] + '-' + config['dataset'] + '.pdf', format='pdf', transparent=False, bbox_inches='tight')
-    
-    from scipy.linalg import svdvals
-    svs = svdvals(embedding_matrix)
-    svs /= svs.max()
-    np.save(log_dir + '/sv.npy', svs)
+        cnt = {}
+        for i in dataset.inter_feat[dataset.iid_field]:
+            item = i.item()
+            cnt[item] = cnt.get(item, 0) + 1
 
-    sns.set(style='darkgrid')
-    sns.set_context("notebook", font_scale=1.8, rc={"lines.linewidth": 3, 'lines.markersize': 20})
-    plt.figure(figsize=(6, 4.5))
-    plt.plot(svs)
-    # plt.show()
-    plt.savefig(log_dir + '/svs.pdf', format='pdf', transparent=False, bbox_inches='tight')
+        freq = np.zeros(embedding_matrix.shape[0])
+        for i in cnt:
+            freq[i - 1] = cnt[i]
+
+        sns.set(style='darkgrid')
+        sns.set_context("notebook", font_scale=1.8, rc={"lines.linewidth": 3, 'lines.markersize': 20})
+        plt.figure(figsize=(6, 4.5))
+        plt.scatter(proj[:, 0], proj[:, 1], s=1, c=freq, cmap='viridis_r')
+        plt.colorbar()
+        plt.xlim(-2, 2)
+        plt.ylim(-2, 2)
+        plt.savefig(log_dir + '/' + config['model'] + '-' + config['dataset'] + '.pdf', format='pdf', transparent=False, bbox_inches='tight')
+
+        from scipy.linalg import svdvals
+        svs = svdvals(embedding_matrix)
+        svs /= svs.max()
+        np.save(log_dir + '/sv.npy', svs)
+
+        sns.set(style='darkgrid')
+        sns.set_context("notebook", font_scale=1.8, rc={"lines.linewidth": 3, 'lines.markersize': 20})
+        plt.figure(figsize=(6, 4.5))
+        plt.plot(svs)
+        plt.savefig(log_dir + '/svs.pdf', format='pdf', transparent=False, bbox_inches='tight')
+    except ImportError:
+        logger.warning("Skip embedding visualization (optional deps not installed).")
 
     # model evaluation
     test_result = trainer.evaluate(test_data, load_best_model=saved, show_progress=config['show_progress'])
@@ -134,7 +130,7 @@ def objective_function(config_dict=None, config_file_list=None, saved=True):
     logging.basicConfig(level=logging.ERROR)
     dataset = create_dataset(config)
     train_data, valid_data, test_data = data_preparation(config, dataset)
-    model = get_model(config['model'])(config, train_data).to(config['device'])
+    model = get_model(config['model'])(config, dataset).to(config['device'])
     trainer = get_trainer(config['MODEL_TYPE'], config['model'])(config, model)
     best_valid_score, best_valid_result = trainer.fit(train_data, valid_data, verbose=False, saved=saved)
     test_result = trainer.evaluate(test_data, load_best_model=saved)

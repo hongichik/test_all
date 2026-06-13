@@ -14,7 +14,7 @@ def transfer2idx(data, item2idx):
 
 # generate adjacency matrix
 def handle_adj(adj_items, weight_items, n_items, sample_num):
-    adj_entity = np.zeros((n_items, sample_num), dtype=np.int)
+    adj_entity = np.zeros((n_items, sample_num), dtype=np.int64)
     wei_entity = np.zeros((n_items, sample_num))
     for entity in range(1, n_items):
         neighbor = list(adj_items[entity])
@@ -41,7 +41,7 @@ class Data(object):
     def __init__(self, data, n_items):
         self.data = data
         self.n_items = n_items
-        self.raw_sessions = np.asarray(data[0])
+        self.raw_sessions = np.array(data[0], dtype=object)
         self.raw_labs = np.asarray(data[1])
         self.length = len(self.raw_sessions)
 
@@ -71,8 +71,8 @@ class Data(object):
         # Return a mask of the session matrix with padding
         # mask_1 Fill in 1 where there are items in the session
         # mask_inf is 0 where the session has an item and -inf where there is no item
-        out_data = np.zeros((len(data), max_length), dtype=np.int)
-        mask_1 = np.zeros((len(data), max_length), dtype=np.int)
+        out_data = np.zeros((len(data), max_length), dtype=np.int64)
+        mask_1 = np.zeros((len(data), max_length), dtype=np.int64)
         mask_inf = np.full((len(data), max_length), float('-inf'), dtype=np.float32)
         for i in range(len(data)):
             out_data[i, :len(data[i])] = data[i]
@@ -145,7 +145,7 @@ class Data(object):
 
     def get_reverse_position(self,inp_sess_padding  , length):
         batch_size, L = np.shape(inp_sess_padding)
-        reverse_positon_idx = np.zeros_like(inp_sess_padding, dtype=np.int)
+        reverse_positon_idx = np.zeros_like(inp_sess_padding, dtype=np.int64)
         for i in range(batch_size):
             reverse_positon_idx[i] = list(np.arange(length[i]-1 ,-1,-1)+1) + [0] *(L - length[i])
         return reverse_positon_idx

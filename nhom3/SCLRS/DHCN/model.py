@@ -70,14 +70,14 @@ class LineConv(Module):
         self.layers = layers
 
     def forward(self, item_embedding, D, A, session_item, session_len):
-        zeros = torch.cuda.FloatTensor(1, self.emb_size).fill_(0)
-        # zeros = torch.zeros([1,self.emb_size])
+        zeros = trans_to_cuda(torch.zeros(1, self.emb_size))
         item_embedding = torch.cat([zeros, item_embedding], 0)
-        seq_h = []
-        for i in torch.arange(len(session_item)):
-            seq_h.append(torch.index_select(item_embedding, 0, session_item[i]))
-        seq_h1 = trans_to_cuda(torch.tensor([item.cpu().detach().numpy() for item in seq_h]))
-        session_emb_lgcn = torch.div(torch.sum(seq_h1, 1), session_len)
+        seq_h = [
+            torch.index_select(item_embedding, 0, session_item[i])
+            for i in range(len(session_item))
+        ]
+        seq_h1 = torch.stack(seq_h, dim=0)
+        session_emb_lgcn = torch.sum(seq_h1, 1) / session_len.float().unsqueeze(-1)
         # session = [session_emb_lgcn] # (origin)
         session = session_emb_lgcn  # 
         DA = torch.mm(D, A).float()
@@ -162,6 +162,11 @@ class DHCN(Module):
         hs = torch.div(torch.sum(seq_h, 1), session_len)
         mask = mask.float().unsqueeze(-1)
         len = seq_h.shape[1]
+        max_pos = self.pos_embedding.num_embeddings
+        if len > max_pos:
+            seq_h = seq_h[:, :max_pos, :]
+            mask = mask[:, :max_pos, :]
+            len = max_pos
         pos_emb = self.pos_embedding.weight[:len]
         pos_emb = pos_emb.unsqueeze(0).repeat(self.batch_size, 1, 1)
 
@@ -326,14 +331,13 @@ def find_k_largest(K, candidates):
 
 def forward(model, i, data):
     tar, session_len, session_item, reversed_sess_item, mask = data.get_slice(i)
-    A_hat, D_hat = data.get_overlap(session_item)
-    session_item = trans_to_cuda(torch.Tensor(session_item).long())
-    session_len = trans_to_cuda(torch.Tensor(session_len).long())
-    A_hat = trans_to_cuda(torch.Tensor(A_hat))
-    D_hat = trans_to_cuda(torch.Tensor(D_hat))
-    tar = trans_to_cuda(torch.Tensor(tar).long())
-    mask = trans_to_cuda(torch.Tensor(mask).long())
-    reversed_sess_item = trans_to_cuda(torch.Tensor(reversed_sess_item).long())
+    device = next(model.parameters()).device
+    A_hat, D_hat = data.get_overlap_tensors(session_item, device=device)
+    session_item = torch.as_tensor(session_item, dtype=torch.long, device=device)
+    session_len = torch.as_tensor(session_len, dtype=torch.long, device=device)
+    tar = torch.as_tensor(tar, dtype=torch.long, device=device)
+    mask = torch.as_tensor(mask, dtype=torch.long, device=device)
+    reversed_sess_item = torch.as_tensor(reversed_sess_item, dtype=torch.long, device=device)
     item_emb_hg, sess_emb_hgnn, con_loss = model(session_item, session_len, D_hat, A_hat, reversed_sess_item, mask)
     scores = torch.mm(sess_emb_hgnn, torch.transpose(item_emb_hg, 1, 0))
     return tar, scores, con_loss
@@ -345,11 +349,11 @@ def get_alignment_uniformity(model, data):
     seesion_collection, item_collection = [], []
     for i in tqdm.tqdm(slices):
         tar, session_len, session_item, reversed_sess_item, mask = data.get_slice(i)
-        A_hat, D_hat = data.get_overlap(session_item)
+        A_hat, D_hat = data.get_overlap_tensors(session_item, device=next(model.parameters()).device)
         session_item = trans_to_cuda(torch.Tensor(session_item).long())
         session_len = trans_to_cuda(torch.Tensor(session_len).long())
-        A_hat = trans_to_cuda(torch.Tensor(A_hat))
-        D_hat = trans_to_cuda(torch.Tensor(D_hat))
+        A_hat = trans_to_cuda(A_hat)
+        D_hat = trans_to_cuda(D_hat)
         tar = trans_to_cuda(torch.Tensor(tar).long())
         mask = trans_to_cuda(torch.Tensor(mask).long())
         reversed_sess_item = trans_to_cuda(torch.Tensor(reversed_sess_item).long())
@@ -364,11 +368,10 @@ def get_alignment_uniformity(model, data):
     
 
 def train_test(model, train_data, test_data):
-    print('start training: ', datetime.datetime.now())
-    torch.autograd.set_detect_anomaly(True)
+    print('start training: ', datetime.datetime.now(), flush=True)
     total_loss = 0.0
     slices = train_data.generate_batch(model.batch_size)
-    for i in tqdm.tqdm(slices):
+    for i in tqdm.tqdm(slices, desc='train', mininterval=1.0):
         model.zero_grad()
         targets, scores, con_loss = forward(model, i, train_data)
         loss = model.loss_function(scores + 1e-8, targets)
@@ -376,17 +379,17 @@ def train_test(model, train_data, test_data):
         loss.backward()
         model.optimizer.step()
         total_loss += loss
-    print('\tLoss:\t%.3f' % total_loss)
+    print('\tLoss:\t%.3f' % total_loss, flush=True)
     top_K = [5, 10, 20]
     metrics = {}
     for K in top_K:
         metrics['hit%d' % K] = []
         metrics['mrr%d' % K] = []
-    print('start predicting: ', datetime.datetime.now())
+    print('start predicting: ', datetime.datetime.now(), flush=True)
 
     model.eval()
     slices = test_data.generate_batch(model.batch_size)
-    for i in tqdm.tqdm(slices):
+    for i in tqdm.tqdm(slices, desc='test', mininterval=1.0):
         tar, scores, con_loss = forward(model, i, test_data)
         scores = trans_to_cpu(scores).detach().numpy()
         index = []

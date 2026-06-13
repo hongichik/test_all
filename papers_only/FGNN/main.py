@@ -5,23 +5,36 @@ Created on 4/4/2019
 """
 
 import os
+import sys
 import argparse
 import logging
 import torch
 import time
+from pathlib import Path
 from tqdm import tqdm
 from dataset import MultiSessionsGraph
 
+_REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_REPO))
+from ncs_data import count_nodes_from_pickle, load_pickle
+
 from torch_geometric.data import DataLoader
-from model import GNNModel
-from sort_pooling_model import SortPoolModel
-from virtual_node_model import VirtualNodeModel
 from set2set_model import Set2SetModel
-from set2set_rnn_model import Set2SetATTModel
-from virtual_node_rnn_model import VirtualNodeRNNModel
 
 from train import forward
-from tensorboardX import SummaryWriter
+
+try:
+    from tensorboardX import SummaryWriter
+except ImportError:
+    class SummaryWriter:  # noqa: D101 — stub khi thiếu tensorboardX/protobuf
+        def __init__(self, *args, **kwargs):
+            pass
+
+        def add_scalar(self, *args, **kwargs):
+            pass
+
+        def close(self):
+            pass
 
 
 # Logger configuration
@@ -48,9 +61,10 @@ def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     cur_dir = os.getcwd()
-    train_dataset = MultiSessionsGraph(cur_dir + '/../datasets/' + opt.dataset, phrase='train')
+    ds_root = cur_dir + '/datasets/' + opt.dataset
+    train_dataset = MultiSessionsGraph(ds_root, phrase='train')
     train_loader = DataLoader(train_dataset, batch_size=opt.batch_size, shuffle=True)
-    test_dataset = MultiSessionsGraph(cur_dir + '/../datasets/' + opt.dataset, phrase='test')
+    test_dataset = MultiSessionsGraph(ds_root, phrase='test')
     test_loader = DataLoader(test_dataset, batch_size=opt.batch_size, shuffle=False)
 
     log_dir = cur_dir + '/../log/' + str(opt.dataset) + '/' + str(opt) + '_s2s3_linear_gat8-1_noleaky_' + time.strftime(
@@ -64,6 +78,10 @@ def main():
         n_node = 43097
     elif opt.dataset == 'yoochoose1_64' or opt.dataset == 'yoochoose1_4':
         n_node = 37483
+    elif opt.dataset == 'retailrocket':
+        tr = load_pickle('FGNN', opt.dataset, 'train.txt', f'papers_only/FGNN/datasets/{opt.dataset}/train.txt')
+        te = load_pickle('FGNN', opt.dataset, 'test.txt', f'papers_only/FGNN/datasets/{opt.dataset}/test.txt')
+        n_node = count_nodes_from_pickle(tr, te)
     else:
         n_node = 309
 

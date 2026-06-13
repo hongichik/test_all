@@ -1,14 +1,20 @@
 import os
+import sys
 import argparse
 import pickle
 import time
 import datetime
+from pathlib import Path
+
 from model import *
 import torch
 import numpy as np
 from data import *
 import warnings
-import numpy as np
+
+_REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_REPO))
+from ncs_data import subsample_session_data
 
 warnings.filterwarnings("ignore")
 import sys
@@ -63,8 +69,10 @@ class Logger(object):
         pass
 
 
-file_name = './log/'+str(opt.dataset)+'/cate_select='+str(opt.cate_select)+\
-            ', hop='+str(opt.hop)+',threshold='+str(opt.dice_threshold)+',beat='+str(opt.beta)+'_'+str(datetime.datetime.now())[-5:]+'.txt'
+log_dir = './log/' + str(opt.dataset)
+os.makedirs(log_dir, exist_ok=True)
+file_name = log_dir + '/cate_select=' + str(opt.cate_select) + \
+            ', hop=' + str(opt.hop) + ',threshold=' + str(opt.dice_threshold) + ',beat=' + str(opt.beta) + '_' + str(datetime.datetime.now())[-5:] + '.txt'
 sys.stdout = Logger(file_name, sys.stdout)
 sys.stderr = Logger(file_name, sys.stderr)  # redirect std err, if necessary
 
@@ -85,10 +93,10 @@ if opt.save_path is not None and opt.dataset != 'sample':
 def main():
     t0 = time.time()
     init_seed(1022)
-    train_data = pickle.load(open('datasets/' + opt.dataset + '/train.txt', 'rb'))
-    train_data_cat = pickle.load(open('datasets/' + opt.dataset + '/train_cat.txt', 'rb'))
-    test_data = pickle.load(open('datasets/' + opt.dataset + '/test.txt', 'rb'))
-    test_data_cat = pickle.load(open('datasets/' + opt.dataset + '/test_cat.txt', 'rb'))
+    train_data = subsample_session_data(pickle.load(open('datasets/' + opt.dataset + '/train.txt', 'rb')))
+    train_data_cat = subsample_session_data(pickle.load(open('datasets/' + opt.dataset + '/train_cat.txt', 'rb')))
+    test_data = subsample_session_data(pickle.load(open('datasets/' + opt.dataset + '/test.txt', 'rb')))
+    test_data_cat = subsample_session_data(pickle.load(open('datasets/' + opt.dataset + '/test_cat.txt', 'rb')))
     cate2item = pickle.load(open('datasets/' + opt.dataset + '/cate2item.txt', 'rb'))
     item2cate = pickle.load(open('datasets/' + opt.dataset + '/item2cate.txt', 'rb'))
     param = pickle.load(open('datasets/' + opt.dataset + '/parm' + '.pkl', 'rb'))

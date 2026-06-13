@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 from scipy.sparse import csr_matrix
 from operator import itemgetter
 
@@ -32,7 +33,7 @@ def split_validation(train_set, valid_portion):
 
 class Data():
     def __init__(self, data, shuffle=False, n_node=None):
-        self.raw = np.asarray(data[0])
+        self.raw = np.array(data[0], dtype=object)
         H_T = data_masks(self.raw, n_node)
         BH_T = H_T.T.multiply(1.0/H_T.sum(axis=1).reshape(1, -1))
         BH_T = BH_T.T
@@ -63,6 +64,40 @@ class Data():
         degree = np.sum(np.array(matrix), 1)
         degree = np.diag(1.0/degree)
         return matrix, degree
+
+    def get_overlap_tensors(self, sessions, device=None):
+        """Jaccard overlap matrix on GPU (nhanh hơn get_overlap CPU)."""
+        if device is None:
+            device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        n = len(sessions)
+        if n == 0:
+            z = torch.zeros(0, 0, device=device)
+            return z, z
+
+        unique_lists = [list(dict.fromkeys(x for x in s if x)) for s in sessions]
+        max_u = max((len(u) for u in unique_lists), default=1)
+        padded = torch.zeros(n, max_u, dtype=torch.long, device=device)
+        mask = torch.zeros(n, max_u, dtype=torch.bool, device=device)
+        for i, u in enumerate(unique_lists):
+            if u:
+                padded[i, : len(u)] = torch.tensor(u, device=device, dtype=torch.long)
+                mask[i, : len(u)] = True
+
+        eq = (
+            (padded.unsqueeze(1).unsqueeze(3) == padded.unsqueeze(0).unsqueeze(2))
+            & mask.unsqueeze(1).unsqueeze(3)
+            & mask.unsqueeze(0).unsqueeze(2)
+        )
+        inter = eq.any(dim=3).sum(dim=2).float()
+        sizes = mask.sum(dim=1).float()
+        union = sizes.unsqueeze(1) + sizes.unsqueeze(0) - inter
+        matrix = torch.zeros(n, n, device=device, dtype=torch.float32)
+        valid = union > 0
+        matrix[valid] = inter[valid] / union[valid]
+        matrix.fill_diagonal_(1.0)
+        deg = matrix.sum(dim=1)
+        deg = torch.where(deg > 0, deg, torch.ones_like(deg))
+        return matrix, torch.diag(1.0 / deg)
 
     def generate_batch(self, batch_size):
         if self.shuffle:

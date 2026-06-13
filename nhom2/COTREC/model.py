@@ -50,7 +50,7 @@ class ItemConv(Module):
             item_embeddings = trans_to_cuda(self.w_item[i])(item_embeddings)
             item_embeddings = torch.sparse.mm(trans_to_cuda(adjacency), item_embeddings)
             final.append(F.normalize(item_embeddings, dim=-1, p=2))
-        item_embeddings = np.sum(final, 0)/(self.layers+1)
+        item_embeddings = torch.stack(final, dim=0).sum(0) / (self.layers + 1)
         return item_embeddings
 
 

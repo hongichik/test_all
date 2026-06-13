@@ -1,6 +1,7 @@
 # general
 gpu_id: 0
 use_gpu: True
+worker: 0
 seed: 2020
 state: INFO
 reproducibility: True

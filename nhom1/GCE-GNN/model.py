@@ -70,12 +70,15 @@ class CombineGraph(Module):
         mask = mask.float().unsqueeze(-1)
 
         batch_size = hidden.shape[0]
-        len = hidden.shape[1]
-        pos_emb = self.pos_embedding.weight[:len]
+        seq_len = min(hidden.shape[1], self.pos_embedding.num_embeddings)
+        if hidden.shape[1] > seq_len:
+            hidden = hidden[:, :seq_len, :]
+            mask = mask[:, :seq_len, :]
+        pos_emb = self.pos_embedding.weight[:seq_len]
         pos_emb = pos_emb.unsqueeze(0).repeat(batch_size, 1, 1)
 
         hs = torch.sum(hidden * mask, -2) / torch.sum(mask, 1)
-        hs = hs.unsqueeze(-2).repeat(1, len, 1)
+        hs = hs.unsqueeze(-2).repeat(1, seq_len, 1)
         nh = torch.matmul(torch.cat([pos_emb, hidden], -1), self.w_1)
         nh = torch.tanh(nh)
         nh = torch.sigmoid(self.glu1(nh) + self.glu2(hs))
