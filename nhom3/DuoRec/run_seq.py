@@ -4,7 +4,8 @@ import sys
 import tempfile
 from pathlib import Path
 
-_duorec_root = os.path.dirname(os.path.abspath(__file__))
+_DUOREC_ROOT = Path(__file__).resolve().parent
+_duorec_root = str(_DUOREC_ROOT)
 if _duorec_root not in sys.path:
     sys.path.insert(0, _duorec_root)
 
@@ -36,6 +37,18 @@ def _smoke_data_path(dataset: str) -> str:
     return str(base) + "/"
 
 
+def _resolve_config_files(config_files: str) -> list[str] | None:
+    if not config_files:
+        return None
+    resolved = []
+    for name in config_files.strip().split():
+        path = Path(name)
+        if not path.is_absolute():
+            path = _DUOREC_ROOT / name
+        resolved.append(str(path))
+    return resolved
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", "-m", type=str, default="DuoRec", help="name of models")
@@ -44,8 +57,8 @@ if __name__ == "__main__":
 
     args, _ = parser.parse_known_args()
 
-    config_file_list = args.config_files.strip().split(" ") if args.config_files else None
-    config_dict = None
+    config_file_list = _resolve_config_files(args.config_files)
+    config_dict = {"data_path": str(_DUOREC_ROOT / "dataset") + "/"}
     if os.environ.get("NCS_SMOKE"):
         config_dict = {
             "data_path": _smoke_data_path(args.dataset),
