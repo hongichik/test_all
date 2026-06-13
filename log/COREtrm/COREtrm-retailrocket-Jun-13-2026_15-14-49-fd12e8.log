@@ -313,3 +313,45 @@ Sat 13 Jun 2026 15:24:02 INFO  epoch 32 evaluating [time: 1.04s, valid_score: 0.
 Sat 13 Jun 2026 15:24:02 INFO  valid result: 
 recall@10 : 0.4167    recall@20 : 0.4837    mrr@10 : 0.1618    mrr@20 : 0.1665
 Sat 13 Jun 2026 15:24:02 INFO  Saving current: saved/COREtrm-Jun-13-2026_15-15-14.pth
+Sat 13 Jun 2026 15:24:16 INFO  epoch 33 training [time: 14.62s, train loss: 1723.7572]
+Sat 13 Jun 2026 15:24:18 INFO  epoch 33 evaluating [time: 1.08s, valid_score: 0.166200]
+Sat 13 Jun 2026 15:24:18 INFO  valid result: 
+recall@10 : 0.4156    recall@20 : 0.4834    mrr@10 : 0.1614    mrr@20 : 0.1662
+Sat 13 Jun 2026 15:24:32 INFO  epoch 34 training [time: 14.63s, train loss: 1721.2250]
+Sat 13 Jun 2026 15:24:33 INFO  epoch 34 evaluating [time: 1.07s, valid_score: 0.166300]
+Sat 13 Jun 2026 15:24:33 INFO  valid result: 
+recall@10 : 0.4159    recall@20 : 0.4834    mrr@10 : 0.1615    mrr@20 : 0.1663
+Sat 13 Jun 2026 15:24:48 INFO  epoch 35 training [time: 14.63s, train loss: 1720.3736]
+Sat 13 Jun 2026 15:24:49 INFO  epoch 35 evaluating [time: 1.06s, valid_score: 0.166300]
+Sat 13 Jun 2026 15:24:49 INFO  valid result: 
+recall@10 : 0.4162    recall@20 : 0.4837    mrr@10 : 0.1615    mrr@20 : 0.1663
+Sat 13 Jun 2026 15:25:04 INFO  epoch 36 training [time: 14.62s, train loss: 1718.3517]
+Sat 13 Jun 2026 15:25:05 INFO  epoch 36 evaluating [time: 1.04s, valid_score: 0.166500]
+Sat 13 Jun 2026 15:25:05 INFO  valid result: 
+recall@10 : 0.4162    recall@20 : 0.4834    mrr@10 : 0.1618    mrr@20 : 0.1665
+Sat 13 Jun 2026 15:25:05 INFO  Saving current: saved/COREtrm-Jun-13-2026_15-15-14.pth
+Sat 13 Jun 2026 15:25:19 INFO  epoch 37 training [time: 14.63s, train loss: 1717.4283]
+Sat 13 Jun 2026 15:25:20 INFO  epoch 37 evaluating [time: 1.05s, valid_score: 0.166200]
+Sat 13 Jun 2026 15:25:20 INFO  valid result: 
+recall@10 : 0.4163    recall@20 : 0.4838    mrr@10 : 0.1615    mrr@20 : 0.1662
+Sat 13 Jun 2026 15:25:35 INFO  epoch 38 training [time: 14.62s, train loss: 1715.5866]
+Sat 13 Jun 2026 15:25:36 INFO  epoch 38 evaluating [time: 1.06s, valid_score: 0.166100]
+Sat 13 Jun 2026 15:25:36 INFO  valid result: 
+recall@10 : 0.4161    recall@20 : 0.4834    mrr@10 : 0.1614    mrr@20 : 0.1661
+Sat 13 Jun 2026 15:25:51 INFO  epoch 39 training [time: 14.62s, train loss: 1715.0720]
+Sat 13 Jun 2026 15:25:52 INFO  epoch 39 evaluating [time: 1.06s, valid_score: 0.166100]
+Sat 13 Jun 2026 15:25:52 INFO  valid result: 
+recall@10 : 0.4163    recall@20 : 0.4835    mrr@10 : 0.1614    mrr@20 : 0.1661
+Sat 13 Jun 2026 15:26:06 INFO  epoch 40 training [time: 14.63s, train loss: 1713.4421]
+Sat 13 Jun 2026 15:26:07 INFO  epoch 40 evaluating [time: 1.04s, valid_score: 0.165900]
+Sat 13 Jun 2026 15:26:07 INFO  valid result: 
+recall@10 : 0.4165    recall@20 : 0.4824    mrr@10 : 0.1613    mrr@20 : 0.1659
+Sat 13 Jun 2026 15:26:22 INFO  epoch 41 training [time: 14.63s, train loss: 1712.1008]
+Sat 13 Jun 2026 15:26:23 INFO  epoch 41 evaluating [time: 1.04s, valid_score: 0.166100]
+Sat 13 Jun 2026 15:26:23 INFO  valid result: 
+recall@10 : 0.4166    recall@20 : 0.4827    mrr@10 : 0.1614    mrr@20 : 0.1661
+Sat 13 Jun 2026 15:26:38 INFO  epoch 42 training [time: 14.62s, train loss: 1711.3134]
+Sat 13 Jun 2026 15:26:39 INFO  epoch 42 evaluating [time: 1.04s, valid_score: 0.166200]
+Sat 13 Jun 2026 15:26:39 INFO  valid result: 
+recall@10 : 0.4164    recall@20 : 0.4835    mrr@10 : 0.1615    mrr@20 : 0.1662
+Sat 13 Jun 2026 15:26:39 INFO  Finished training, best eval result in epoch 36
