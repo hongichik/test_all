@@ -60,12 +60,21 @@ if __name__ == "__main__":
 
     config_file_list = _resolve_config_files(args.config_files)
     config_dict = {"data_path": str(_DUOREC_ROOT / "dataset") + "/"}
-    if os.environ.get("NCS_SMOKE"):
+    # Chỉ smoke khi có smoke_1epoch.yaml — tránh NCS_SMOKE kế thừa từ shell làm full train chạy CPU.
+    smoke_config = config_file_list and any(
+        "smoke" in Path(f).name for f in config_file_list
+    )
+    if os.environ.get("NCS_SMOKE") and smoke_config:
         config_dict = {
             "data_path": _smoke_data_path(args.dataset),
             "use_gpu": False,
             "gpu_id": "",
         }
+    elif os.environ.get("NCS_SMOKE"):
+        print(
+            "WARN: NCS_SMOKE set nhưng không có smoke config — bỏ qua, chạy full train trên GPU.",
+            flush=True,
+        )
     run_recbole(
         model=args.model,
         dataset=args.dataset,

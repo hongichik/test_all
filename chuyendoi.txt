@@ -267,7 +267,7 @@ nohup python3 -u nhom2/CSGNN/main.py --dataset retailrocket --epoch 1 --embSize 
 # 3. DuoRec (cần symlink trước: ln -sfn ../../../Data/DuoRec/retailrocket nhom3/DuoRec/dataset/retailrocket)
 LOG="Log/DuoRec/retailrocket/log-$(date +%Y-%m-%d-%H-%M-%S).log"
 mkdir -p "$(dirname "$LOG")"
-nohup python3 -u nhom3/DuoRec/run_seq.py --dataset retailrocket --model DuoRec --config_files "seq.yaml DuoRec.yaml" > "$LOG" 2>&1 &
+nohup env -u NCS_SMOKE -u NCS_EPOCH1 -u NCS_SMOKE_SAMPLES python3 -u nhom3/DuoRec/run_seq.py --dataset retailrocket --model DuoRec --config_files "seq.yaml DuoRec.yaml" > "$LOG" 2>&1 &
 
 # 4. CORE (symlink: ln -sfn ../../../Data/CORE/retailrocket nhom3/CORE/dataset/retailrocket)
 LOG="Log/CORE/retailrocket/log-$(date +%Y-%m-%d-%H-%M-%S).log"

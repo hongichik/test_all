@@ -112,15 +112,21 @@ class DuoRec(SequentialRecommender):
                 sem_pos_lengths.append(interaction[self.ITEM_SEQ_LEN][i])
                 sem_pos_seqs.append(interaction[self.ITEM_SEQ][i])
                 continue
-            while True:
+            cur_item_list = interaction[self.ITEM_SEQ][i]
+            picked = False
+            max_attempts = max(len(targets_index) * 3, 1)
+            for _ in range(max_attempts):
                 sample_index = int(random.choice(targets_index))
-                cur_item_list = interaction[self.ITEM_SEQ][i].cpu()
                 sample_item_list = self.dataset.inter_feat[self.ITEM_SEQ][sample_index]
                 sample_item_length = self.dataset.inter_feat[self.ITEM_SEQ_LEN][sample_index]
-                if not torch.equal(cur_item_list, sample_item_list) or len(targets_index) == 1:
+                if len(targets_index) == 1 or not torch.equal(cur_item_list, sample_item_list):
                     sem_pos_lengths.append(sample_item_length)
                     sem_pos_seqs.append(sample_item_list)
+                    picked = True
                     break
+            if not picked:
+                sem_pos_lengths.append(interaction[self.ITEM_SEQ_LEN][i])
+                sem_pos_seqs.append(cur_item_list)
         interaction.update(
             Interaction(
                 {

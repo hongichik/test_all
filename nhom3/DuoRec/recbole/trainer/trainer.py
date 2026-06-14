@@ -37,7 +37,8 @@ from recbole.utils.utils import set_color
 
 
 def _progress_log_step(total, n_parts=20):
-    return max(1, min(50, total // n_parts))
+    # Log thường xuyên hơn (mỗi ~10 batch) — tránh tưởng treo ở batch 0.
+    return max(1, min(10, total // n_parts))
 
 
 class AbstractTrainer(object):
