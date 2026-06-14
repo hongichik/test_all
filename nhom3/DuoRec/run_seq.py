@@ -59,7 +59,12 @@ if __name__ == "__main__":
     args, _ = parser.parse_known_args()
 
     config_file_list = _resolve_config_files(args.config_files)
-    config_dict = {"data_path": str(_DUOREC_ROOT / "dataset") + "/"}
+    # RecBole ghi runtime vào <repo>/log/ và <repo>/saved/ (đã gitignore — không git add).
+    config_dict = {
+        "data_path": str(_DUOREC_ROOT / "dataset") + "/",
+        "log_root": str(_REPO / "log") + "/",
+        "checkpoint_dir": str(_REPO / "saved"),
+    }
     # Chỉ smoke khi có smoke_1epoch.yaml — tránh NCS_SMOKE kế thừa từ shell làm full train chạy CPU.
     smoke_config = config_file_list and any(
         "smoke" in Path(f).name for f in config_file_list
