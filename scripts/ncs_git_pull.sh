@@ -39,9 +39,4 @@ for dir in Log LogMins; do
   fi
 done
 
-# Git không hiển thị diff log local (máy này không quan tâm Git so sánh log)
-git ls-files 'Log/' 'LogMins/' 2>/dev/null | while read -r f; do
-  git update-index --skip-worktree "$f" 2>/dev/null || true
-done
-
-echo "ncs_git_pull: xong — code theo Git, log local đã giữ nguyên."
+echo "ncs_git_pull: xong — code theo Git, log local đã giữ nguyên (không dùng skip-worktree)."

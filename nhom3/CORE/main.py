@@ -60,8 +60,9 @@ def run_single_model(args):
     ds_path = data_dir('CORE', args.dataset)
     if not ds_path.is_dir():
         ds_path = _CORE_ROOT / 'dataset' / args.dataset
+    # RecBole tự nối data_path + dataset → trỏ thư mục cha (Data/CORE/ hoặc .../dataset/)
     config_dict = {
-        'data_path': str(ds_path) + '/',
+        'data_path': str(ds_path.parent) + '/',
         'train_neg_sample_args': None,
     }
     if os.environ.get('NCS_SMOKE'):
