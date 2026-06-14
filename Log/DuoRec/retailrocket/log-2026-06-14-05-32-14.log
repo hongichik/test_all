@@ -17223,3 +17223,3008 @@ Train 40: [460/3734] loss=5.3316
 Train 40: [470/3734] loss=4.8189
 Train 40: [480/3734] loss=7.0017
 Train 40: [490/3734] loss=5.5440
+Train 40: [500/3734] loss=4.9076
+Train 40: [510/3734] loss=4.8359
+Train 40: [520/3734] loss=6.1807
+Train 40: [530/3734] loss=5.1422
+Train 40: [540/3734] loss=5.5426
+Train 40: [550/3734] loss=4.3062
+Train 40: [560/3734] loss=5.0789
+Train 40: [570/3734] loss=4.9503
+Train 40: [580/3734] loss=4.9631
+Train 40: [590/3734] loss=6.7155
+Train 40: [600/3734] loss=3.5052
+Train 40: [610/3734] loss=5.2485
+Train 40: [620/3734] loss=5.5686
+Train 40: [630/3734] loss=5.4805
+Train 40: [640/3734] loss=4.7314
+Train 40: [650/3734] loss=5.1117
+Train 40: [660/3734] loss=4.6591
+Train 40: [670/3734] loss=5.5957
+Train 40: [680/3734] loss=4.5200
+Train 40: [690/3734] loss=4.5848
+Train 40: [700/3734] loss=6.3189
+Train 40: [710/3734] loss=4.7823
+Train 40: [720/3734] loss=4.6660
+Train 40: [730/3734] loss=5.6205
+Train 40: [740/3734] loss=4.7025
+Train 40: [750/3734] loss=5.2644
+Train 40: [760/3734] loss=5.3409
+Train 40: [770/3734] loss=4.5829
+Train 40: [780/3734] loss=5.5945
+Train 40: [790/3734] loss=4.6348
+Train 40: [800/3734] loss=5.6566
+Train 40: [810/3734] loss=5.6128
+Train 40: [820/3734] loss=5.0118
+Train 40: [830/3734] loss=5.2593
+Train 40: [840/3734] loss=4.8655
+Train 40: [850/3734] loss=4.4302
+Train 40: [860/3734] loss=4.9755
+Train 40: [870/3734] loss=4.8809
+Train 40: [880/3734] loss=5.2696
+Train 40: [890/3734] loss=4.6828
+Train 40: [900/3734] loss=5.1452
+Train 40: [910/3734] loss=5.6044
+Train 40: [920/3734] loss=5.6258
+Train 40: [930/3734] loss=5.0807
+Train 40: [940/3734] loss=5.2206
+Train 40: [950/3734] loss=5.1950
+Train 40: [960/3734] loss=5.0372
+Train 40: [970/3734] loss=5.4445
+Train 40: [980/3734] loss=4.5289
+Train 40: [990/3734] loss=4.4614
+Train 40: [1000/3734] loss=5.3644
+Train 40: [1010/3734] loss=5.0407
+Train 40: [1020/3734] loss=3.4490
+Train 40: [1030/3734] loss=6.6174
+Train 40: [1040/3734] loss=4.7538
+Train 40: [1050/3734] loss=5.9332
+Train 40: [1060/3734] loss=4.5329
+Train 40: [1070/3734] loss=5.2696
+Train 40: [1080/3734] loss=4.4120
+Train 40: [1090/3734] loss=5.6692
+Train 40: [1100/3734] loss=5.3803
+Train 40: [1110/3734] loss=4.7895
+Train 40: [1120/3734] loss=5.5258
+Train 40: [1130/3734] loss=5.0424
+Train 40: [1140/3734] loss=5.0523
+Train 40: [1150/3734] loss=5.5523
+Train 40: [1160/3734] loss=5.3142
+Train 40: [1170/3734] loss=4.7990
+Train 40: [1180/3734] loss=5.5263
+Train 40: [1190/3734] loss=4.5116
+Train 40: [1200/3734] loss=4.1763
+Train 40: [1210/3734] loss=5.1675
+Train 40: [1220/3734] loss=4.9305
+Train 40: [1230/3734] loss=4.8319
+Train 40: [1240/3734] loss=5.6908
+Train 40: [1250/3734] loss=3.0912
+Train 40: [1260/3734] loss=4.8898
+Train 40: [1270/3734] loss=5.4253
+Train 40: [1280/3734] loss=5.1535
+Train 40: [1290/3734] loss=5.7151
+Train 40: [1300/3734] loss=4.9842
+Train 40: [1310/3734] loss=8.6112
+Train 40: [1320/3734] loss=5.0449
+Train 40: [1330/3734] loss=8.5023
+Train 40: [1340/3734] loss=5.3805
+Train 40: [1350/3734] loss=4.7470
+Train 40: [1360/3734] loss=5.1612
+Train 40: [1370/3734] loss=4.6254
+Train 40: [1380/3734] loss=5.2017
+Train 40: [1390/3734] loss=6.6603
+Train 40: [1400/3734] loss=8.5333
+Train 40: [1410/3734] loss=8.0850
+Train 40: [1420/3734] loss=7.8922
+Train 40: [1430/3734] loss=4.7054
+Train 40: [1440/3734] loss=5.5547
+Train 40: [1450/3734] loss=4.5619
+Train 40: [1460/3734] loss=5.2356
+Train 40: [1470/3734] loss=5.4082
+Train 40: [1480/3734] loss=5.0747
+Train 40: [1490/3734] loss=4.9087
+Train 40: [1500/3734] loss=4.7550
+Train 40: [1510/3734] loss=5.5430
+Train 40: [1520/3734] loss=8.2035
+Train 40: [1530/3734] loss=4.8933
+Train 40: [1540/3734] loss=5.7291
+Train 40: [1550/3734] loss=4.9790
+Train 40: [1560/3734] loss=4.9535
+Train 40: [1570/3734] loss=5.2651
+Train 40: [1580/3734] loss=4.7475
+Train 40: [1590/3734] loss=4.1815
+Train 40: [1600/3734] loss=7.6545
+Train 40: [1610/3734] loss=4.5180
+Train 40: [1620/3734] loss=4.6894
+Train 40: [1630/3734] loss=4.5085
+Train 40: [1640/3734] loss=4.9998
+Train 40: [1650/3734] loss=5.3820
+Train 40: [1660/3734] loss=4.8689
+Train 40: [1670/3734] loss=5.1530
+Train 40: [1680/3734] loss=4.0146
+Train 40: [1690/3734] loss=4.5061
+Train 40: [1700/3734] loss=4.9467
+Train 40: [1710/3734] loss=4.8053
+Train 40: [1720/3734] loss=4.8933
+Train 40: [1730/3734] loss=4.4487
+Train 40: [1740/3734] loss=5.2845
+Train 40: [1750/3734] loss=4.8305
+Train 40: [1760/3734] loss=4.9917
+Train 40: [1770/3734] loss=4.7790
+Train 40: [1780/3734] loss=4.9382
+Train 40: [1790/3734] loss=4.8175
+Train 40: [1800/3734] loss=4.8186
+Train 40: [1810/3734] loss=5.4352
+Train 40: [1820/3734] loss=4.8046
+Train 40: [1830/3734] loss=7.2819
+Train 40: [1840/3734] loss=5.5332
+Train 40: [1850/3734] loss=5.1472
+Train 40: [1860/3734] loss=5.2058
+Train 40: [1870/3734] loss=5.6404
+Train 40: [1880/3734] loss=5.2314
+Train 40: [1890/3734] loss=5.4602
+Train 40: [1900/3734] loss=4.7186
+Train 40: [1910/3734] loss=4.4099
+Train 40: [1920/3734] loss=5.2020
+Train 40: [1930/3734] loss=5.1443
+Train 40: [1940/3734] loss=4.7747
+Train 40: [1950/3734] loss=6.7229
+Train 40: [1960/3734] loss=5.0650
+Train 40: [1970/3734] loss=4.8470
+Train 40: [1980/3734] loss=5.0082
+Train 40: [1990/3734] loss=4.1253
+Train 40: [2000/3734] loss=5.3283
+Train 40: [2010/3734] loss=6.1885
+Train 40: [2020/3734] loss=4.8199
+Train 40: [2030/3734] loss=4.6993
+Train 40: [2040/3734] loss=5.6902
+Train 40: [2050/3734] loss=5.7001
+Train 40: [2060/3734] loss=5.0672
+Train 40: [2070/3734] loss=5.0198
+Train 40: [2080/3734] loss=4.9689
+Train 40: [2090/3734] loss=4.6654
+Train 40: [2100/3734] loss=5.2739
+Train 40: [2110/3734] loss=5.2232
+Train 40: [2120/3734] loss=6.6300
+Train 40: [2130/3734] loss=4.9538
+Train 40: [2140/3734] loss=5.0340
+Train 40: [2150/3734] loss=5.2373
+Train 40: [2160/3734] loss=5.2550
+Train 40: [2170/3734] loss=5.2394
+Train 40: [2180/3734] loss=5.3928
+Train 40: [2190/3734] loss=5.1619
+Train 40: [2200/3734] loss=4.7049
+Train 40: [2210/3734] loss=4.4003
+Train 40: [2220/3734] loss=3.9925
+Train 40: [2230/3734] loss=5.0626
+Train 40: [2240/3734] loss=4.5292
+Train 40: [2250/3734] loss=4.9665
+Train 40: [2260/3734] loss=4.7589
+Train 40: [2270/3734] loss=4.1907
+Train 40: [2280/3734] loss=5.2701
+Train 40: [2290/3734] loss=5.4354
+Train 40: [2300/3734] loss=4.4795
+Train 40: [2310/3734] loss=3.7749
+Train 40: [2320/3734] loss=5.3085
+Train 40: [2330/3734] loss=4.6971
+Train 40: [2340/3734] loss=6.0002
+Train 40: [2350/3734] loss=5.2233
+Train 40: [2360/3734] loss=5.3012
+Train 40: [2370/3734] loss=4.7098
+Train 40: [2380/3734] loss=5.5474
+Train 40: [2390/3734] loss=4.5113
+Train 40: [2400/3734] loss=4.9379
+Train 40: [2410/3734] loss=5.2695
+Train 40: [2420/3734] loss=5.0589
+Train 40: [2430/3734] loss=5.4608
+Train 40: [2440/3734] loss=5.2110
+Train 40: [2450/3734] loss=4.5372
+Train 40: [2460/3734] loss=4.9631
+Train 40: [2470/3734] loss=6.9762
+Train 40: [2480/3734] loss=5.2963
+Train 40: [2490/3734] loss=4.7656
+Train 40: [2500/3734] loss=6.2483
+Train 40: [2510/3734] loss=4.3587
+Train 40: [2520/3734] loss=4.7802
+Train 40: [2530/3734] loss=4.7655
+Train 40: [2540/3734] loss=5.1466
+Train 40: [2550/3734] loss=5.1170
+Train 40: [2560/3734] loss=5.0740
+Train 40: [2570/3734] loss=6.3940
+Train 40: [2580/3734] loss=5.2261
+Train 40: [2590/3734] loss=6.3245
+Train 40: [2600/3734] loss=9.1552
+Train 40: [2610/3734] loss=5.7377
+Train 40: [2620/3734] loss=3.4936
+Train 40: [2630/3734] loss=4.6734
+Train 40: [2640/3734] loss=4.7073
+Train 40: [2650/3734] loss=4.5424
+Train 40: [2660/3734] loss=4.6481
+Train 40: [2670/3734] loss=4.7580
+Train 40: [2680/3734] loss=4.9039
+Train 40: [2690/3734] loss=5.1624
+Train 40: [2700/3734] loss=4.9590
+Train 40: [2710/3734] loss=4.8650
+Train 40: [2720/3734] loss=5.0125
+Train 40: [2730/3734] loss=4.8295
+Train 40: [2740/3734] loss=4.6258
+Train 40: [2750/3734] loss=5.7882
+Train 40: [2760/3734] loss=5.4331
+Train 40: [2770/3734] loss=4.9334
+Train 40: [2780/3734] loss=6.6694
+Train 40: [2790/3734] loss=4.8436
+Train 40: [2800/3734] loss=5.7329
+Train 40: [2810/3734] loss=4.7618
+Train 40: [2820/3734] loss=8.2238
+Train 40: [2830/3734] loss=4.6973
+Train 40: [2840/3734] loss=4.9186
+Train 40: [2850/3734] loss=4.8104
+Train 40: [2860/3734] loss=5.3799
+Train 40: [2870/3734] loss=4.5038
+Train 40: [2880/3734] loss=5.2804
+Train 40: [2890/3734] loss=6.1291
+Train 40: [2900/3734] loss=4.9447
+Train 40: [2910/3734] loss=5.3428
+Train 40: [2920/3734] loss=4.7137
+Train 40: [2930/3734] loss=4.7578
+Train 40: [2940/3734] loss=5.0319
+Train 40: [2950/3734] loss=3.9397
+Train 40: [2960/3734] loss=5.2065
+Train 40: [2970/3734] loss=5.4441
+Train 40: [2980/3734] loss=4.9752
+Train 40: [2990/3734] loss=5.5382
+Train 40: [3000/3734] loss=4.7042
+Train 40: [3010/3734] loss=4.8663
+Train 40: [3020/3734] loss=4.4396
+Train 40: [3030/3734] loss=4.9538
+Train 40: [3040/3734] loss=4.8337
+Train 40: [3050/3734] loss=4.9858
+Train 40: [3060/3734] loss=4.6291
+Train 40: [3070/3734] loss=4.4296
+Train 40: [3080/3734] loss=7.4237
+Train 40: [3090/3734] loss=4.9921
+Train 40: [3100/3734] loss=4.6691
+Train 40: [3110/3734] loss=4.7064
+Train 40: [3120/3734] loss=4.5158
+Train 40: [3130/3734] loss=4.3140
+Train 40: [3140/3734] loss=5.0605
+Train 40: [3150/3734] loss=5.2297
+Train 40: [3160/3734] loss=4.5262
+Train 40: [3170/3734] loss=5.0678
+Train 40: [3180/3734] loss=4.4247
+Train 40: [3190/3734] loss=4.9198
+Train 40: [3200/3734] loss=8.5482
+Train 40: [3210/3734] loss=5.6102
+Train 40: [3220/3734] loss=5.5546
+Train 40: [3230/3734] loss=4.5987
+Train 40: [3240/3734] loss=4.9379
+Train 40: [3250/3734] loss=4.2433
+Train 40: [3260/3734] loss=4.8909
+Train 40: [3270/3734] loss=4.2986
+Train 40: [3280/3734] loss=4.9171
+Train 40: [3290/3734] loss=4.6922
+Train 40: [3300/3734] loss=4.8811
+Train 40: [3310/3734] loss=8.1787
+Train 40: [3320/3734] loss=4.6427
+Train 40: [3330/3734] loss=8.0627
+Train 40: [3340/3734] loss=5.5055
+Train 40: [3350/3734] loss=5.7322
+Train 40: [3360/3734] loss=4.6631
+Train 40: [3370/3734] loss=4.8791
+Train 40: [3380/3734] loss=4.8044
+Train 40: [3390/3734] loss=5.0369
+Train 40: [3400/3734] loss=4.8747
+Train 40: [3410/3734] loss=4.8487
+Train 40: [3420/3734] loss=4.7678
+Train 40: [3430/3734] loss=4.8192
+Train 40: [3440/3734] loss=6.1102
+Train 40: [3450/3734] loss=4.8234
+Train 40: [3460/3734] loss=5.1263
+Train 40: [3470/3734] loss=4.5170
+Train 40: [3480/3734] loss=4.8760
+Train 40: [3490/3734] loss=4.7996
+Train 40: [3500/3734] loss=4.2286
+Train 40: [3510/3734] loss=7.7904
+Train 40: [3520/3734] loss=4.8022
+Train 40: [3530/3734] loss=4.8821
+Train 40: [3540/3734] loss=5.0548
+Train 40: [3550/3734] loss=5.6608
+Train 40: [3560/3734] loss=4.8369
+Train 40: [3570/3734] loss=5.1728
+Train 40: [3580/3734] loss=4.8405
+Train 40: [3590/3734] loss=5.0483
+Train 40: [3600/3734] loss=4.8714
+Train 40: [3610/3734] loss=5.0011
+Train 40: [3620/3734] loss=4.7303
+Train 40: [3630/3734] loss=5.0876
+Train 40: [3640/3734] loss=5.1286
+Train 40: [3650/3734] loss=5.0880
+Train 40: [3660/3734] loss=4.7310
+Train 40: [3670/3734] loss=4.2938
+Train 40: [3680/3734] loss=4.7732
+Train 40: [3690/3734] loss=4.3757
+Train 40: [3700/3734] loss=4.7467
+Train 40: [3710/3734] loss=5.6865
+Train 40: [3720/3734] loss=5.0304
+Train 40: [3730/3734] loss=4.6932
+Train 40: [3733/3734] loss=2.7081
+14 Jun 07:38    INFO  epoch 40 training [time: 180.65s, train loss: 19751.8439]
+Evaluate: [0/444]
+Evaluate: [10/444]
+Evaluate: [20/444]
+Evaluate: [30/444]
+Evaluate: [40/444]
+Evaluate: [50/444]
+Evaluate: [60/444]
+Evaluate: [70/444]
+Evaluate: [80/444]
+Evaluate: [90/444]
+Evaluate: [100/444]
+Evaluate: [110/444]
+Evaluate: [120/444]
+Evaluate: [130/444]
+Evaluate: [140/444]
+Evaluate: [150/444]
+Evaluate: [160/444]
+Evaluate: [170/444]
+Evaluate: [180/444]
+Evaluate: [190/444]
+Evaluate: [200/444]
+Evaluate: [210/444]
+Evaluate: [220/444]
+Evaluate: [230/444]
+Evaluate: [240/444]
+Evaluate: [250/444]
+Evaluate: [260/444]
+Evaluate: [270/444]
+Evaluate: [280/444]
+Evaluate: [290/444]
+Evaluate: [300/444]
+Evaluate: [310/444]
+Evaluate: [320/444]
+Evaluate: [330/444]
+Evaluate: [340/444]
+Evaluate: [350/444]
+Evaluate: [360/444]
+Evaluate: [370/444]
+Evaluate: [380/444]
+Evaluate: [390/444]
+Evaluate: [400/444]
+Evaluate: [410/444]
+Evaluate: [420/444]
+Evaluate: [430/444]
+Evaluate: [440/444]
+Evaluate: [443/444]
+14 Jun 07:38    INFO  epoch 40 evaluating [time: 3.34s, valid_score: 0.328700]
+14 Jun 07:38    INFO  valid result: 
+recall@5 : 0.4293    recall@10 : 0.5027    recall@20 : 0.5738    recall@50 : 0.6601    mrr@5 : 0.3189    mrr@10 : 0.3287    mrr@20 : 0.3337    mrr@50 : 0.3365    ndcg@5 : 0.3464    ndcg@10 : 0.3702    ndcg@20 : 0.3882    ndcg@50 : 0.4054    precision@5 : 0.0859    precision@10 : 0.0503    precision@20 : 0.0287    precision@50 : 0.0132    
+Train 41: [0/3734] loss=6.5031
+Train 41: [10/3734] loss=5.7752
+Train 41: [20/3734] loss=6.9652
+Train 41: [30/3734] loss=4.8058
+Train 41: [40/3734] loss=7.5004
+Train 41: [50/3734] loss=7.1363
+Train 41: [60/3734] loss=5.5352
+Train 41: [70/3734] loss=3.1541
+Train 41: [80/3734] loss=4.5550
+Train 41: [90/3734] loss=7.9947
+Train 41: [100/3734] loss=4.6199
+Train 41: [110/3734] loss=4.8653
+Train 41: [120/3734] loss=5.1907
+Train 41: [130/3734] loss=6.3298
+Train 41: [140/3734] loss=8.0274
+Train 41: [150/3734] loss=8.0114
+Train 41: [160/3734] loss=7.9101
+Train 41: [170/3734] loss=6.7471
+Train 41: [180/3734] loss=6.5572
+Train 41: [190/3734] loss=7.8237
+Train 41: [200/3734] loss=5.6370
+Train 41: [210/3734] loss=6.3359
+Train 41: [220/3734] loss=6.7345
+Train 41: [230/3734] loss=5.0464
+Train 41: [240/3734] loss=4.7009
+Train 41: [250/3734] loss=6.2515
+Train 41: [260/3734] loss=5.2069
+Train 41: [270/3734] loss=8.2939
+Train 41: [280/3734] loss=5.9083
+Train 41: [290/3734] loss=5.6759
+Train 41: [300/3734] loss=7.0605
+Train 41: [310/3734] loss=5.1863
+Train 41: [320/3734] loss=4.8701
+Train 41: [330/3734] loss=4.5056
+Train 41: [340/3734] loss=6.2075
+Train 41: [350/3734] loss=4.9241
+Train 41: [360/3734] loss=6.8428
+Train 41: [370/3734] loss=5.4928
+Train 41: [380/3734] loss=3.4894
+Train 41: [390/3734] loss=7.9615
+Train 41: [400/3734] loss=4.8923
+Train 41: [410/3734] loss=5.0648
+Train 41: [420/3734] loss=5.6029
+Train 41: [430/3734] loss=5.6031
+Train 41: [440/3734] loss=4.8431
+Train 41: [450/3734] loss=3.9367
+Train 41: [460/3734] loss=5.2501
+Train 41: [470/3734] loss=4.8028
+Train 41: [480/3734] loss=7.1347
+Train 41: [490/3734] loss=5.6461
+Train 41: [500/3734] loss=4.8085
+Train 41: [510/3734] loss=4.7668
+Train 41: [520/3734] loss=6.3430
+Train 41: [530/3734] loss=5.0032
+Train 41: [540/3734] loss=5.4327
+Train 41: [550/3734] loss=4.4009
+Train 41: [560/3734] loss=5.2282
+Train 41: [570/3734] loss=5.0813
+Train 41: [580/3734] loss=5.0128
+Train 41: [590/3734] loss=6.6922
+Train 41: [600/3734] loss=3.5278
+Train 41: [610/3734] loss=5.2940
+Train 41: [620/3734] loss=5.6342
+Train 41: [630/3734] loss=5.5310
+Train 41: [640/3734] loss=4.6996
+Train 41: [650/3734] loss=5.0284
+Train 41: [660/3734] loss=4.8137
+Train 41: [670/3734] loss=5.4680
+Train 41: [680/3734] loss=4.3921
+Train 41: [690/3734] loss=4.5184
+Train 41: [700/3734] loss=6.4558
+Train 41: [710/3734] loss=4.8711
+Train 41: [720/3734] loss=4.7353
+Train 41: [730/3734] loss=5.7522
+Train 41: [740/3734] loss=4.7834
+Train 41: [750/3734] loss=5.3751
+Train 41: [760/3734] loss=5.3410
+Train 41: [770/3734] loss=4.5565
+Train 41: [780/3734] loss=5.6054
+Train 41: [790/3734] loss=4.6358
+Train 41: [800/3734] loss=5.7045
+Train 41: [810/3734] loss=5.6325
+Train 41: [820/3734] loss=5.0696
+Train 41: [830/3734] loss=5.3346
+Train 41: [840/3734] loss=4.6141
+Train 41: [850/3734] loss=4.4922
+Train 41: [860/3734] loss=4.9506
+Train 41: [870/3734] loss=4.8238
+Train 41: [880/3734] loss=5.2977
+Train 41: [890/3734] loss=4.7749
+Train 41: [900/3734] loss=5.0853
+Train 41: [910/3734] loss=5.6306
+Train 41: [920/3734] loss=5.4884
+Train 41: [930/3734] loss=5.0790
+Train 41: [940/3734] loss=5.2893
+Train 41: [950/3734] loss=5.3360
+Train 41: [960/3734] loss=5.2393
+Train 41: [970/3734] loss=5.4905
+Train 41: [980/3734] loss=4.5140
+Train 41: [990/3734] loss=4.4786
+Train 41: [1000/3734] loss=5.4523
+Train 41: [1010/3734] loss=5.0446
+Train 41: [1020/3734] loss=3.4715
+Train 41: [1030/3734] loss=6.5575
+Train 41: [1040/3734] loss=4.8992
+Train 41: [1050/3734] loss=5.8409
+Train 41: [1060/3734] loss=4.6619
+Train 41: [1070/3734] loss=5.1768
+Train 41: [1080/3734] loss=4.3526
+Train 41: [1090/3734] loss=5.6925
+Train 41: [1100/3734] loss=5.5623
+Train 41: [1110/3734] loss=4.8517
+Train 41: [1120/3734] loss=5.2703
+Train 41: [1130/3734] loss=5.1590
+Train 41: [1140/3734] loss=4.9666
+Train 41: [1150/3734] loss=5.5250
+Train 41: [1160/3734] loss=5.2948
+Train 41: [1170/3734] loss=4.8217
+Train 41: [1180/3734] loss=5.5099
+Train 41: [1190/3734] loss=4.6831
+Train 41: [1200/3734] loss=4.2565
+Train 41: [1210/3734] loss=5.1183
+Train 41: [1220/3734] loss=4.9876
+Train 41: [1230/3734] loss=4.8865
+Train 41: [1240/3734] loss=5.5922
+Train 41: [1250/3734] loss=3.1617
+Train 41: [1260/3734] loss=4.9391
+Train 41: [1270/3734] loss=5.4580
+Train 41: [1280/3734] loss=5.1535
+Train 41: [1290/3734] loss=5.6555
+Train 41: [1300/3734] loss=4.8742
+Train 41: [1310/3734] loss=8.5636
+Train 41: [1320/3734] loss=4.9516
+Train 41: [1330/3734] loss=8.3740
+Train 41: [1340/3734] loss=5.4289
+Train 41: [1350/3734] loss=4.6703
+Train 41: [1360/3734] loss=5.0750
+Train 41: [1370/3734] loss=4.7877
+Train 41: [1380/3734] loss=5.0914
+Train 41: [1390/3734] loss=6.6394
+Train 41: [1400/3734] loss=8.4953
+Train 41: [1410/3734] loss=8.1480
+Train 41: [1420/3734] loss=8.0314
+Train 41: [1430/3734] loss=4.7795
+Train 41: [1440/3734] loss=5.5418
+Train 41: [1450/3734] loss=4.5682
+Train 41: [1460/3734] loss=5.3322
+Train 41: [1470/3734] loss=5.5464
+Train 41: [1480/3734] loss=5.0738
+Train 41: [1490/3734] loss=4.7622
+Train 41: [1500/3734] loss=4.7115
+Train 41: [1510/3734] loss=5.6180
+Train 41: [1520/3734] loss=7.9907
+Train 41: [1530/3734] loss=4.7424
+Train 41: [1540/3734] loss=5.6845
+Train 41: [1550/3734] loss=4.9078
+Train 41: [1560/3734] loss=4.9016
+Train 41: [1570/3734] loss=5.2274
+Train 41: [1580/3734] loss=4.6238
+Train 41: [1590/3734] loss=4.2469
+Train 41: [1600/3734] loss=7.7127
+Train 41: [1610/3734] loss=4.5784
+Train 41: [1620/3734] loss=4.6951
+Train 41: [1630/3734] loss=4.5198
+Train 41: [1640/3734] loss=5.0420
+Train 41: [1650/3734] loss=5.4274
+Train 41: [1660/3734] loss=4.8366
+Train 41: [1670/3734] loss=5.0742
+Train 41: [1680/3734] loss=3.7866
+Train 41: [1690/3734] loss=4.4548
+Train 41: [1700/3734] loss=4.9168
+Train 41: [1710/3734] loss=4.8112
+Train 41: [1720/3734] loss=4.9171
+Train 41: [1730/3734] loss=4.5807
+Train 41: [1740/3734] loss=5.3310
+Train 41: [1750/3734] loss=4.8004
+Train 41: [1760/3734] loss=4.8961
+Train 41: [1770/3734] loss=4.9140
+Train 41: [1780/3734] loss=4.8933
+Train 41: [1790/3734] loss=4.6696
+Train 41: [1800/3734] loss=4.8437
+Train 41: [1810/3734] loss=5.4115
+Train 41: [1820/3734] loss=4.7414
+Train 41: [1830/3734] loss=7.3048
+Train 41: [1840/3734] loss=5.4245
+Train 41: [1850/3734] loss=5.2016
+Train 41: [1860/3734] loss=5.0638
+Train 41: [1870/3734] loss=5.6487
+Train 41: [1880/3734] loss=5.2822
+Train 41: [1890/3734] loss=5.4354
+Train 41: [1900/3734] loss=4.7188
+Train 41: [1910/3734] loss=4.4625
+Train 41: [1920/3734] loss=5.2775
+Train 41: [1930/3734] loss=5.1083
+Train 41: [1940/3734] loss=4.6499
+Train 41: [1950/3734] loss=6.7754
+Train 41: [1960/3734] loss=5.2709
+Train 41: [1970/3734] loss=4.7309
+Train 41: [1980/3734] loss=5.0198
+Train 41: [1990/3734] loss=4.1585
+Train 41: [2000/3734] loss=5.2328
+Train 41: [2010/3734] loss=6.1692
+Train 41: [2020/3734] loss=4.8465
+Train 41: [2030/3734] loss=4.6810
+Train 41: [2040/3734] loss=5.6018
+Train 41: [2050/3734] loss=5.6834
+Train 41: [2060/3734] loss=5.1854
+Train 41: [2070/3734] loss=4.9266
+Train 41: [2080/3734] loss=4.9444
+Train 41: [2090/3734] loss=4.4855
+Train 41: [2100/3734] loss=5.3956
+Train 41: [2110/3734] loss=5.2570
+Train 41: [2120/3734] loss=6.7147
+Train 41: [2130/3734] loss=4.7647
+Train 41: [2140/3734] loss=4.7729
+Train 41: [2150/3734] loss=5.0881
+Train 41: [2160/3734] loss=5.1195
+Train 41: [2170/3734] loss=5.2078
+Train 41: [2180/3734] loss=5.3815
+Train 41: [2190/3734] loss=5.2902
+Train 41: [2200/3734] loss=4.7257
+Train 41: [2210/3734] loss=4.2878
+Train 41: [2220/3734] loss=3.9480
+Train 41: [2230/3734] loss=5.1106
+Train 41: [2240/3734] loss=4.5583
+Train 41: [2250/3734] loss=4.8518
+Train 41: [2260/3734] loss=4.7618
+Train 41: [2270/3734] loss=4.3221
+Train 41: [2280/3734] loss=5.1362
+Train 41: [2290/3734] loss=5.4909
+Train 41: [2300/3734] loss=4.3970
+Train 41: [2310/3734] loss=3.9600
+Train 41: [2320/3734] loss=5.3846
+Train 41: [2330/3734] loss=4.8647
+Train 41: [2340/3734] loss=6.0409
+Train 41: [2350/3734] loss=5.2342
+Train 41: [2360/3734] loss=5.3066
+Train 41: [2370/3734] loss=4.7744
+Train 41: [2380/3734] loss=5.4280
+Train 41: [2390/3734] loss=4.5579
+Train 41: [2400/3734] loss=4.9383
+Train 41: [2410/3734] loss=5.2922
+Train 41: [2420/3734] loss=5.0356
+Train 41: [2430/3734] loss=5.5110
+Train 41: [2440/3734] loss=5.1541
+Train 41: [2450/3734] loss=4.5922
+Train 41: [2460/3734] loss=4.8610
+Train 41: [2470/3734] loss=6.8189
+Train 41: [2480/3734] loss=5.2289
+Train 41: [2490/3734] loss=4.7353
+Train 41: [2500/3734] loss=6.2698
+Train 41: [2510/3734] loss=4.4854
+Train 41: [2520/3734] loss=4.7556
+Train 41: [2530/3734] loss=4.9371
+Train 41: [2540/3734] loss=5.1836
+Train 41: [2550/3734] loss=5.1045
+Train 41: [2560/3734] loss=5.0817
+Train 41: [2570/3734] loss=6.4201
+Train 41: [2580/3734] loss=5.2202
+Train 41: [2590/3734] loss=6.2330
+Train 41: [2600/3734] loss=9.0401
+Train 41: [2610/3734] loss=5.5863
+Train 41: [2620/3734] loss=3.3816
+Train 41: [2630/3734] loss=4.7744
+Train 41: [2640/3734] loss=4.7156
+Train 41: [2650/3734] loss=4.3943
+Train 41: [2660/3734] loss=4.6906
+Train 41: [2670/3734] loss=4.7747
+Train 41: [2680/3734] loss=5.2207
+Train 41: [2690/3734] loss=5.0747
+Train 41: [2700/3734] loss=4.8420
+Train 41: [2710/3734] loss=4.8242
+Train 41: [2720/3734] loss=4.7809
+Train 41: [2730/3734] loss=4.8370
+Train 41: [2740/3734] loss=4.6600
+Train 41: [2750/3734] loss=5.6561
+Train 41: [2760/3734] loss=5.4171
+Train 41: [2770/3734] loss=4.7348
+Train 41: [2780/3734] loss=6.5779
+Train 41: [2790/3734] loss=4.8181
+Train 41: [2800/3734] loss=5.5826
+Train 41: [2810/3734] loss=4.7921
+Train 41: [2820/3734] loss=8.3942
+Train 41: [2830/3734] loss=4.6342
+Train 41: [2840/3734] loss=4.9077
+Train 41: [2850/3734] loss=4.7073
+Train 41: [2860/3734] loss=5.4224
+Train 41: [2870/3734] loss=4.7364
+Train 41: [2880/3734] loss=5.3422
+Train 41: [2890/3734] loss=6.1566
+Train 41: [2900/3734] loss=4.9494
+Train 41: [2910/3734] loss=5.1615
+Train 41: [2920/3734] loss=4.6965
+Train 41: [2930/3734] loss=4.9060
+Train 41: [2940/3734] loss=4.9854
+Train 41: [2950/3734] loss=3.9487
+Train 41: [2960/3734] loss=5.2857
+Train 41: [2970/3734] loss=5.5506
+Train 41: [2980/3734] loss=5.0564
+Train 41: [2990/3734] loss=5.6128
+Train 41: [3000/3734] loss=4.7208
+Train 41: [3010/3734] loss=4.7709
+Train 41: [3020/3734] loss=4.4434
+Train 41: [3030/3734] loss=4.8271
+Train 41: [3040/3734] loss=4.7489
+Train 41: [3050/3734] loss=4.8695
+Train 41: [3060/3734] loss=4.5105
+Train 41: [3070/3734] loss=4.6232
+Train 41: [3080/3734] loss=7.4989
+Train 41: [3090/3734] loss=4.9676
+Train 41: [3100/3734] loss=4.6159
+Train 41: [3110/3734] loss=4.6562
+Train 41: [3120/3734] loss=4.5151
+Train 41: [3130/3734] loss=4.5287
+Train 41: [3140/3734] loss=4.8718
+Train 41: [3150/3734] loss=5.0947
+Train 41: [3160/3734] loss=4.3848
+Train 41: [3170/3734] loss=4.9797
+Train 41: [3180/3734] loss=4.5171
+Train 41: [3190/3734] loss=4.8479
+Train 41: [3200/3734] loss=8.6326
+Train 41: [3210/3734] loss=5.6731
+Train 41: [3220/3734] loss=5.5686
+Train 41: [3230/3734] loss=4.5926
+Train 41: [3240/3734] loss=5.0764
+Train 41: [3250/3734] loss=4.2559
+Train 41: [3260/3734] loss=4.8372
+Train 41: [3270/3734] loss=4.3455
+Train 41: [3280/3734] loss=4.9971
+Train 41: [3290/3734] loss=4.5885
+Train 41: [3300/3734] loss=4.8598
+Train 41: [3310/3734] loss=8.1258
+Train 41: [3320/3734] loss=4.6594
+Train 41: [3330/3734] loss=7.7710
+Train 41: [3340/3734] loss=5.4418
+Train 41: [3350/3734] loss=5.7833
+Train 41: [3360/3734] loss=4.7099
+Train 41: [3370/3734] loss=5.0072
+Train 41: [3380/3734] loss=4.7267
+Train 41: [3390/3734] loss=5.0501
+Train 41: [3400/3734] loss=4.8859
+Train 41: [3410/3734] loss=4.8115
+Train 41: [3420/3734] loss=4.7325
+Train 41: [3430/3734] loss=4.8254
+Train 41: [3440/3734] loss=6.0127
+Train 41: [3450/3734] loss=4.9168
+Train 41: [3460/3734] loss=5.1375
+Train 41: [3470/3734] loss=4.4332
+Train 41: [3480/3734] loss=4.9087
+Train 41: [3490/3734] loss=4.6817
+Train 41: [3500/3734] loss=4.0360
+Train 41: [3510/3734] loss=7.9145
+Train 41: [3520/3734] loss=5.0164
+Train 41: [3530/3734] loss=4.9849
+Train 41: [3540/3734] loss=4.8864
+Train 41: [3550/3734] loss=5.5577
+Train 41: [3560/3734] loss=4.8718
+Train 41: [3570/3734] loss=5.0527
+Train 41: [3580/3734] loss=4.7523
+Train 41: [3590/3734] loss=5.0770
+Train 41: [3600/3734] loss=4.9365
+Train 41: [3610/3734] loss=5.1274
+Train 41: [3620/3734] loss=4.8323
+Train 41: [3630/3734] loss=5.0569
+Train 41: [3640/3734] loss=4.9843
+Train 41: [3650/3734] loss=5.0886
+Train 41: [3660/3734] loss=4.6932
+Train 41: [3670/3734] loss=4.1570
+Train 41: [3680/3734] loss=4.8809
+Train 41: [3690/3734] loss=4.3849
+Train 41: [3700/3734] loss=4.6693
+Train 41: [3710/3734] loss=5.7773
+Train 41: [3720/3734] loss=4.8669
+Train 41: [3730/3734] loss=4.8005
+Train 41: [3733/3734] loss=2.8078
+14 Jun 07:41    INFO  epoch 41 training [time: 180.90s, train loss: 19720.8873]
+Evaluate: [0/444]
+Evaluate: [10/444]
+Evaluate: [20/444]
+Evaluate: [30/444]
+Evaluate: [40/444]
+Evaluate: [50/444]
+Evaluate: [60/444]
+Evaluate: [70/444]
+Evaluate: [80/444]
+Evaluate: [90/444]
+Evaluate: [100/444]
+Evaluate: [110/444]
+Evaluate: [120/444]
+Evaluate: [130/444]
+Evaluate: [140/444]
+Evaluate: [150/444]
+Evaluate: [160/444]
+Evaluate: [170/444]
+Evaluate: [180/444]
+Evaluate: [190/444]
+Evaluate: [200/444]
+Evaluate: [210/444]
+Evaluate: [220/444]
+Evaluate: [230/444]
+Evaluate: [240/444]
+Evaluate: [250/444]
+Evaluate: [260/444]
+Evaluate: [270/444]
+Evaluate: [280/444]
+Evaluate: [290/444]
+Evaluate: [300/444]
+Evaluate: [310/444]
+Evaluate: [320/444]
+Evaluate: [330/444]
+Evaluate: [340/444]
+Evaluate: [350/444]
+Evaluate: [360/444]
+Evaluate: [370/444]
+Evaluate: [380/444]
+Evaluate: [390/444]
+Evaluate: [400/444]
+Evaluate: [410/444]
+Evaluate: [420/444]
+Evaluate: [430/444]
+Evaluate: [440/444]
+Evaluate: [443/444]
+14 Jun 07:41    INFO  epoch 41 evaluating [time: 3.29s, valid_score: 0.326300]
+14 Jun 07:41    INFO  valid result: 
+recall@5 : 0.4274    recall@10 : 0.5009    recall@20 : 0.5722    recall@50 : 0.659    mrr@5 : 0.3164    mrr@10 : 0.3263    mrr@20 : 0.3313    mrr@50 : 0.3341    ndcg@5 : 0.3441    ndcg@10 : 0.3679    ndcg@20 : 0.386    ndcg@50 : 0.4033    precision@5 : 0.0855    precision@10 : 0.0501    precision@20 : 0.0286    precision@50 : 0.0132    
+Train 42: [0/3734] loss=6.5953
+Train 42: [10/3734] loss=5.6982
+Train 42: [20/3734] loss=7.1126
+Train 42: [30/3734] loss=4.8138
+Train 42: [40/3734] loss=7.6053
+Train 42: [50/3734] loss=6.9635
+Train 42: [60/3734] loss=5.4697
+Train 42: [70/3734] loss=3.1150
+Train 42: [80/3734] loss=4.6365
+Train 42: [90/3734] loss=8.0286
+Train 42: [100/3734] loss=4.5675
+Train 42: [110/3734] loss=4.9520
+Train 42: [120/3734] loss=5.1852
+Train 42: [130/3734] loss=6.4018
+Train 42: [140/3734] loss=8.1400
+Train 42: [150/3734] loss=8.0045
+Train 42: [160/3734] loss=7.8382
+Train 42: [170/3734] loss=6.8898
+Train 42: [180/3734] loss=6.5315
+Train 42: [190/3734] loss=7.9535
+Train 42: [200/3734] loss=5.8275
+Train 42: [210/3734] loss=6.5215
+Train 42: [220/3734] loss=6.6401
+Train 42: [230/3734] loss=5.0532
+Train 42: [240/3734] loss=4.7647
+Train 42: [250/3734] loss=6.3308
+Train 42: [260/3734] loss=4.9866
+Train 42: [270/3734] loss=8.3183
+Train 42: [280/3734] loss=5.9835
+Train 42: [290/3734] loss=5.6853
+Train 42: [300/3734] loss=7.1402
+Train 42: [310/3734] loss=5.1258
+Train 42: [320/3734] loss=4.7690
+Train 42: [330/3734] loss=4.6591
+Train 42: [340/3734] loss=6.1543
+Train 42: [350/3734] loss=4.8820
+Train 42: [360/3734] loss=6.5836
+Train 42: [370/3734] loss=5.4933
+Train 42: [380/3734] loss=3.5051
+Train 42: [390/3734] loss=7.9379
+Train 42: [400/3734] loss=4.9341
+Train 42: [410/3734] loss=5.1509
+Train 42: [420/3734] loss=5.5753
+Train 42: [430/3734] loss=5.5379
+Train 42: [440/3734] loss=5.0198
+Train 42: [450/3734] loss=3.9272
+Train 42: [460/3734] loss=5.3942
+Train 42: [470/3734] loss=4.7370
+Train 42: [480/3734] loss=7.1052
+Train 42: [490/3734] loss=5.5111
+Train 42: [500/3734] loss=4.9077
+Train 42: [510/3734] loss=4.6765
+Train 42: [520/3734] loss=6.2324
+Train 42: [530/3734] loss=5.0676
+Train 42: [540/3734] loss=5.3643
+Train 42: [550/3734] loss=4.3573
+Train 42: [560/3734] loss=5.1951
+Train 42: [570/3734] loss=5.0902
+Train 42: [580/3734] loss=4.9017
+Train 42: [590/3734] loss=6.4630
+Train 42: [600/3734] loss=3.3919
+Train 42: [610/3734] loss=5.2642
+Train 42: [620/3734] loss=5.5730
+Train 42: [630/3734] loss=5.5552
+Train 42: [640/3734] loss=4.7406
+Train 42: [650/3734] loss=5.0571
+Train 42: [660/3734] loss=4.6347
+Train 42: [670/3734] loss=5.3987
+Train 42: [680/3734] loss=4.5263
+Train 42: [690/3734] loss=4.6451
+Train 42: [700/3734] loss=6.4525
+Train 42: [710/3734] loss=4.9283
+Train 42: [720/3734] loss=4.7320
+Train 42: [730/3734] loss=5.7626
+Train 42: [740/3734] loss=4.8030
+Train 42: [750/3734] loss=5.3368
+Train 42: [760/3734] loss=5.2909
+Train 42: [770/3734] loss=4.4654
+Train 42: [780/3734] loss=5.5957
+Train 42: [790/3734] loss=4.5245
+Train 42: [800/3734] loss=5.6577
+Train 42: [810/3734] loss=5.5289
+Train 42: [820/3734] loss=4.9815
+Train 42: [830/3734] loss=5.3452
+Train 42: [840/3734] loss=4.8490
+Train 42: [850/3734] loss=4.4412
+Train 42: [860/3734] loss=4.8849
+Train 42: [870/3734] loss=4.9117
+Train 42: [880/3734] loss=5.2182
+Train 42: [890/3734] loss=4.8266
+Train 42: [900/3734] loss=5.0526
+Train 42: [910/3734] loss=5.6707
+Train 42: [920/3734] loss=5.5611
+Train 42: [930/3734] loss=4.9925
+Train 42: [940/3734] loss=5.0609
+Train 42: [950/3734] loss=5.1510
+Train 42: [960/3734] loss=5.0386
+Train 42: [970/3734] loss=5.4222
+Train 42: [980/3734] loss=4.4840
+Train 42: [990/3734] loss=4.6400
+Train 42: [1000/3734] loss=5.4460
+Train 42: [1010/3734] loss=4.8835
+Train 42: [1020/3734] loss=3.3794
+Train 42: [1030/3734] loss=6.7214
+Train 42: [1040/3734] loss=4.8979
+Train 42: [1050/3734] loss=5.9394
+Train 42: [1060/3734] loss=4.7425
+Train 42: [1070/3734] loss=5.2292
+Train 42: [1080/3734] loss=4.3874
+Train 42: [1090/3734] loss=5.5680
+Train 42: [1100/3734] loss=5.4797
+Train 42: [1110/3734] loss=4.6425
+Train 42: [1120/3734] loss=5.2888
+Train 42: [1130/3734] loss=5.0607
+Train 42: [1140/3734] loss=5.1254
+Train 42: [1150/3734] loss=5.5550
+Train 42: [1160/3734] loss=5.3923
+Train 42: [1170/3734] loss=4.8579
+Train 42: [1180/3734] loss=5.4373
+Train 42: [1190/3734] loss=4.5715
+Train 42: [1200/3734] loss=4.1796
+Train 42: [1210/3734] loss=5.0790
+Train 42: [1220/3734] loss=4.9831
+Train 42: [1230/3734] loss=4.8578
+Train 42: [1240/3734] loss=5.7670
+Train 42: [1250/3734] loss=3.0784
+Train 42: [1260/3734] loss=4.9170
+Train 42: [1270/3734] loss=5.4817
+Train 42: [1280/3734] loss=5.1196
+Train 42: [1290/3734] loss=5.6235
+Train 42: [1300/3734] loss=4.9222
+Train 42: [1310/3734] loss=8.6062
+Train 42: [1320/3734] loss=4.9778
+Train 42: [1330/3734] loss=8.4850
+Train 42: [1340/3734] loss=5.4203
+Train 42: [1350/3734] loss=4.6300
+Train 42: [1360/3734] loss=5.0745
+Train 42: [1370/3734] loss=4.7381
+Train 42: [1380/3734] loss=5.2813
+Train 42: [1390/3734] loss=6.6357
+Train 42: [1400/3734] loss=8.5485
+Train 42: [1410/3734] loss=8.1022
+Train 42: [1420/3734] loss=8.0084
+Train 42: [1430/3734] loss=4.6798
+Train 42: [1440/3734] loss=5.6497
+Train 42: [1450/3734] loss=4.5876
+Train 42: [1460/3734] loss=5.3467
+Train 42: [1470/3734] loss=5.5310
+Train 42: [1480/3734] loss=5.2066
+Train 42: [1490/3734] loss=4.7550
+Train 42: [1500/3734] loss=4.6805
+Train 42: [1510/3734] loss=5.5705
+Train 42: [1520/3734] loss=8.0783
+Train 42: [1530/3734] loss=4.7157
+Train 42: [1540/3734] loss=5.6585
+Train 42: [1550/3734] loss=5.0621
+Train 42: [1560/3734] loss=4.9928
+Train 42: [1570/3734] loss=5.2144
+Train 42: [1580/3734] loss=4.7285
+Train 42: [1590/3734] loss=4.1804
+Train 42: [1600/3734] loss=7.6821
+Train 42: [1610/3734] loss=4.5968
+Train 42: [1620/3734] loss=4.7893
+Train 42: [1630/3734] loss=4.4190
+Train 42: [1640/3734] loss=4.9878
+Train 42: [1650/3734] loss=5.3988
+Train 42: [1660/3734] loss=4.9302
+Train 42: [1670/3734] loss=5.0398
+Train 42: [1680/3734] loss=4.0029
+Train 42: [1690/3734] loss=4.5007
+Train 42: [1700/3734] loss=4.9899
+Train 42: [1710/3734] loss=4.7295
+Train 42: [1720/3734] loss=4.9629
+Train 42: [1730/3734] loss=4.5714
+Train 42: [1740/3734] loss=5.2384
+Train 42: [1750/3734] loss=4.7327
+Train 42: [1760/3734] loss=4.7671
+Train 42: [1770/3734] loss=4.7578
+Train 42: [1780/3734] loss=4.8543
+Train 42: [1790/3734] loss=4.7739
+Train 42: [1800/3734] loss=4.8318
+Train 42: [1810/3734] loss=5.3870
+Train 42: [1820/3734] loss=4.7907
+Train 42: [1830/3734] loss=7.3327
+Train 42: [1840/3734] loss=5.3892
+Train 42: [1850/3734] loss=5.2008
+Train 42: [1860/3734] loss=5.2210
+Train 42: [1870/3734] loss=5.5914
+Train 42: [1880/3734] loss=5.2518
+Train 42: [1890/3734] loss=5.3684
+Train 42: [1900/3734] loss=4.5680
+Train 42: [1910/3734] loss=4.4876
+Train 42: [1920/3734] loss=5.0763
+Train 42: [1930/3734] loss=5.1611
+Train 42: [1940/3734] loss=4.6169
+Train 42: [1950/3734] loss=6.6282
+Train 42: [1960/3734] loss=5.2494
+Train 42: [1970/3734] loss=4.8272
+Train 42: [1980/3734] loss=4.9118
+Train 42: [1990/3734] loss=4.1776
+Train 42: [2000/3734] loss=5.2094
+Train 42: [2010/3734] loss=6.1780
+Train 42: [2020/3734] loss=5.1221
+Train 42: [2030/3734] loss=4.7044
+Train 42: [2040/3734] loss=5.6607
+Train 42: [2050/3734] loss=5.8544
+Train 42: [2060/3734] loss=5.2274
+Train 42: [2070/3734] loss=4.9299
+Train 42: [2080/3734] loss=4.9678
+Train 42: [2090/3734] loss=4.6026
+Train 42: [2100/3734] loss=5.4450
+Train 42: [2110/3734] loss=5.4305
+Train 42: [2120/3734] loss=6.7483
+Train 42: [2130/3734] loss=4.9754
+Train 42: [2140/3734] loss=4.8924
+Train 42: [2150/3734] loss=5.2101
+Train 42: [2160/3734] loss=5.2631
+Train 42: [2170/3734] loss=5.0829
+Train 42: [2180/3734] loss=5.2931
+Train 42: [2190/3734] loss=5.3093
+Train 42: [2200/3734] loss=4.7487
+Train 42: [2210/3734] loss=4.3694
+Train 42: [2220/3734] loss=4.0231
+Train 42: [2230/3734] loss=5.1954
+Train 42: [2240/3734] loss=4.4704
+Train 42: [2250/3734] loss=4.8631
+Train 42: [2260/3734] loss=4.7385
+Train 42: [2270/3734] loss=4.1459
+Train 42: [2280/3734] loss=5.2198
+Train 42: [2290/3734] loss=5.4333
+Train 42: [2300/3734] loss=4.4033
+Train 42: [2310/3734] loss=3.7933
+Train 42: [2320/3734] loss=5.2925
+Train 42: [2330/3734] loss=4.7995
+Train 42: [2340/3734] loss=5.9829
+Train 42: [2350/3734] loss=5.3629
+Train 42: [2360/3734] loss=5.0934
+Train 42: [2370/3734] loss=4.6887
+Train 42: [2380/3734] loss=5.5000
+Train 42: [2390/3734] loss=4.6237
+Train 42: [2400/3734] loss=4.7326
+Train 42: [2410/3734] loss=5.3300
+Train 42: [2420/3734] loss=5.1967
+Train 42: [2430/3734] loss=5.5642
+Train 42: [2440/3734] loss=5.2247
+Train 42: [2450/3734] loss=4.5758
+Train 42: [2460/3734] loss=4.9935
+Train 42: [2470/3734] loss=6.8916
+Train 42: [2480/3734] loss=5.2443
+Train 42: [2490/3734] loss=4.7806
+Train 42: [2500/3734] loss=6.2639
+Train 42: [2510/3734] loss=4.4437
+Train 42: [2520/3734] loss=4.8699
+Train 42: [2530/3734] loss=4.8122
+Train 42: [2540/3734] loss=5.1887
+Train 42: [2550/3734] loss=4.9999
+Train 42: [2560/3734] loss=5.1411
+Train 42: [2570/3734] loss=6.5604
+Train 42: [2580/3734] loss=5.0995
+Train 42: [2590/3734] loss=6.2476
+Train 42: [2600/3734] loss=9.0041
+Train 42: [2610/3734] loss=5.6777
+Train 42: [2620/3734] loss=3.4002
+Train 42: [2630/3734] loss=4.6683
+Train 42: [2640/3734] loss=4.8372
+Train 42: [2650/3734] loss=4.3363
+Train 42: [2660/3734] loss=4.6286
+Train 42: [2670/3734] loss=4.8631
+Train 42: [2680/3734] loss=5.0515
+Train 42: [2690/3734] loss=5.1473
+Train 42: [2700/3734] loss=4.8075
+Train 42: [2710/3734] loss=4.9065
+Train 42: [2720/3734] loss=4.8325
+Train 42: [2730/3734] loss=4.9064
+Train 42: [2740/3734] loss=4.5461
+Train 42: [2750/3734] loss=5.6842
+Train 42: [2760/3734] loss=5.4083
+Train 42: [2770/3734] loss=4.9761
+Train 42: [2780/3734] loss=6.5568
+Train 42: [2790/3734] loss=4.8297
+Train 42: [2800/3734] loss=5.6987
+Train 42: [2810/3734] loss=4.7927
+Train 42: [2820/3734] loss=8.4668
+Train 42: [2830/3734] loss=4.4607
+Train 42: [2840/3734] loss=4.7411
+Train 42: [2850/3734] loss=4.7892
+Train 42: [2860/3734] loss=5.3485
+Train 42: [2870/3734] loss=4.5745
+Train 42: [2880/3734] loss=5.3062
+Train 42: [2890/3734] loss=6.1899
+Train 42: [2900/3734] loss=4.9177
+Train 42: [2910/3734] loss=5.3339
+Train 42: [2920/3734] loss=4.6346
+Train 42: [2930/3734] loss=4.7695
+Train 42: [2940/3734] loss=5.0069
+Train 42: [2950/3734] loss=4.0286
+Train 42: [2960/3734] loss=5.0281
+Train 42: [2970/3734] loss=5.4999
+Train 42: [2980/3734] loss=4.9979
+Train 42: [2990/3734] loss=5.4038
+Train 42: [3000/3734] loss=4.5943
+Train 42: [3010/3734] loss=4.9501
+Train 42: [3020/3734] loss=4.5045
+Train 42: [3030/3734] loss=4.7358
+Train 42: [3040/3734] loss=4.6612
+Train 42: [3050/3734] loss=4.9414
+Train 42: [3060/3734] loss=4.6637
+Train 42: [3070/3734] loss=4.6260
+Train 42: [3080/3734] loss=7.4607
+Train 42: [3090/3734] loss=4.9802
+Train 42: [3100/3734] loss=4.7278
+Train 42: [3110/3734] loss=4.5102
+Train 42: [3120/3734] loss=4.5286
+Train 42: [3130/3734] loss=4.2914
+Train 42: [3140/3734] loss=4.9701
+Train 42: [3150/3734] loss=5.0473
+Train 42: [3160/3734] loss=4.5165
+Train 42: [3170/3734] loss=5.1116
+Train 42: [3180/3734] loss=4.5016
+Train 42: [3190/3734] loss=4.9157
+Train 42: [3200/3734] loss=8.4714
+Train 42: [3210/3734] loss=5.5011
+Train 42: [3220/3734] loss=5.6153
+Train 42: [3230/3734] loss=4.6930
+Train 42: [3240/3734] loss=5.1153
+Train 42: [3250/3734] loss=4.2327
+Train 42: [3260/3734] loss=4.8280
+Train 42: [3270/3734] loss=4.3911
+Train 42: [3280/3734] loss=4.8710
+Train 42: [3290/3734] loss=4.7070
+Train 42: [3300/3734] loss=4.9275
+Train 42: [3310/3734] loss=8.1927
+Train 42: [3320/3734] loss=4.7031
+Train 42: [3330/3734] loss=7.8031
+Train 42: [3340/3734] loss=5.4576
+Train 42: [3350/3734] loss=5.7145
+Train 42: [3360/3734] loss=4.6286
+Train 42: [3370/3734] loss=4.9529
+Train 42: [3380/3734] loss=4.7402
+Train 42: [3390/3734] loss=4.9724
+Train 42: [3400/3734] loss=4.8977
+Train 42: [3410/3734] loss=4.7786
+Train 42: [3420/3734] loss=4.7640
+Train 42: [3430/3734] loss=4.8509
+Train 42: [3440/3734] loss=6.1660
+Train 42: [3450/3734] loss=4.7845
+Train 42: [3460/3734] loss=5.1796
+Train 42: [3470/3734] loss=4.4529
+Train 42: [3480/3734] loss=5.0190
+Train 42: [3490/3734] loss=4.7622
+Train 42: [3500/3734] loss=4.3738
+Train 42: [3510/3734] loss=7.7900
+Train 42: [3520/3734] loss=4.8829
+Train 42: [3530/3734] loss=4.9186
+Train 42: [3540/3734] loss=5.0208
+Train 42: [3550/3734] loss=5.7285
+Train 42: [3560/3734] loss=5.0386
+Train 42: [3570/3734] loss=5.1306
+Train 42: [3580/3734] loss=4.8389
+Train 42: [3590/3734] loss=5.1151
+Train 42: [3600/3734] loss=4.9979
+Train 42: [3610/3734] loss=4.9075
+Train 42: [3620/3734] loss=4.8175
+Train 42: [3630/3734] loss=5.0850
+Train 42: [3640/3734] loss=4.9875
+Train 42: [3650/3734] loss=5.0604
+Train 42: [3660/3734] loss=4.6845
+Train 42: [3670/3734] loss=4.3494
+Train 42: [3680/3734] loss=4.7958
+Train 42: [3690/3734] loss=4.4175
+Train 42: [3700/3734] loss=4.7180
+Train 42: [3710/3734] loss=5.5525
+Train 42: [3720/3734] loss=5.1157
+Train 42: [3730/3734] loss=4.5088
+Train 42: [3733/3734] loss=3.1486
+14 Jun 07:44    INFO  epoch 42 training [time: 179.77s, train loss: 19707.9701]
+Evaluate: [0/444]
+Evaluate: [10/444]
+Evaluate: [20/444]
+Evaluate: [30/444]
+Evaluate: [40/444]
+Evaluate: [50/444]
+Evaluate: [60/444]
+Evaluate: [70/444]
+Evaluate: [80/444]
+Evaluate: [90/444]
+Evaluate: [100/444]
+Evaluate: [110/444]
+Evaluate: [120/444]
+Evaluate: [130/444]
+Evaluate: [140/444]
+Evaluate: [150/444]
+Evaluate: [160/444]
+Evaluate: [170/444]
+Evaluate: [180/444]
+Evaluate: [190/444]
+Evaluate: [200/444]
+Evaluate: [210/444]
+Evaluate: [220/444]
+Evaluate: [230/444]
+Evaluate: [240/444]
+Evaluate: [250/444]
+Evaluate: [260/444]
+Evaluate: [270/444]
+Evaluate: [280/444]
+Evaluate: [290/444]
+Evaluate: [300/444]
+Evaluate: [310/444]
+Evaluate: [320/444]
+Evaluate: [330/444]
+Evaluate: [340/444]
+Evaluate: [350/444]
+Evaluate: [360/444]
+Evaluate: [370/444]
+Evaluate: [380/444]
+Evaluate: [390/444]
+Evaluate: [400/444]
+Evaluate: [410/444]
+Evaluate: [420/444]
+Evaluate: [430/444]
+Evaluate: [440/444]
+Evaluate: [443/444]
+14 Jun 07:44    INFO  epoch 42 evaluating [time: 3.35s, valid_score: 0.329000]
+14 Jun 07:44    INFO  valid result: 
+recall@5 : 0.43    recall@10 : 0.5027    recall@20 : 0.5729    recall@50 : 0.659    mrr@5 : 0.3193    mrr@10 : 0.329    mrr@20 : 0.3339    mrr@50 : 0.3368    ndcg@5 : 0.3469    ndcg@10 : 0.3704    ndcg@20 : 0.3882    ndcg@50 : 0.4054    precision@5 : 0.086    precision@10 : 0.0503    precision@20 : 0.0286    precision@50 : 0.0132    
+Train 43: [0/3734] loss=6.4016
+Train 43: [10/3734] loss=5.6071
+Train 43: [20/3734] loss=6.9327
+Train 43: [30/3734] loss=4.6818
+Train 43: [40/3734] loss=7.5626
+Train 43: [50/3734] loss=7.0625
+Train 43: [60/3734] loss=5.5062
+Train 43: [70/3734] loss=3.1311
+Train 43: [80/3734] loss=4.6110
+Train 43: [90/3734] loss=7.9596
+Train 43: [100/3734] loss=4.5346
+Train 43: [110/3734] loss=4.9852
+Train 43: [120/3734] loss=5.1278
+Train 43: [130/3734] loss=6.2463
+Train 43: [140/3734] loss=8.1618
+Train 43: [150/3734] loss=7.9856
+Train 43: [160/3734] loss=7.9336
+Train 43: [170/3734] loss=6.8458
+Train 43: [180/3734] loss=6.4751
+Train 43: [190/3734] loss=7.9473
+Train 43: [200/3734] loss=5.6898
+Train 43: [210/3734] loss=6.3827
+Train 43: [220/3734] loss=6.6605
+Train 43: [230/3734] loss=5.0948
+Train 43: [240/3734] loss=4.7571
+Train 43: [250/3734] loss=6.3359
+Train 43: [260/3734] loss=5.0568
+Train 43: [270/3734] loss=8.2993
+Train 43: [280/3734] loss=6.1584
+Train 43: [290/3734] loss=5.5565
+Train 43: [300/3734] loss=7.0169
+Train 43: [310/3734] loss=5.2019
+Train 43: [320/3734] loss=4.8024
+Train 43: [330/3734] loss=4.4817
+Train 43: [340/3734] loss=6.1218
+Train 43: [350/3734] loss=4.8657
+Train 43: [360/3734] loss=6.7706
+Train 43: [370/3734] loss=5.4484
+Train 43: [380/3734] loss=3.4718
+Train 43: [390/3734] loss=7.9262
+Train 43: [400/3734] loss=4.9125
+Train 43: [410/3734] loss=5.1898
+Train 43: [420/3734] loss=5.5600
+Train 43: [430/3734] loss=5.4023
+Train 43: [440/3734] loss=4.9955
+Train 43: [450/3734] loss=3.8387
+Train 43: [460/3734] loss=5.3919
+Train 43: [470/3734] loss=4.8897
+Train 43: [480/3734] loss=7.0715
+Train 43: [490/3734] loss=5.6375
+Train 43: [500/3734] loss=4.7072
+Train 43: [510/3734] loss=4.6839
+Train 43: [520/3734] loss=6.2604
+Train 43: [530/3734] loss=4.9863
+Train 43: [540/3734] loss=5.5371
+Train 43: [550/3734] loss=4.3792
+Train 43: [560/3734] loss=5.1111
+Train 43: [570/3734] loss=4.9661
+Train 43: [580/3734] loss=5.0882
+Train 43: [590/3734] loss=6.5883
+Train 43: [600/3734] loss=3.5197
+Train 43: [610/3734] loss=5.1978
+Train 43: [620/3734] loss=5.6530
+Train 43: [630/3734] loss=5.5264
+Train 43: [640/3734] loss=4.6949
+Train 43: [650/3734] loss=5.1197
+Train 43: [660/3734] loss=4.7285
+Train 43: [670/3734] loss=5.3913
+Train 43: [680/3734] loss=4.3525
+Train 43: [690/3734] loss=4.4430
+Train 43: [700/3734] loss=6.5152
+Train 43: [710/3734] loss=4.9285
+Train 43: [720/3734] loss=4.6761
+Train 43: [730/3734] loss=5.7065
+Train 43: [740/3734] loss=4.6936
+Train 43: [750/3734] loss=5.2138
+Train 43: [760/3734] loss=5.3639
+Train 43: [770/3734] loss=4.4322
+Train 43: [780/3734] loss=5.4694
+Train 43: [790/3734] loss=4.6659
+Train 43: [800/3734] loss=5.5610
+Train 43: [810/3734] loss=5.4801
+Train 43: [820/3734] loss=4.8534
+Train 43: [830/3734] loss=5.2872
+Train 43: [840/3734] loss=4.7727
+Train 43: [850/3734] loss=4.4032
+Train 43: [860/3734] loss=4.9759
+Train 43: [870/3734] loss=4.8284
+Train 43: [880/3734] loss=5.2028
+Train 43: [890/3734] loss=4.8688
+Train 43: [900/3734] loss=5.0438
+Train 43: [910/3734] loss=5.6671
+Train 43: [920/3734] loss=5.5891
+Train 43: [930/3734] loss=5.0625
+Train 43: [940/3734] loss=5.1317
+Train 43: [950/3734] loss=5.2212
+Train 43: [960/3734] loss=5.0310
+Train 43: [970/3734] loss=5.2845
+Train 43: [980/3734] loss=4.4147
+Train 43: [990/3734] loss=4.5995
+Train 43: [1000/3734] loss=5.3159
+Train 43: [1010/3734] loss=5.0765
+Train 43: [1020/3734] loss=3.5058
+Train 43: [1030/3734] loss=6.5715
+Train 43: [1040/3734] loss=4.7307
+Train 43: [1050/3734] loss=5.8323
+Train 43: [1060/3734] loss=4.6800
+Train 43: [1070/3734] loss=5.2975
+Train 43: [1080/3734] loss=4.4115
+Train 43: [1090/3734] loss=5.7585
+Train 43: [1100/3734] loss=5.6216
+Train 43: [1110/3734] loss=4.7791
+Train 43: [1120/3734] loss=5.3327
+Train 43: [1130/3734] loss=4.9267
+Train 43: [1140/3734] loss=4.9990
+Train 43: [1150/3734] loss=5.5648
+Train 43: [1160/3734] loss=5.2428
+Train 43: [1170/3734] loss=4.7259
+Train 43: [1180/3734] loss=5.4684
+Train 43: [1190/3734] loss=4.5226
+Train 43: [1200/3734] loss=4.1847
+Train 43: [1210/3734] loss=5.1370
+Train 43: [1220/3734] loss=4.9600
+Train 43: [1230/3734] loss=4.8552
+Train 43: [1240/3734] loss=5.5620
+Train 43: [1250/3734] loss=3.0922
+Train 43: [1260/3734] loss=4.8361
+Train 43: [1270/3734] loss=5.4867
+Train 43: [1280/3734] loss=5.0859
+Train 43: [1290/3734] loss=5.6203
+Train 43: [1300/3734] loss=4.8157
+Train 43: [1310/3734] loss=8.6394
+Train 43: [1320/3734] loss=5.0405
+Train 43: [1330/3734] loss=8.5464
+Train 43: [1340/3734] loss=5.1008
+Train 43: [1350/3734] loss=4.6815
+Train 43: [1360/3734] loss=5.0372
+Train 43: [1370/3734] loss=4.6813
+Train 43: [1380/3734] loss=5.1407
+Train 43: [1390/3734] loss=6.6519
+Train 43: [1400/3734] loss=8.4551
+Train 43: [1410/3734] loss=8.0754
+Train 43: [1420/3734] loss=7.9113
+Train 43: [1430/3734] loss=4.5994
+Train 43: [1440/3734] loss=5.5498
+Train 43: [1450/3734] loss=4.5844
+Train 43: [1460/3734] loss=5.2788
+Train 43: [1470/3734] loss=5.5443
+Train 43: [1480/3734] loss=5.0997
+Train 43: [1490/3734] loss=4.9940
+Train 43: [1500/3734] loss=4.7218
+Train 43: [1510/3734] loss=5.6067
+Train 43: [1520/3734] loss=8.0079
+Train 43: [1530/3734] loss=4.7625
+Train 43: [1540/3734] loss=5.7427
+Train 43: [1550/3734] loss=4.9027
+Train 43: [1560/3734] loss=4.8536
+Train 43: [1570/3734] loss=5.2554
+Train 43: [1580/3734] loss=4.7041
+Train 43: [1590/3734] loss=4.0719
+Train 43: [1600/3734] loss=7.5801
+Train 43: [1610/3734] loss=4.5206
+Train 43: [1620/3734] loss=4.8227
+Train 43: [1630/3734] loss=4.5111
+Train 43: [1640/3734] loss=4.8215
+Train 43: [1650/3734] loss=5.4368
+Train 43: [1660/3734] loss=4.8673
+Train 43: [1670/3734] loss=5.1613
+Train 43: [1680/3734] loss=3.9054
+Train 43: [1690/3734] loss=4.5185
+Train 43: [1700/3734] loss=5.0403
+Train 43: [1710/3734] loss=4.7477
+Train 43: [1720/3734] loss=4.8788
+Train 43: [1730/3734] loss=4.4163
+Train 43: [1740/3734] loss=5.3176
+Train 43: [1750/3734] loss=4.8231
+Train 43: [1760/3734] loss=4.9937
+Train 43: [1770/3734] loss=4.7717
+Train 43: [1780/3734] loss=4.9728
+Train 43: [1790/3734] loss=4.8625
+Train 43: [1800/3734] loss=4.9036
+Train 43: [1810/3734] loss=5.3447
+Train 43: [1820/3734] loss=4.8809
+Train 43: [1830/3734] loss=7.3268
+Train 43: [1840/3734] loss=5.5415
+Train 43: [1850/3734] loss=5.1251
+Train 43: [1860/3734] loss=5.2339
+Train 43: [1870/3734] loss=5.4942
+Train 43: [1880/3734] loss=5.2071
+Train 43: [1890/3734] loss=5.5739
+Train 43: [1900/3734] loss=4.6066
+Train 43: [1910/3734] loss=4.4455
+Train 43: [1920/3734] loss=5.1560
+Train 43: [1930/3734] loss=5.2271
+Train 43: [1940/3734] loss=4.5831
+Train 43: [1950/3734] loss=6.5572
+Train 43: [1960/3734] loss=5.1684
+Train 43: [1970/3734] loss=4.8516
+Train 43: [1980/3734] loss=4.8723
+Train 43: [1990/3734] loss=4.2015
+Train 43: [2000/3734] loss=5.3085
+Train 43: [2010/3734] loss=6.0394
+Train 43: [2020/3734] loss=4.9351
+Train 43: [2030/3734] loss=4.5866
+Train 43: [2040/3734] loss=5.7226
+Train 43: [2050/3734] loss=5.8140
+Train 43: [2060/3734] loss=5.1301
+Train 43: [2070/3734] loss=4.9880
+Train 43: [2080/3734] loss=5.1005
+Train 43: [2090/3734] loss=4.5557
+Train 43: [2100/3734] loss=5.3988
+Train 43: [2110/3734] loss=5.2932
+Train 43: [2120/3734] loss=6.6951
+Train 43: [2130/3734] loss=4.8236
+Train 43: [2140/3734] loss=4.8865
+Train 43: [2150/3734] loss=5.1280
+Train 43: [2160/3734] loss=5.2667
+Train 43: [2170/3734] loss=5.0691
+Train 43: [2180/3734] loss=5.2999
+Train 43: [2190/3734] loss=5.2407
+Train 43: [2200/3734] loss=4.5828
+Train 43: [2210/3734] loss=4.3822
+Train 43: [2220/3734] loss=3.9589
+Train 43: [2230/3734] loss=5.1324
+Train 43: [2240/3734] loss=4.3551
+Train 43: [2250/3734] loss=4.9202
+Train 43: [2260/3734] loss=4.6492
+Train 43: [2270/3734] loss=4.2578
+Train 43: [2280/3734] loss=5.2280
+Train 43: [2290/3734] loss=5.4661
+Train 43: [2300/3734] loss=4.3944
+Train 43: [2310/3734] loss=3.8617
+Train 43: [2320/3734] loss=5.2679
+Train 43: [2330/3734] loss=4.9050
+Train 43: [2340/3734] loss=6.0405
+Train 43: [2350/3734] loss=5.4033
+Train 43: [2360/3734] loss=5.2292
+Train 43: [2370/3734] loss=4.6480
+Train 43: [2380/3734] loss=5.5003
+Train 43: [2390/3734] loss=4.5748
+Train 43: [2400/3734] loss=4.8964
+Train 43: [2410/3734] loss=5.2807
+Train 43: [2420/3734] loss=5.1219
+Train 43: [2430/3734] loss=5.4517
+Train 43: [2440/3734] loss=5.1685
+Train 43: [2450/3734] loss=4.5433
+Train 43: [2460/3734] loss=4.9803
+Train 43: [2470/3734] loss=6.9478
+Train 43: [2480/3734] loss=5.3050
+Train 43: [2490/3734] loss=4.7917
+Train 43: [2500/3734] loss=6.3350
+Train 43: [2510/3734] loss=4.3908
+Train 43: [2520/3734] loss=4.7342
+Train 43: [2530/3734] loss=4.8567
+Train 43: [2540/3734] loss=5.0885
+Train 43: [2550/3734] loss=5.0984
+Train 43: [2560/3734] loss=5.0760
+Train 43: [2570/3734] loss=6.4571
+Train 43: [2580/3734] loss=5.2456
+Train 43: [2590/3734] loss=6.2078
+Train 43: [2600/3734] loss=9.1131
+Train 43: [2610/3734] loss=5.6899
+Train 43: [2620/3734] loss=3.4981
+Train 43: [2630/3734] loss=4.7597
+Train 43: [2640/3734] loss=4.8517
+Train 43: [2650/3734] loss=4.4153
+Train 43: [2660/3734] loss=4.5639
+Train 43: [2670/3734] loss=4.7444
+Train 43: [2680/3734] loss=4.9884
+Train 43: [2690/3734] loss=5.0946
+Train 43: [2700/3734] loss=4.7808
+Train 43: [2710/3734] loss=4.7764
+Train 43: [2720/3734] loss=4.6605
+Train 43: [2730/3734] loss=4.7585
+Train 43: [2740/3734] loss=4.4382
+Train 43: [2750/3734] loss=5.6449
+Train 43: [2760/3734] loss=5.4108
+Train 43: [2770/3734] loss=4.9037
+Train 43: [2780/3734] loss=6.5759
+Train 43: [2790/3734] loss=4.8174
+Train 43: [2800/3734] loss=5.5912
+Train 43: [2810/3734] loss=4.6487
+Train 43: [2820/3734] loss=8.3422
+Train 43: [2830/3734] loss=4.6023
+Train 43: [2840/3734] loss=4.6553
+Train 43: [2850/3734] loss=4.8003
+Train 43: [2860/3734] loss=5.3320
+Train 43: [2870/3734] loss=4.7010
+Train 43: [2880/3734] loss=5.4124
+Train 43: [2890/3734] loss=6.1577
+Train 43: [2900/3734] loss=5.0995
+Train 43: [2910/3734] loss=5.2187
+Train 43: [2920/3734] loss=4.6258
+Train 43: [2930/3734] loss=4.7267
+Train 43: [2940/3734] loss=5.0697
+Train 43: [2950/3734] loss=3.8831
+Train 43: [2960/3734] loss=5.1343
+Train 43: [2970/3734] loss=5.4459
+Train 43: [2980/3734] loss=5.0010
+Train 43: [2990/3734] loss=5.4505
+Train 43: [3000/3734] loss=4.5812
+Train 43: [3010/3734] loss=4.8632
+Train 43: [3020/3734] loss=4.5018
+Train 43: [3030/3734] loss=4.8049
+Train 43: [3040/3734] loss=4.7424
+Train 43: [3050/3734] loss=4.9270
+Train 43: [3060/3734] loss=4.5843
+Train 43: [3070/3734] loss=4.4044
+Train 43: [3080/3734] loss=7.4691
+Train 43: [3090/3734] loss=5.0121
+Train 43: [3100/3734] loss=4.7071
+Train 43: [3110/3734] loss=4.5476
+Train 43: [3120/3734] loss=4.6513
+Train 43: [3130/3734] loss=4.4450
+Train 43: [3140/3734] loss=4.8558
+Train 43: [3150/3734] loss=5.0977
+Train 43: [3160/3734] loss=4.5927
+Train 43: [3170/3734] loss=4.9303
+Train 43: [3180/3734] loss=4.4775
+Train 43: [3190/3734] loss=4.8207
+Train 43: [3200/3734] loss=8.4540
+Train 43: [3210/3734] loss=5.5552
+Train 43: [3220/3734] loss=5.5250
+Train 43: [3230/3734] loss=4.6311
+Train 43: [3240/3734] loss=5.1677
+Train 43: [3250/3734] loss=4.2258
+Train 43: [3260/3734] loss=4.7618
+Train 43: [3270/3734] loss=4.2725
+Train 43: [3280/3734] loss=4.9124
+Train 43: [3290/3734] loss=4.7235
+Train 43: [3300/3734] loss=4.7692
+Train 43: [3310/3734] loss=8.1535
+Train 43: [3320/3734] loss=4.6162
+Train 43: [3330/3734] loss=7.6491
+Train 43: [3340/3734] loss=5.5407
+Train 43: [3350/3734] loss=5.6491
+Train 43: [3360/3734] loss=4.7028
+Train 43: [3370/3734] loss=4.9173
+Train 43: [3380/3734] loss=4.6897
+Train 43: [3390/3734] loss=4.9118
+Train 43: [3400/3734] loss=4.8823
+Train 43: [3410/3734] loss=4.8687
+Train 43: [3420/3734] loss=4.6569
+Train 43: [3430/3734] loss=4.9589
+Train 43: [3440/3734] loss=6.0728
+Train 43: [3450/3734] loss=4.8869
+Train 43: [3460/3734] loss=5.0753
+Train 43: [3470/3734] loss=4.4348
+Train 43: [3480/3734] loss=4.9111
+Train 43: [3490/3734] loss=4.7917
+Train 43: [3500/3734] loss=4.1550
+Train 43: [3510/3734] loss=7.9439
+Train 43: [3520/3734] loss=4.8872
+Train 43: [3530/3734] loss=4.7476
+Train 43: [3540/3734] loss=4.8031
+Train 43: [3550/3734] loss=5.5833
+Train 43: [3560/3734] loss=4.9620
+Train 43: [3570/3734] loss=5.0902
+Train 43: [3580/3734] loss=4.7695
+Train 43: [3590/3734] loss=5.0485
+Train 43: [3600/3734] loss=4.8678
+Train 43: [3610/3734] loss=4.9689
+Train 43: [3620/3734] loss=4.7853
+Train 43: [3630/3734] loss=5.0965
+Train 43: [3640/3734] loss=4.9971
+Train 43: [3650/3734] loss=5.1386
+Train 43: [3660/3734] loss=4.7882
+Train 43: [3670/3734] loss=4.2029
+Train 43: [3680/3734] loss=4.8275
+Train 43: [3690/3734] loss=4.4131
+Train 43: [3700/3734] loss=4.7711
+Train 43: [3710/3734] loss=5.6469
+Train 43: [3720/3734] loss=4.9874
+Train 43: [3730/3734] loss=4.6047
+Train 43: [3733/3734] loss=2.7468
+14 Jun 07:47    INFO  epoch 43 training [time: 180.37s, train loss: 19678.8773]
+Evaluate: [0/444]
+Evaluate: [10/444]
+Evaluate: [20/444]
+Evaluate: [30/444]
+Evaluate: [40/444]
+Evaluate: [50/444]
+Evaluate: [60/444]
+Evaluate: [70/444]
+Evaluate: [80/444]
+Evaluate: [90/444]
+Evaluate: [100/444]
+Evaluate: [110/444]
+Evaluate: [120/444]
+Evaluate: [130/444]
+Evaluate: [140/444]
+Evaluate: [150/444]
+Evaluate: [160/444]
+Evaluate: [170/444]
+Evaluate: [180/444]
+Evaluate: [190/444]
+Evaluate: [200/444]
+Evaluate: [210/444]
+Evaluate: [220/444]
+Evaluate: [230/444]
+Evaluate: [240/444]
+Evaluate: [250/444]
+Evaluate: [260/444]
+Evaluate: [270/444]
+Evaluate: [280/444]
+Evaluate: [290/444]
+Evaluate: [300/444]
+Evaluate: [310/444]
+Evaluate: [320/444]
+Evaluate: [330/444]
+Evaluate: [340/444]
+Evaluate: [350/444]
+Evaluate: [360/444]
+Evaluate: [370/444]
+Evaluate: [380/444]
+Evaluate: [390/444]
+Evaluate: [400/444]
+Evaluate: [410/444]
+Evaluate: [420/444]
+Evaluate: [430/444]
+Evaluate: [440/444]
+Evaluate: [443/444]
+14 Jun 07:47    INFO  epoch 43 evaluating [time: 3.26s, valid_score: 0.329200]
+14 Jun 07:47    INFO  valid result: 
+recall@5 : 0.43    recall@10 : 0.5028    recall@20 : 0.5736    recall@50 : 0.66    mrr@5 : 0.3194    mrr@10 : 0.3292    mrr@20 : 0.3341    mrr@50 : 0.3369    ndcg@5 : 0.347    ndcg@10 : 0.3706    ndcg@20 : 0.3885    ndcg@50 : 0.4058    precision@5 : 0.086    precision@10 : 0.0503    precision@20 : 0.0287    precision@50 : 0.0132    
+Train 44: [0/3734] loss=6.4360
+Train 44: [10/3734] loss=5.6426
+Train 44: [20/3734] loss=7.1173
+Train 44: [30/3734] loss=4.8104
+Train 44: [40/3734] loss=7.5573
+Train 44: [50/3734] loss=7.2635
+Train 44: [60/3734] loss=5.4638
+Train 44: [70/3734] loss=3.2041
+Train 44: [80/3734] loss=4.5275
+Train 44: [90/3734] loss=8.0537
+Train 44: [100/3734] loss=4.5808
+Train 44: [110/3734] loss=4.9674
+Train 44: [120/3734] loss=5.1402
+Train 44: [130/3734] loss=6.2578
+Train 44: [140/3734] loss=8.2600
+Train 44: [150/3734] loss=7.9236
+Train 44: [160/3734] loss=7.7511
+Train 44: [170/3734] loss=6.7081
+Train 44: [180/3734] loss=6.5354
+Train 44: [190/3734] loss=7.9433
+Train 44: [200/3734] loss=5.7381
+Train 44: [210/3734] loss=6.4624
+Train 44: [220/3734] loss=6.5825
+Train 44: [230/3734] loss=5.1353
+Train 44: [240/3734] loss=4.7130
+Train 44: [250/3734] loss=6.2460
+Train 44: [260/3734] loss=5.0094
+Train 44: [270/3734] loss=8.2341
+Train 44: [280/3734] loss=6.0292
+Train 44: [290/3734] loss=5.5945
+Train 44: [300/3734] loss=7.0008
+Train 44: [310/3734] loss=5.0870
+Train 44: [320/3734] loss=4.9103
+Train 44: [330/3734] loss=4.6326
+Train 44: [340/3734] loss=6.1469
+Train 44: [350/3734] loss=4.8960
+Train 44: [360/3734] loss=6.6836
+Train 44: [370/3734] loss=5.4406
+Train 44: [380/3734] loss=3.4616
+Train 44: [390/3734] loss=7.8168
+Train 44: [400/3734] loss=4.9335
+Train 44: [410/3734] loss=5.0479
+Train 44: [420/3734] loss=5.4400
+Train 44: [430/3734] loss=5.4910
+Train 44: [440/3734] loss=4.8588
+Train 44: [450/3734] loss=3.8499
+Train 44: [460/3734] loss=5.3617
+Train 44: [470/3734] loss=4.7213
+Train 44: [480/3734] loss=7.0187
+Train 44: [490/3734] loss=5.5386
+Train 44: [500/3734] loss=4.7543
+Train 44: [510/3734] loss=4.7768
+Train 44: [520/3734] loss=6.2313
+Train 44: [530/3734] loss=5.0491
+Train 44: [540/3734] loss=5.2951
+Train 44: [550/3734] loss=4.2934
+Train 44: [560/3734] loss=5.2274
+Train 44: [570/3734] loss=5.1331
+Train 44: [580/3734] loss=4.9514
+Train 44: [590/3734] loss=6.6888
+Train 44: [600/3734] loss=3.4896
+Train 44: [610/3734] loss=5.2468
+Train 44: [620/3734] loss=5.7077
+Train 44: [630/3734] loss=5.4598
+Train 44: [640/3734] loss=4.7139
+Train 44: [650/3734] loss=5.0682
+Train 44: [660/3734] loss=4.6384
+Train 44: [670/3734] loss=5.4700
+Train 44: [680/3734] loss=4.5057
+Train 44: [690/3734] loss=4.4368
+Train 44: [700/3734] loss=6.6234
+Train 44: [710/3734] loss=4.8970
+Train 44: [720/3734] loss=4.5701
+Train 44: [730/3734] loss=5.7717
+Train 44: [740/3734] loss=4.6968
+Train 44: [750/3734] loss=5.1925
+Train 44: [760/3734] loss=5.2517
+Train 44: [770/3734] loss=4.5729
+Train 44: [780/3734] loss=5.4724
+Train 44: [790/3734] loss=4.5617
+Train 44: [800/3734] loss=5.7447
+Train 44: [810/3734] loss=5.5322
+Train 44: [820/3734] loss=5.0467
+Train 44: [830/3734] loss=5.3000
+Train 44: [840/3734] loss=4.6792
+Train 44: [850/3734] loss=4.4215
+Train 44: [860/3734] loss=4.9141
+Train 44: [870/3734] loss=4.7593
+Train 44: [880/3734] loss=5.2887
+Train 44: [890/3734] loss=4.7671
+Train 44: [900/3734] loss=5.0485
+Train 44: [910/3734] loss=5.8003
+Train 44: [920/3734] loss=5.6420
+Train 44: [930/3734] loss=5.0155
+Train 44: [940/3734] loss=5.0655
+Train 44: [950/3734] loss=5.0516
+Train 44: [960/3734] loss=5.1105
+Train 44: [970/3734] loss=5.3214
+Train 44: [980/3734] loss=4.3801
+Train 44: [990/3734] loss=4.5270
+Train 44: [1000/3734] loss=5.3860
+Train 44: [1010/3734] loss=4.9482
+Train 44: [1020/3734] loss=3.4852
+Train 44: [1030/3734] loss=6.5920
+Train 44: [1040/3734] loss=4.7654
+Train 44: [1050/3734] loss=5.9118
+Train 44: [1060/3734] loss=4.6128
+Train 44: [1070/3734] loss=5.2105
+Train 44: [1080/3734] loss=4.4014
+Train 44: [1090/3734] loss=5.7746
+Train 44: [1100/3734] loss=5.4865
+Train 44: [1110/3734] loss=4.8283
+Train 44: [1120/3734] loss=5.3742
+Train 44: [1130/3734] loss=5.0880
+Train 44: [1140/3734] loss=4.7737
+Train 44: [1150/3734] loss=5.6877
+Train 44: [1160/3734] loss=5.4371
+Train 44: [1170/3734] loss=4.8892
+Train 44: [1180/3734] loss=5.4403
+Train 44: [1190/3734] loss=4.4765
+Train 44: [1200/3734] loss=4.1744
+Train 44: [1210/3734] loss=5.1798
+Train 44: [1220/3734] loss=5.0488
+Train 44: [1230/3734] loss=4.8424
+Train 44: [1240/3734] loss=5.5949
+Train 44: [1250/3734] loss=3.0917
+Train 44: [1260/3734] loss=4.8379
+Train 44: [1270/3734] loss=5.3925
+Train 44: [1280/3734] loss=5.0639
+Train 44: [1290/3734] loss=5.7189
+Train 44: [1300/3734] loss=4.9178
+Train 44: [1310/3734] loss=8.6222
+Train 44: [1320/3734] loss=4.9357
+Train 44: [1330/3734] loss=8.5037
+Train 44: [1340/3734] loss=5.4795
+Train 44: [1350/3734] loss=4.6816
+Train 44: [1360/3734] loss=5.1023
+Train 44: [1370/3734] loss=4.7940
+Train 44: [1380/3734] loss=5.1498
+Train 44: [1390/3734] loss=6.6110
+Train 44: [1400/3734] loss=8.4636
+Train 44: [1410/3734] loss=8.0326
+Train 44: [1420/3734] loss=7.8935
+Train 44: [1430/3734] loss=4.5815
+Train 44: [1440/3734] loss=5.5112
+Train 44: [1450/3734] loss=4.5668
+Train 44: [1460/3734] loss=5.2770
+Train 44: [1470/3734] loss=5.4078
+Train 44: [1480/3734] loss=5.0117
+Train 44: [1490/3734] loss=4.8479
+Train 44: [1500/3734] loss=4.5837
+Train 44: [1510/3734] loss=5.4390
+Train 44: [1520/3734] loss=8.0116
+Train 44: [1530/3734] loss=4.6692
+Train 44: [1540/3734] loss=5.6627
+Train 44: [1550/3734] loss=4.8079
+Train 44: [1560/3734] loss=4.8866
+Train 44: [1570/3734] loss=5.2120
+Train 44: [1580/3734] loss=4.6415
+Train 44: [1590/3734] loss=4.1176
+Train 44: [1600/3734] loss=7.6226
+Train 44: [1610/3734] loss=4.4647
+Train 44: [1620/3734] loss=4.6978
+Train 44: [1630/3734] loss=4.4896
+Train 44: [1640/3734] loss=4.8404
+Train 44: [1650/3734] loss=5.3154
+Train 44: [1660/3734] loss=4.7732
+Train 44: [1670/3734] loss=5.0672
+Train 44: [1680/3734] loss=3.9344
+Train 44: [1690/3734] loss=4.3874
+Train 44: [1700/3734] loss=4.9699
+Train 44: [1710/3734] loss=4.7493
+Train 44: [1720/3734] loss=4.8321
+Train 44: [1730/3734] loss=4.4144
+Train 44: [1740/3734] loss=5.2813
+Train 44: [1750/3734] loss=4.7285
+Train 44: [1760/3734] loss=4.8633
+Train 44: [1770/3734] loss=4.8503
+Train 44: [1780/3734] loss=4.8350
+Train 44: [1790/3734] loss=4.6527
+Train 44: [1800/3734] loss=4.9357
+Train 44: [1810/3734] loss=5.2998
+Train 44: [1820/3734] loss=4.7611
+Train 44: [1830/3734] loss=7.3563
+Train 44: [1840/3734] loss=5.4901
+Train 44: [1850/3734] loss=5.2203
+Train 44: [1860/3734] loss=4.9211
+Train 44: [1870/3734] loss=5.5472
+Train 44: [1880/3734] loss=5.2836
+Train 44: [1890/3734] loss=5.3911
+Train 44: [1900/3734] loss=4.6287
+Train 44: [1910/3734] loss=4.3823
+Train 44: [1920/3734] loss=4.9841
+Train 44: [1930/3734] loss=5.1362
+Train 44: [1940/3734] loss=4.6609
+Train 44: [1950/3734] loss=6.6552
+Train 44: [1960/3734] loss=5.1908
+Train 44: [1970/3734] loss=4.8873
+Train 44: [1980/3734] loss=5.0054
+Train 44: [1990/3734] loss=4.1017
+Train 44: [2000/3734] loss=5.2266
+Train 44: [2010/3734] loss=6.0090
+Train 44: [2020/3734] loss=4.9850
+Train 44: [2030/3734] loss=4.7387
+Train 44: [2040/3734] loss=5.6964
+Train 44: [2050/3734] loss=5.6683
+Train 44: [2060/3734] loss=5.1384
+Train 44: [2070/3734] loss=4.9292
+Train 44: [2080/3734] loss=4.9708
+Train 44: [2090/3734] loss=4.6105
+Train 44: [2100/3734] loss=5.4468
+Train 44: [2110/3734] loss=5.3610
+Train 44: [2120/3734] loss=6.8188
+Train 44: [2130/3734] loss=5.0408
+Train 44: [2140/3734] loss=4.7898
+Train 44: [2150/3734] loss=5.1086
+Train 44: [2160/3734] loss=5.2655
+Train 44: [2170/3734] loss=4.9180
+Train 44: [2180/3734] loss=5.2888
+Train 44: [2190/3734] loss=5.1498
+Train 44: [2200/3734] loss=4.6091
+Train 44: [2210/3734] loss=4.4361
+Train 44: [2220/3734] loss=3.8893
+Train 44: [2230/3734] loss=5.1250
+Train 44: [2240/3734] loss=4.5050
+Train 44: [2250/3734] loss=4.8075
+Train 44: [2260/3734] loss=4.8913
+Train 44: [2270/3734] loss=4.2074
+Train 44: [2280/3734] loss=5.2921
+Train 44: [2290/3734] loss=5.4114
+Train 44: [2300/3734] loss=4.2918
+Train 44: [2310/3734] loss=3.8004
+Train 44: [2320/3734] loss=5.2914
+Train 44: [2330/3734] loss=4.8702
+Train 44: [2340/3734] loss=6.0097
+Train 44: [2350/3734] loss=5.3427
+Train 44: [2360/3734] loss=5.1515
+Train 44: [2370/3734] loss=4.7339
+Train 44: [2380/3734] loss=5.4605
+Train 44: [2390/3734] loss=4.5852
+Train 44: [2400/3734] loss=4.8661
+Train 44: [2410/3734] loss=5.3218
+Train 44: [2420/3734] loss=5.0695
+Train 44: [2430/3734] loss=5.4945
+Train 44: [2440/3734] loss=5.1323
+Train 44: [2450/3734] loss=4.4616
+Train 44: [2460/3734] loss=4.9820
+Train 44: [2470/3734] loss=6.8792
+Train 44: [2480/3734] loss=5.2841
+Train 44: [2490/3734] loss=4.9525
+Train 44: [2500/3734] loss=6.2871
+Train 44: [2510/3734] loss=4.3518
+Train 44: [2520/3734] loss=4.8656
+Train 44: [2530/3734] loss=4.7413
+Train 44: [2540/3734] loss=5.0997
+Train 44: [2550/3734] loss=5.1577
+Train 44: [2560/3734] loss=5.0231
+Train 44: [2570/3734] loss=6.4933
+Train 44: [2580/3734] loss=5.1437
+Train 44: [2590/3734] loss=6.1068
+Train 44: [2600/3734] loss=9.0018
+Train 44: [2610/3734] loss=5.5270
+Train 44: [2620/3734] loss=3.4133
+Train 44: [2630/3734] loss=4.7317
+Train 44: [2640/3734] loss=4.8407
+Train 44: [2650/3734] loss=4.3607
+Train 44: [2660/3734] loss=4.6403
+Train 44: [2670/3734] loss=4.7842
+Train 44: [2680/3734] loss=4.9852
+Train 44: [2690/3734] loss=5.0421
+Train 44: [2700/3734] loss=4.8651
+Train 44: [2710/3734] loss=4.6247
+Train 44: [2720/3734] loss=4.8659
+Train 44: [2730/3734] loss=4.8278
+Train 44: [2740/3734] loss=4.3858
+Train 44: [2750/3734] loss=5.5012
+Train 44: [2760/3734] loss=5.3473
+Train 44: [2770/3734] loss=4.8975
+Train 44: [2780/3734] loss=6.5206
+Train 44: [2790/3734] loss=4.6632
+Train 44: [2800/3734] loss=5.6136
+Train 44: [2810/3734] loss=4.7907
+Train 44: [2820/3734] loss=8.3558
+Train 44: [2830/3734] loss=4.5388
+Train 44: [2840/3734] loss=4.7933
+Train 44: [2850/3734] loss=4.7702
+Train 44: [2860/3734] loss=5.3491
+Train 44: [2870/3734] loss=4.5632
+Train 44: [2880/3734] loss=5.3665
+Train 44: [2890/3734] loss=6.0565
+Train 44: [2900/3734] loss=4.8928
+Train 44: [2910/3734] loss=5.1742
+Train 44: [2920/3734] loss=4.6261
+Train 44: [2930/3734] loss=4.8035
+Train 44: [2940/3734] loss=5.0596
+Train 44: [2950/3734] loss=3.9675
+Train 44: [2960/3734] loss=5.3675
+Train 44: [2970/3734] loss=5.4744
+Train 44: [2980/3734] loss=5.0113
+Train 44: [2990/3734] loss=5.6442
+Train 44: [3000/3734] loss=4.5192
+Train 44: [3010/3734] loss=4.7903
+Train 44: [3020/3734] loss=4.4715
+Train 44: [3030/3734] loss=4.8939
+Train 44: [3040/3734] loss=4.8667
+Train 44: [3050/3734] loss=4.8706
+Train 44: [3060/3734] loss=4.5937
+Train 44: [3070/3734] loss=4.5585
+Train 44: [3080/3734] loss=7.4087
+Train 44: [3090/3734] loss=4.9172
+Train 44: [3100/3734] loss=4.5978
+Train 44: [3110/3734] loss=4.6066
+Train 44: [3120/3734] loss=4.4390
+Train 44: [3130/3734] loss=4.3476
+Train 44: [3140/3734] loss=4.8900
+Train 44: [3150/3734] loss=5.1551
+Train 44: [3160/3734] loss=4.4733
+Train 44: [3170/3734] loss=5.0807
+Train 44: [3180/3734] loss=4.3646
+Train 44: [3190/3734] loss=4.9264
+Train 44: [3200/3734] loss=8.5691
+Train 44: [3210/3734] loss=5.6641
+Train 44: [3220/3734] loss=5.5696
+Train 44: [3230/3734] loss=4.5773
+Train 44: [3240/3734] loss=5.0612
+Train 44: [3250/3734] loss=4.1755
+Train 44: [3260/3734] loss=4.8740
+Train 44: [3270/3734] loss=4.3368
+Train 44: [3280/3734] loss=5.0877
+Train 44: [3290/3734] loss=4.5926
+Train 44: [3300/3734] loss=4.8027
+Train 44: [3310/3734] loss=8.0632
+Train 44: [3320/3734] loss=4.7520
+Train 44: [3330/3734] loss=7.8507
+Train 44: [3340/3734] loss=5.3657
+Train 44: [3350/3734] loss=5.6506
+Train 44: [3360/3734] loss=4.7811
+Train 44: [3370/3734] loss=4.7208
+Train 44: [3380/3734] loss=4.6364
+Train 44: [3390/3734] loss=5.0008
+Train 44: [3400/3734] loss=4.8218
+Train 44: [3410/3734] loss=4.8731
+Train 44: [3420/3734] loss=4.9409
+Train 44: [3430/3734] loss=4.9764
+Train 44: [3440/3734] loss=5.8599
+Train 44: [3450/3734] loss=4.9214
+Train 44: [3460/3734] loss=5.1704
+Train 44: [3470/3734] loss=4.3243
+Train 44: [3480/3734] loss=4.9370
+Train 44: [3490/3734] loss=4.6044
+Train 44: [3500/3734] loss=4.1371
+Train 44: [3510/3734] loss=7.7142
+Train 44: [3520/3734] loss=4.8820
+Train 44: [3530/3734] loss=4.7965
+Train 44: [3540/3734] loss=4.9143
+Train 44: [3550/3734] loss=5.6165
+Train 44: [3560/3734] loss=4.9640
+Train 44: [3570/3734] loss=4.9647
+Train 44: [3580/3734] loss=4.7293
+Train 44: [3590/3734] loss=4.9051
+Train 44: [3600/3734] loss=5.0616
+Train 44: [3610/3734] loss=5.0289
+Train 44: [3620/3734] loss=4.6514
+Train 44: [3630/3734] loss=5.1087
+Train 44: [3640/3734] loss=5.0733
+Train 44: [3650/3734] loss=5.1346
+Train 44: [3660/3734] loss=4.7368
+Train 44: [3670/3734] loss=4.2907
+Train 44: [3680/3734] loss=4.8491
+Train 44: [3690/3734] loss=4.4016
+Train 44: [3700/3734] loss=4.6783
+Train 44: [3710/3734] loss=5.5472
+Train 44: [3720/3734] loss=4.9395
+Train 44: [3730/3734] loss=4.5765
+Train 44: [3733/3734] loss=2.7094
+14 Jun 07:50    INFO  epoch 44 training [time: 177.82s, train loss: 19654.6631]
+Evaluate: [0/444]
+Evaluate: [10/444]
+Evaluate: [20/444]
+Evaluate: [30/444]
+Evaluate: [40/444]
+Evaluate: [50/444]
+Evaluate: [60/444]
+Evaluate: [70/444]
+Evaluate: [80/444]
+Evaluate: [90/444]
+Evaluate: [100/444]
+Evaluate: [110/444]
+Evaluate: [120/444]
+Evaluate: [130/444]
+Evaluate: [140/444]
+Evaluate: [150/444]
+Evaluate: [160/444]
+Evaluate: [170/444]
+Evaluate: [180/444]
+Evaluate: [190/444]
+Evaluate: [200/444]
+Evaluate: [210/444]
+Evaluate: [220/444]
+Evaluate: [230/444]
+Evaluate: [240/444]
+Evaluate: [250/444]
+Evaluate: [260/444]
+Evaluate: [270/444]
+Evaluate: [280/444]
+Evaluate: [290/444]
+Evaluate: [300/444]
+Evaluate: [310/444]
+Evaluate: [320/444]
+Evaluate: [330/444]
+Evaluate: [340/444]
+Evaluate: [350/444]
+Evaluate: [360/444]
+Evaluate: [370/444]
+Evaluate: [380/444]
+Evaluate: [390/444]
+Evaluate: [400/444]
+Evaluate: [410/444]
+Evaluate: [420/444]
+Evaluate: [430/444]
+Evaluate: [440/444]
+Evaluate: [443/444]
+14 Jun 07:50    INFO  epoch 44 evaluating [time: 3.31s, valid_score: 0.327900]
+14 Jun 07:50    INFO  valid result: 
+recall@5 : 0.4289    recall@10 : 0.5012    recall@20 : 0.5717    recall@50 : 0.6579    mrr@5 : 0.3182    mrr@10 : 0.3279    mrr@20 : 0.3328    mrr@50 : 0.3356    ndcg@5 : 0.3458    ndcg@10 : 0.3692    ndcg@20 : 0.3871    ndcg@50 : 0.4043    precision@5 : 0.0858    precision@10 : 0.0501    precision@20 : 0.0286    precision@50 : 0.0132    
+Train 45: [0/3734] loss=6.4655
+Train 45: [10/3734] loss=5.7336
+Train 45: [20/3734] loss=7.0548
+Train 45: [30/3734] loss=4.7042
+Train 45: [40/3734] loss=7.6502
+Train 45: [50/3734] loss=7.0340
+Train 45: [60/3734] loss=5.4676
+Train 45: [70/3734] loss=3.0829
+Train 45: [80/3734] loss=4.5416
+Train 45: [90/3734] loss=7.9279
+Train 45: [100/3734] loss=4.6578
+Train 45: [110/3734] loss=4.8215
+Train 45: [120/3734] loss=5.1734
+Train 45: [130/3734] loss=6.2032
+Train 45: [140/3734] loss=8.2355
+Train 45: [150/3734] loss=7.9918
+Train 45: [160/3734] loss=7.8459
+Train 45: [170/3734] loss=6.9059
+Train 45: [180/3734] loss=6.6460
+Train 45: [190/3734] loss=7.8671
+Train 45: [200/3734] loss=5.7513
+Train 45: [210/3734] loss=6.3211
+Train 45: [220/3734] loss=6.5739
+Train 45: [230/3734] loss=5.1269
+Train 45: [240/3734] loss=4.6347
+Train 45: [250/3734] loss=6.3223
+Train 45: [260/3734] loss=5.0122
+Train 45: [270/3734] loss=8.3529
+Train 45: [280/3734] loss=6.0679
+Train 45: [290/3734] loss=5.6734
+Train 45: [300/3734] loss=7.0810
+Train 45: [310/3734] loss=5.1197
+Train 45: [320/3734] loss=4.8258
+Train 45: [330/3734] loss=4.5433
+Train 45: [340/3734] loss=6.1224
+Train 45: [350/3734] loss=4.9279
+Train 45: [360/3734] loss=6.6345
+Train 45: [370/3734] loss=5.5501
+Train 45: [380/3734] loss=3.4657
+Train 45: [390/3734] loss=7.9077
+Train 45: [400/3734] loss=4.9484
+Train 45: [410/3734] loss=4.9987
+Train 45: [420/3734] loss=5.5917
+Train 45: [430/3734] loss=5.5002
+Train 45: [440/3734] loss=4.9648
+Train 45: [450/3734] loss=3.7893
+Train 45: [460/3734] loss=5.3412
+Train 45: [470/3734] loss=4.8138
+Train 45: [480/3734] loss=7.0476
+Train 45: [490/3734] loss=5.4028
+Train 45: [500/3734] loss=4.8035
+Train 45: [510/3734] loss=4.8469
+Train 45: [520/3734] loss=6.3084
+Train 45: [530/3734] loss=5.2410
+Train 45: [540/3734] loss=5.3520
+Train 45: [550/3734] loss=4.4466
+Train 45: [560/3734] loss=5.2136
+Train 45: [570/3734] loss=4.9681
+Train 45: [580/3734] loss=4.8942
+Train 45: [590/3734] loss=6.4962
+Train 45: [600/3734] loss=3.4259
+Train 45: [610/3734] loss=5.1553
+Train 45: [620/3734] loss=5.6199
+Train 45: [630/3734] loss=5.5190
+Train 45: [640/3734] loss=4.9452
+Train 45: [650/3734] loss=5.0367
+Train 45: [660/3734] loss=4.6696
+Train 45: [670/3734] loss=5.3876
+Train 45: [680/3734] loss=4.5738
+Train 45: [690/3734] loss=4.4450
+Train 45: [700/3734] loss=6.5283
+Train 45: [710/3734] loss=4.6727
+Train 45: [720/3734] loss=4.7310
+Train 45: [730/3734] loss=5.6945
+Train 45: [740/3734] loss=4.6657
+Train 45: [750/3734] loss=5.2137
+Train 45: [760/3734] loss=5.1026
+Train 45: [770/3734] loss=4.5789
+Train 45: [780/3734] loss=5.5820
+Train 45: [790/3734] loss=4.5807
+Train 45: [800/3734] loss=5.6098
+Train 45: [810/3734] loss=5.5520
+Train 45: [820/3734] loss=5.0774
+Train 45: [830/3734] loss=5.2254
+Train 45: [840/3734] loss=4.6159
+Train 45: [850/3734] loss=4.3752
+Train 45: [860/3734] loss=4.9993
+Train 45: [870/3734] loss=4.7611
+Train 45: [880/3734] loss=5.2215
+Train 45: [890/3734] loss=4.8821
+Train 45: [900/3734] loss=5.1604
+Train 45: [910/3734] loss=5.5900
+Train 45: [920/3734] loss=5.5932
+Train 45: [930/3734] loss=4.9458
+Train 45: [940/3734] loss=5.2236
+Train 45: [950/3734] loss=5.1502
+Train 45: [960/3734] loss=5.0069
+Train 45: [970/3734] loss=5.3388
+Train 45: [980/3734] loss=4.5130
+Train 45: [990/3734] loss=4.5381
+Train 45: [1000/3734] loss=5.3609
+Train 45: [1010/3734] loss=4.9781
+Train 45: [1020/3734] loss=3.4525
+Train 45: [1030/3734] loss=6.3624
+Train 45: [1040/3734] loss=4.7359
+Train 45: [1050/3734] loss=5.8603
+Train 45: [1060/3734] loss=4.7401
+Train 45: [1070/3734] loss=5.1952
+Train 45: [1080/3734] loss=4.4222
+Train 45: [1090/3734] loss=5.5889
+Train 45: [1100/3734] loss=5.5171
+Train 45: [1110/3734] loss=4.8239
+Train 45: [1120/3734] loss=5.2469
+Train 45: [1130/3734] loss=5.0602
+Train 45: [1140/3734] loss=4.9701
+Train 45: [1150/3734] loss=5.6214
+Train 45: [1160/3734] loss=5.3113
+Train 45: [1170/3734] loss=4.7546
+Train 45: [1180/3734] loss=5.5585
+Train 45: [1190/3734] loss=4.4784
+Train 45: [1200/3734] loss=4.2075
+Train 45: [1210/3734] loss=5.1236
+Train 45: [1220/3734] loss=4.9198
+Train 45: [1230/3734] loss=4.8702
+Train 45: [1240/3734] loss=5.5769
+Train 45: [1250/3734] loss=3.1236
+Train 45: [1260/3734] loss=4.9454
+Train 45: [1270/3734] loss=5.3566
+Train 45: [1280/3734] loss=5.0543
+Train 45: [1290/3734] loss=5.7061
+Train 45: [1300/3734] loss=4.8160
+Train 45: [1310/3734] loss=8.6796
+Train 45: [1320/3734] loss=5.0222
+Train 45: [1330/3734] loss=8.4393
+Train 45: [1340/3734] loss=5.5637
+Train 45: [1350/3734] loss=4.7416
+Train 45: [1360/3734] loss=5.0738
+Train 45: [1370/3734] loss=4.7286
+Train 45: [1380/3734] loss=5.0728
+Train 45: [1390/3734] loss=6.5750
+Train 45: [1400/3734] loss=8.4992
+Train 45: [1410/3734] loss=7.9940
+Train 45: [1420/3734] loss=7.9859
+Train 45: [1430/3734] loss=4.6951
+Train 45: [1440/3734] loss=5.4611
+Train 45: [1450/3734] loss=4.5278
+Train 45: [1460/3734] loss=5.2668
+Train 45: [1470/3734] loss=5.3612
+Train 45: [1480/3734] loss=4.9823
+Train 45: [1490/3734] loss=4.8433
+Train 45: [1500/3734] loss=4.7604
+Train 45: [1510/3734] loss=5.5240
+Train 45: [1520/3734] loss=8.0356
+Train 45: [1530/3734] loss=4.6753
+Train 45: [1540/3734] loss=5.6249
+Train 45: [1550/3734] loss=4.9293
+Train 45: [1560/3734] loss=5.0304
+Train 45: [1570/3734] loss=5.2796
+Train 45: [1580/3734] loss=4.6530
+Train 45: [1590/3734] loss=4.0600
+Train 45: [1600/3734] loss=7.6450
+Train 45: [1610/3734] loss=4.5129
+Train 45: [1620/3734] loss=4.7075
+Train 45: [1630/3734] loss=4.5064
+Train 45: [1640/3734] loss=4.8604
+Train 45: [1650/3734] loss=5.4167
+Train 45: [1660/3734] loss=4.8489
+Train 45: [1670/3734] loss=4.8716
+Train 45: [1680/3734] loss=3.8765
+Train 45: [1690/3734] loss=4.4744
+Train 45: [1700/3734] loss=4.8423
+Train 45: [1710/3734] loss=4.7055
+Train 45: [1720/3734] loss=4.9108
+Train 45: [1730/3734] loss=4.5241
+Train 45: [1740/3734] loss=5.2251
+Train 45: [1750/3734] loss=4.8226
+Train 45: [1760/3734] loss=4.8858
+Train 45: [1770/3734] loss=4.8859
+Train 45: [1780/3734] loss=4.8049
+Train 45: [1790/3734] loss=4.7784
+Train 45: [1800/3734] loss=4.8303
+Train 45: [1810/3734] loss=5.3716
+Train 45: [1820/3734] loss=4.7959
+Train 45: [1830/3734] loss=7.3007
+Train 45: [1840/3734] loss=5.6046
+Train 45: [1850/3734] loss=4.9892
+Train 45: [1860/3734] loss=5.1648
+Train 45: [1870/3734] loss=5.6117
+Train 45: [1880/3734] loss=5.2769
+Train 45: [1890/3734] loss=5.6077
+Train 45: [1900/3734] loss=4.7229
+Train 45: [1910/3734] loss=4.4624
+Train 45: [1920/3734] loss=5.0893
+Train 45: [1930/3734] loss=4.9900
+Train 45: [1940/3734] loss=4.6081
+Train 45: [1950/3734] loss=6.7599
+Train 45: [1960/3734] loss=5.1063
+Train 45: [1970/3734] loss=4.8360
+Train 45: [1980/3734] loss=5.1028
+Train 45: [1990/3734] loss=3.9558
+Train 45: [2000/3734] loss=5.1761
+Train 45: [2010/3734] loss=6.0699
+Train 45: [2020/3734] loss=4.9724
+Train 45: [2030/3734] loss=4.5708
+Train 45: [2040/3734] loss=5.6343
+Train 45: [2050/3734] loss=5.7368
+Train 45: [2060/3734] loss=5.2049
+Train 45: [2070/3734] loss=4.9211
+Train 45: [2080/3734] loss=4.7737
+Train 45: [2090/3734] loss=4.5363
+Train 45: [2100/3734] loss=5.4257
+Train 45: [2110/3734] loss=5.3318
+Train 45: [2120/3734] loss=6.6659
+Train 45: [2130/3734] loss=4.9957
+Train 45: [2140/3734] loss=4.8969
+Train 45: [2150/3734] loss=5.1181
+Train 45: [2160/3734] loss=5.2431
+Train 45: [2170/3734] loss=5.2156
+Train 45: [2180/3734] loss=5.2568
+Train 45: [2190/3734] loss=5.1220
+Train 45: [2200/3734] loss=4.6855
+Train 45: [2210/3734] loss=4.2767
+Train 45: [2220/3734] loss=4.0665
+Train 45: [2230/3734] loss=4.9622
+Train 45: [2240/3734] loss=4.4542
+Train 45: [2250/3734] loss=4.9345
+Train 45: [2260/3734] loss=4.8166
+Train 45: [2270/3734] loss=4.2373
+Train 45: [2280/3734] loss=5.1468
+Train 45: [2290/3734] loss=5.5736
+Train 45: [2300/3734] loss=4.4018
+Train 45: [2310/3734] loss=3.7689
+Train 45: [2320/3734] loss=5.3181
+Train 45: [2330/3734] loss=4.8400
+Train 45: [2340/3734] loss=6.0453
+Train 45: [2350/3734] loss=5.4144
+Train 45: [2360/3734] loss=5.2040
+Train 45: [2370/3734] loss=4.6473
+Train 45: [2380/3734] loss=5.6317
+Train 45: [2390/3734] loss=4.5596
+Train 45: [2400/3734] loss=4.8421
+Train 45: [2410/3734] loss=5.3602
+Train 45: [2420/3734] loss=5.0198
+Train 45: [2430/3734] loss=5.5149
+Train 45: [2440/3734] loss=5.1229
+Train 45: [2450/3734] loss=4.5784
+Train 45: [2460/3734] loss=4.9589
+Train 45: [2470/3734] loss=6.8956
+Train 45: [2480/3734] loss=5.2334
+Train 45: [2490/3734] loss=4.7173
+Train 45: [2500/3734] loss=6.3041
+Train 45: [2510/3734] loss=4.3353
+Train 45: [2520/3734] loss=4.7610
+Train 45: [2530/3734] loss=4.8179
+Train 45: [2540/3734] loss=5.0247
+Train 45: [2550/3734] loss=4.9852
+Train 45: [2560/3734] loss=5.1964
+Train 45: [2570/3734] loss=6.5130
+Train 45: [2580/3734] loss=5.1970
+Train 45: [2590/3734] loss=6.1989
+Train 45: [2600/3734] loss=9.0384
+Train 45: [2610/3734] loss=5.5600
+Train 45: [2620/3734] loss=3.3915
+Train 45: [2630/3734] loss=4.6904
+Train 45: [2640/3734] loss=4.7210
+Train 45: [2650/3734] loss=4.3830
+Train 45: [2660/3734] loss=4.7396
+Train 45: [2670/3734] loss=4.7860
+Train 45: [2680/3734] loss=4.8659
+Train 45: [2690/3734] loss=5.0745
+Train 45: [2700/3734] loss=4.8060
+Train 45: [2710/3734] loss=4.6888
+Train 45: [2720/3734] loss=4.7695
+Train 45: [2730/3734] loss=4.6875
+Train 45: [2740/3734] loss=4.4064
+Train 45: [2750/3734] loss=5.5634
+Train 45: [2760/3734] loss=5.4267
+Train 45: [2770/3734] loss=4.7786
+Train 45: [2780/3734] loss=6.5147
+Train 45: [2790/3734] loss=4.7092
+Train 45: [2800/3734] loss=5.7296
+Train 45: [2810/3734] loss=4.7839
+Train 45: [2820/3734] loss=8.5255
+Train 45: [2830/3734] loss=4.5250
+Train 45: [2840/3734] loss=4.8396
+Train 45: [2850/3734] loss=4.7681
+Train 45: [2860/3734] loss=5.3290
+Train 45: [2870/3734] loss=4.6035
+Train 45: [2880/3734] loss=5.1368
+Train 45: [2890/3734] loss=6.0135
+Train 45: [2900/3734] loss=4.9511
+Train 45: [2910/3734] loss=5.1769
+Train 45: [2920/3734] loss=4.7065
+Train 45: [2930/3734] loss=4.7372
+Train 45: [2940/3734] loss=4.8163
+Train 45: [2950/3734] loss=3.8692
+Train 45: [2960/3734] loss=5.1632
+Train 45: [2970/3734] loss=5.3984
+Train 45: [2980/3734] loss=5.0509
+Train 45: [2990/3734] loss=5.4773
+Train 45: [3000/3734] loss=4.5772
+Train 45: [3010/3734] loss=4.8230
+Train 45: [3020/3734] loss=4.5104
+Train 45: [3030/3734] loss=4.7910
+Train 45: [3040/3734] loss=4.6713
+Train 45: [3050/3734] loss=5.1106
+Train 45: [3060/3734] loss=4.6123
+Train 45: [3070/3734] loss=4.4403
+Train 45: [3080/3734] loss=7.4675
+Train 45: [3090/3734] loss=5.0406
+Train 45: [3100/3734] loss=4.7648
+Train 45: [3110/3734] loss=4.6141
+Train 45: [3120/3734] loss=4.6732
+Train 45: [3130/3734] loss=4.3020
+Train 45: [3140/3734] loss=4.7974
+Train 45: [3150/3734] loss=5.0707
+Train 45: [3160/3734] loss=4.5412
+Train 45: [3170/3734] loss=5.0105
+Train 45: [3180/3734] loss=4.3457
+Train 45: [3190/3734] loss=4.9663
+Train 45: [3200/3734] loss=8.6104
+Train 45: [3210/3734] loss=5.5801
+Train 45: [3220/3734] loss=5.4599
+Train 45: [3230/3734] loss=4.5758
+Train 45: [3240/3734] loss=4.9897
+Train 45: [3250/3734] loss=4.2960
+Train 45: [3260/3734] loss=4.7905
+Train 45: [3270/3734] loss=4.3662
+Train 45: [3280/3734] loss=4.9546
+Train 45: [3290/3734] loss=4.5558
+Train 45: [3300/3734] loss=4.8863
+Train 45: [3310/3734] loss=8.0938
+Train 45: [3320/3734] loss=4.5357
+Train 45: [3330/3734] loss=7.9079
+Train 45: [3340/3734] loss=5.4230
+Train 45: [3350/3734] loss=5.7261
+Train 45: [3360/3734] loss=4.5179
+Train 45: [3370/3734] loss=4.8436
+Train 45: [3380/3734] loss=4.5921
+Train 45: [3390/3734] loss=4.8313
+Train 45: [3400/3734] loss=4.8381
+Train 45: [3410/3734] loss=4.7263
+Train 45: [3420/3734] loss=4.7231
+Train 45: [3430/3734] loss=4.8515
+Train 45: [3440/3734] loss=5.8906
+Train 45: [3450/3734] loss=4.8590
+Train 45: [3460/3734] loss=4.9838
+Train 45: [3470/3734] loss=4.4647
+Train 45: [3480/3734] loss=4.7697
+Train 45: [3490/3734] loss=4.8002
+Train 45: [3500/3734] loss=4.0471
+Train 45: [3510/3734] loss=7.8676
+Train 45: [3520/3734] loss=4.9159
+Train 45: [3530/3734] loss=4.8634
+Train 45: [3540/3734] loss=4.9841
+Train 45: [3550/3734] loss=5.5436
+Train 45: [3560/3734] loss=4.8893
+Train 45: [3570/3734] loss=4.9642
+Train 45: [3580/3734] loss=4.7063
+Train 45: [3590/3734] loss=5.0198
+Train 45: [3600/3734] loss=4.8870
+Train 45: [3610/3734] loss=5.0873
+Train 45: [3620/3734] loss=4.7597
+Train 45: [3630/3734] loss=5.0995
+Train 45: [3640/3734] loss=5.0441
+Train 45: [3650/3734] loss=5.0936
+Train 45: [3660/3734] loss=4.8143
+Train 45: [3670/3734] loss=4.2904
+Train 45: [3680/3734] loss=4.9292
+Train 45: [3690/3734] loss=4.4344
+Train 45: [3700/3734] loss=4.8071
+Train 45: [3710/3734] loss=5.4737
+Train 45: [3720/3734] loss=4.9858
+Train 45: [3730/3734] loss=4.7159
+Train 45: [3733/3734] loss=2.6276
+14 Jun 07:53    INFO  epoch 45 training [time: 177.04s, train loss: 19643.3242]
+Evaluate: [0/444]
+Evaluate: [10/444]
+Evaluate: [20/444]
+Evaluate: [30/444]
+Evaluate: [40/444]
+Evaluate: [50/444]
+Evaluate: [60/444]
+Evaluate: [70/444]
+Evaluate: [80/444]
+Evaluate: [90/444]
+Evaluate: [100/444]
+Evaluate: [110/444]
+Evaluate: [120/444]
+Evaluate: [130/444]
+Evaluate: [140/444]
+Evaluate: [150/444]
+Evaluate: [160/444]
+Evaluate: [170/444]
+Evaluate: [180/444]
+Evaluate: [190/444]
+Evaluate: [200/444]
+Evaluate: [210/444]
+Evaluate: [220/444]
+Evaluate: [230/444]
+Evaluate: [240/444]
+Evaluate: [250/444]
+Evaluate: [260/444]
+Evaluate: [270/444]
+Evaluate: [280/444]
+Evaluate: [290/444]
+Evaluate: [300/444]
+Evaluate: [310/444]
+Evaluate: [320/444]
+Evaluate: [330/444]
+Evaluate: [340/444]
+Evaluate: [350/444]
+Evaluate: [360/444]
+Evaluate: [370/444]
+Evaluate: [380/444]
+Evaluate: [390/444]
+Evaluate: [400/444]
+Evaluate: [410/444]
+Evaluate: [420/444]
+Evaluate: [430/444]
+Evaluate: [440/444]
+Evaluate: [443/444]
+14 Jun 07:53    INFO  epoch 45 evaluating [time: 3.36s, valid_score: 0.327300]
+14 Jun 07:53    INFO  valid result: 
+recall@5 : 0.4288    recall@10 : 0.5016    recall@20 : 0.5725    recall@50 : 0.658    mrr@5 : 0.3175    mrr@10 : 0.3273    mrr@20 : 0.3322    mrr@50 : 0.335    ndcg@5 : 0.3453    ndcg@10 : 0.3689    ndcg@20 : 0.3868    ndcg@50 : 0.4039    precision@5 : 0.0858    precision@10 : 0.0502    precision@20 : 0.0286    precision@50 : 0.0132    
+Train 46: [0/3734] loss=6.4996
+Train 46: [10/3734] loss=5.4997
+Train 46: [20/3734] loss=7.1042
+Train 46: [30/3734] loss=4.6683
+Train 46: [40/3734] loss=7.4916
+Train 46: [50/3734] loss=7.1445
+Train 46: [60/3734] loss=5.5017
+Train 46: [70/3734] loss=3.0570
+Train 46: [80/3734] loss=4.5708
+Train 46: [90/3734] loss=7.9440
+Train 46: [100/3734] loss=4.5053
+Train 46: [110/3734] loss=4.9231
+Train 46: [120/3734] loss=5.1181
+Train 46: [130/3734] loss=6.2911
+Train 46: [140/3734] loss=8.1959
+Train 46: [150/3734] loss=8.1017
+Train 46: [160/3734] loss=7.8372
+Train 46: [170/3734] loss=6.9558
+Train 46: [180/3734] loss=6.5129
+Train 46: [190/3734] loss=8.0350
+Train 46: [200/3734] loss=5.7416
+Train 46: [210/3734] loss=6.3834
+Train 46: [220/3734] loss=6.6267
+Train 46: [230/3734] loss=5.1857
+Train 46: [240/3734] loss=4.7025
+Train 46: [250/3734] loss=6.3900
+Train 46: [260/3734] loss=5.0693
+Train 46: [270/3734] loss=8.2584
+Train 46: [280/3734] loss=5.9899
+Train 46: [290/3734] loss=5.7974
+Train 46: [300/3734] loss=7.0241
+Train 46: [310/3734] loss=5.1015
+Train 46: [320/3734] loss=4.8669
+Train 46: [330/3734] loss=4.6083
+Train 46: [340/3734] loss=6.1041
+Train 46: [350/3734] loss=4.7182
+Train 46: [360/3734] loss=6.7304
+Train 46: [370/3734] loss=5.5175
+Train 46: [380/3734] loss=3.4527
+Train 46: [390/3734] loss=7.9380
+Train 46: [400/3734] loss=4.8693
+Train 46: [410/3734] loss=5.1055
+Train 46: [420/3734] loss=5.4548
+Train 46: [430/3734] loss=5.6536
+Train 46: [440/3734] loss=4.8877
+Train 46: [450/3734] loss=3.9164
+Train 46: [460/3734] loss=5.3546
+Train 46: [470/3734] loss=4.8093
+Train 46: [480/3734] loss=7.1181
+Train 46: [490/3734] loss=5.5269
+Train 46: [500/3734] loss=4.6037
+Train 46: [510/3734] loss=4.6357
+Train 46: [520/3734] loss=6.2542
+Train 46: [530/3734] loss=5.1441
+Train 46: [540/3734] loss=5.2894
+Train 46: [550/3734] loss=4.3419
+Train 46: [560/3734] loss=5.1451
+Train 46: [570/3734] loss=5.0163
+Train 46: [580/3734] loss=4.9810
+Train 46: [590/3734] loss=6.5790
+Train 46: [600/3734] loss=3.4582
+Train 46: [610/3734] loss=5.2143
+Train 46: [620/3734] loss=5.7488
+Train 46: [630/3734] loss=5.3858
+Train 46: [640/3734] loss=4.7545
+Train 46: [650/3734] loss=5.1370
+Train 46: [660/3734] loss=4.7679
+Train 46: [670/3734] loss=5.4599
+Train 46: [680/3734] loss=4.4733
+Train 46: [690/3734] loss=4.4785
+Train 46: [700/3734] loss=6.4317
+Train 46: [710/3734] loss=4.8011
+Train 46: [720/3734] loss=4.6995
+Train 46: [730/3734] loss=5.6471
+Train 46: [740/3734] loss=4.6776
+Train 46: [750/3734] loss=5.2844
+Train 46: [760/3734] loss=5.1605
+Train 46: [770/3734] loss=4.5679
+Train 46: [780/3734] loss=5.4161
+Train 46: [790/3734] loss=4.6041
+Train 46: [800/3734] loss=5.6606
+Train 46: [810/3734] loss=5.5780
+Train 46: [820/3734] loss=4.9808
+Train 46: [830/3734] loss=5.2348
+Train 46: [840/3734] loss=4.6490
+Train 46: [850/3734] loss=4.2984
+Train 46: [860/3734] loss=4.8412
+Train 46: [870/3734] loss=4.9247
+Train 46: [880/3734] loss=5.1599
+Train 46: [890/3734] loss=4.9492
+Train 46: [900/3734] loss=4.9909
+Train 46: [910/3734] loss=5.5668
+Train 46: [920/3734] loss=5.6155
+Train 46: [930/3734] loss=5.0030
+Train 46: [940/3734] loss=5.1705
+Train 46: [950/3734] loss=5.1536
+Train 46: [960/3734] loss=5.0831
+Train 46: [970/3734] loss=5.3286
+Train 46: [980/3734] loss=4.4541
+Train 46: [990/3734] loss=4.5744
+Train 46: [1000/3734] loss=5.3407
+Train 46: [1010/3734] loss=5.0588
+Train 46: [1020/3734] loss=3.2535
+Train 46: [1030/3734] loss=6.6371
+Train 46: [1040/3734] loss=4.8352
+Train 46: [1050/3734] loss=5.8064
+Train 46: [1060/3734] loss=4.7895
+Train 46: [1070/3734] loss=5.1503
+Train 46: [1080/3734] loss=4.4097
+Train 46: [1090/3734] loss=5.7335
+Train 46: [1100/3734] loss=5.4794
+Train 46: [1110/3734] loss=4.7436
+Train 46: [1120/3734] loss=5.3459
+Train 46: [1130/3734] loss=5.1015
+Train 46: [1140/3734] loss=4.9756
+Train 46: [1150/3734] loss=5.6379
+Train 46: [1160/3734] loss=5.3990
+Train 46: [1170/3734] loss=4.7932
+Train 46: [1180/3734] loss=5.5305
+Train 46: [1190/3734] loss=4.6310
+Train 46: [1200/3734] loss=4.1833
+Train 46: [1210/3734] loss=5.1949
+Train 46: [1220/3734] loss=4.8253
+Train 46: [1230/3734] loss=4.8500
+Train 46: [1240/3734] loss=5.5752
+Train 46: [1250/3734] loss=3.1435
+Train 46: [1260/3734] loss=4.8741
+Train 46: [1270/3734] loss=5.4971
+Train 46: [1280/3734] loss=5.1299
+Train 46: [1290/3734] loss=5.6045
+Train 46: [1300/3734] loss=4.9778
+Train 46: [1310/3734] loss=8.7514
+Train 46: [1320/3734] loss=5.0917
+Train 46: [1330/3734] loss=8.3459
+Train 46: [1340/3734] loss=5.3359
+Train 46: [1350/3734] loss=4.7560
+Train 46: [1360/3734] loss=4.9074
+Train 46: [1370/3734] loss=4.7607
+Train 46: [1380/3734] loss=5.0638
+Train 46: [1390/3734] loss=6.6309
+Train 46: [1400/3734] loss=8.4467
+Train 46: [1410/3734] loss=7.9564
+Train 46: [1420/3734] loss=7.9902
+Train 46: [1430/3734] loss=4.5484
+Train 46: [1440/3734] loss=5.5496
+Train 46: [1450/3734] loss=4.5298
+Train 46: [1460/3734] loss=5.1747
+Train 46: [1470/3734] loss=5.4013
+Train 46: [1480/3734] loss=5.1523
+Train 46: [1490/3734] loss=4.8238
+Train 46: [1500/3734] loss=4.6045
+Train 46: [1510/3734] loss=5.5431
+Train 46: [1520/3734] loss=8.0035
+Train 46: [1530/3734] loss=4.7864
+Train 46: [1540/3734] loss=5.5998
+Train 46: [1550/3734] loss=4.9622
+Train 46: [1560/3734] loss=4.9680
+Train 46: [1570/3734] loss=5.2940
+Train 46: [1580/3734] loss=4.7647
+Train 46: [1590/3734] loss=4.1574
+Train 46: [1600/3734] loss=7.6824
+Train 46: [1610/3734] loss=4.5929
+Train 46: [1620/3734] loss=4.8624
+Train 46: [1630/3734] loss=4.4024
+Train 46: [1640/3734] loss=4.9188
+Train 46: [1650/3734] loss=5.3553
+Train 46: [1660/3734] loss=4.8226
+Train 46: [1670/3734] loss=5.0264
+Train 46: [1680/3734] loss=3.8147
+Train 46: [1690/3734] loss=4.3325
+Train 46: [1700/3734] loss=4.9684
+Train 46: [1710/3734] loss=4.6447
+Train 46: [1720/3734] loss=4.9742
+Train 46: [1730/3734] loss=4.5138
+Train 46: [1740/3734] loss=5.3282
+Train 46: [1750/3734] loss=4.8216
+Train 46: [1760/3734] loss=4.8795
+Train 46: [1770/3734] loss=4.6230
+Train 46: [1780/3734] loss=4.8252
+Train 46: [1790/3734] loss=4.7155
+Train 46: [1800/3734] loss=4.6429
+Train 46: [1810/3734] loss=5.4761
+Train 46: [1820/3734] loss=4.7328
+Train 46: [1830/3734] loss=7.3701
+Train 46: [1840/3734] loss=5.5271
+Train 46: [1850/3734] loss=5.0048
+Train 46: [1860/3734] loss=5.1664
+Train 46: [1870/3734] loss=5.6165
+Train 46: [1880/3734] loss=5.2867
+Train 46: [1890/3734] loss=5.4794
+Train 46: [1900/3734] loss=4.6095
+Train 46: [1910/3734] loss=4.3541
+Train 46: [1920/3734] loss=5.1004
+Train 46: [1930/3734] loss=5.0262
+Train 46: [1940/3734] loss=4.5323
+Train 46: [1950/3734] loss=6.7221
+Train 46: [1960/3734] loss=5.1132
+Train 46: [1970/3734] loss=4.9148
+Train 46: [1980/3734] loss=4.9232
+Train 46: [1990/3734] loss=4.0277
+Train 46: [2000/3734] loss=5.3814
+Train 46: [2010/3734] loss=6.0329
+Train 46: [2020/3734] loss=4.9533
+Train 46: [2030/3734] loss=4.5995
+Train 46: [2040/3734] loss=5.4399
+Train 46: [2050/3734] loss=5.7148
+Train 46: [2060/3734] loss=5.0458
+Train 46: [2070/3734] loss=4.9476
+Train 46: [2080/3734] loss=4.7968
+Train 46: [2090/3734] loss=4.4784
+Train 46: [2100/3734] loss=5.3750
+Train 46: [2110/3734] loss=5.3526
+Train 46: [2120/3734] loss=6.8833
+Train 46: [2130/3734] loss=4.9314
+Train 46: [2140/3734] loss=4.7766
+Train 46: [2150/3734] loss=5.1003
+Train 46: [2160/3734] loss=5.3200
+Train 46: [2170/3734] loss=5.2132
+Train 46: [2180/3734] loss=5.3312
+Train 46: [2190/3734] loss=5.1300
+Train 46: [2200/3734] loss=4.5054
+Train 46: [2210/3734] loss=4.3389
+Train 46: [2220/3734] loss=3.9933
+Train 46: [2230/3734] loss=5.1291
+Train 46: [2240/3734] loss=4.3836
+Train 46: [2250/3734] loss=4.8969
+Train 46: [2260/3734] loss=4.6310
+Train 46: [2270/3734] loss=4.1952
+Train 46: [2280/3734] loss=5.2228
+Train 46: [2290/3734] loss=5.3566
+Train 46: [2300/3734] loss=4.3658
+Train 46: [2310/3734] loss=3.8420
+Train 46: [2320/3734] loss=5.4662
+Train 46: [2330/3734] loss=4.9303
+Train 46: [2340/3734] loss=6.0562
+Train 46: [2350/3734] loss=5.1742
+Train 46: [2360/3734] loss=5.1631
+Train 46: [2370/3734] loss=4.7366
+Train 46: [2380/3734] loss=5.4602
+Train 46: [2390/3734] loss=4.6229
+Train 46: [2400/3734] loss=5.0218
+Train 46: [2410/3734] loss=5.3303
+Train 46: [2420/3734] loss=5.1305
+Train 46: [2430/3734] loss=5.4193
+Train 46: [2440/3734] loss=5.1616
+Train 46: [2450/3734] loss=4.4612
+Train 46: [2460/3734] loss=4.9572
+Train 46: [2470/3734] loss=6.8733
+Train 46: [2480/3734] loss=5.1523
+Train 46: [2490/3734] loss=4.7426
+Train 46: [2500/3734] loss=6.3416
+Train 46: [2510/3734] loss=4.5209
+Train 46: [2520/3734] loss=4.7769
+Train 46: [2530/3734] loss=4.8380
+Train 46: [2540/3734] loss=5.2172
+Train 46: [2550/3734] loss=5.0487
+Train 46: [2560/3734] loss=5.1139
+Train 46: [2570/3734] loss=6.4337
+Train 46: [2580/3734] loss=5.1476
+Train 46: [2590/3734] loss=6.1374
+Train 46: [2600/3734] loss=9.0662
+Train 46: [2610/3734] loss=5.6497
+Train 46: [2620/3734] loss=3.3859
+Train 46: [2630/3734] loss=4.6471
+Train 46: [2640/3734] loss=4.7267
+Train 46: [2650/3734] loss=4.4932
+Train 46: [2660/3734] loss=4.6987
+Train 46: [2670/3734] loss=4.7920
+Train 46: [2680/3734] loss=4.9531
+Train 46: [2690/3734] loss=5.1293
+Train 46: [2700/3734] loss=4.8396
+Train 46: [2710/3734] loss=4.9860
+Train 46: [2720/3734] loss=4.8953
+Train 46: [2730/3734] loss=4.8179
+Train 46: [2740/3734] loss=4.5610
+Train 46: [2750/3734] loss=5.6656
+Train 46: [2760/3734] loss=5.4513
+Train 46: [2770/3734] loss=4.9201
+Train 46: [2780/3734] loss=6.4962
+Train 46: [2790/3734] loss=4.6257
+Train 46: [2800/3734] loss=5.6877
+Train 46: [2810/3734] loss=4.7176
+Train 46: [2820/3734] loss=8.3208
+Train 46: [2830/3734] loss=4.6144
+Train 46: [2840/3734] loss=4.7515
+Train 46: [2850/3734] loss=4.7768
+Train 46: [2860/3734] loss=5.3074
+Train 46: [2870/3734] loss=4.5477
+Train 46: [2880/3734] loss=5.2084
+Train 46: [2890/3734] loss=6.2386
+Train 46: [2900/3734] loss=4.8591
+Train 46: [2910/3734] loss=5.1746
+Train 46: [2920/3734] loss=4.5995
+Train 46: [2930/3734] loss=4.7814
+Train 46: [2940/3734] loss=4.9568
+Train 46: [2950/3734] loss=3.7940
+Train 46: [2960/3734] loss=5.1787
+Train 46: [2970/3734] loss=5.4070
+Train 46: [2980/3734] loss=4.9779
+Train 46: [2990/3734] loss=5.5784
+Train 46: [3000/3734] loss=4.6199
+Train 46: [3010/3734] loss=4.7601
+Train 46: [3020/3734] loss=4.3765
+Train 46: [3030/3734] loss=4.8128
+Train 46: [3040/3734] loss=4.7215
+Train 46: [3050/3734] loss=4.8571
+Train 46: [3060/3734] loss=4.5236
+Train 46: [3070/3734] loss=4.5629
+Train 46: [3080/3734] loss=7.3792
+Train 46: [3090/3734] loss=4.9581
+Train 46: [3100/3734] loss=4.6201
+Train 46: [3110/3734] loss=4.7334
+Train 46: [3120/3734] loss=4.5612
+Train 46: [3130/3734] loss=4.3658
+Train 46: [3140/3734] loss=4.8728
+Train 46: [3150/3734] loss=5.2177
+Train 46: [3160/3734] loss=4.6300
+Train 46: [3170/3734] loss=4.9844
+Train 46: [3180/3734] loss=4.5491
+Train 46: [3190/3734] loss=4.9757
+Train 46: [3200/3734] loss=8.6204
+Train 46: [3210/3734] loss=5.4521
+Train 46: [3220/3734] loss=5.5539
+Train 46: [3230/3734] loss=4.5472
+Train 46: [3240/3734] loss=5.0388
+Train 46: [3250/3734] loss=4.2748
+Train 46: [3260/3734] loss=4.8032
+Train 46: [3270/3734] loss=4.2361
+Train 46: [3280/3734] loss=5.0244
+Train 46: [3290/3734] loss=4.6088
+Train 46: [3300/3734] loss=4.7844
+Train 46: [3310/3734] loss=8.2211
+Train 46: [3320/3734] loss=4.5953
+Train 46: [3330/3734] loss=7.9293
+Train 46: [3340/3734] loss=5.4931
+Train 46: [3350/3734] loss=5.6682
+Train 46: [3360/3734] loss=4.7984
+Train 46: [3370/3734] loss=4.8865
+Train 46: [3380/3734] loss=4.5908
+Train 46: [3390/3734] loss=4.9027
+Train 46: [3400/3734] loss=4.9647
+Train 46: [3410/3734] loss=4.8739
+Train 46: [3420/3734] loss=4.8272
+Train 46: [3430/3734] loss=4.9068
+Train 46: [3440/3734] loss=5.8925
+Train 46: [3450/3734] loss=4.9369
+Train 46: [3460/3734] loss=5.1050
+Train 46: [3470/3734] loss=4.5029
+Train 46: [3480/3734] loss=5.0762
+Train 46: [3490/3734] loss=4.6908
+Train 46: [3500/3734] loss=3.9416
+Train 46: [3510/3734] loss=7.8166
+Train 46: [3520/3734] loss=4.9558
+Train 46: [3530/3734] loss=4.8218
+Train 46: [3540/3734] loss=4.8945
+Train 46: [3550/3734] loss=5.5387
+Train 46: [3560/3734] loss=4.9203
+Train 46: [3570/3734] loss=5.1185
+Train 46: [3580/3734] loss=4.6996
+Train 46: [3590/3734] loss=4.9678
+Train 46: [3600/3734] loss=4.8464
+Train 46: [3610/3734] loss=4.8473
+Train 46: [3620/3734] loss=4.7023
+Train 46: [3630/3734] loss=5.0675
+Train 46: [3640/3734] loss=4.8955
+Train 46: [3650/3734] loss=5.2253
+Train 46: [3660/3734] loss=4.6862
+Train 46: [3670/3734] loss=4.3666
+Train 46: [3680/3734] loss=4.9755
+Train 46: [3690/3734] loss=4.5138
+Train 46: [3700/3734] loss=4.6657
+Train 46: [3710/3734] loss=5.5993
+Train 46: [3720/3734] loss=4.9242
+Train 46: [3730/3734] loss=4.5146
+Train 46: [3733/3734] loss=2.7980
+14 Jun 07:56    INFO  epoch 46 training [time: 179.57s, train loss: 19622.3138]
+Evaluate: [0/444]
+Evaluate: [10/444]
+Evaluate: [20/444]
+Evaluate: [30/444]
+Evaluate: [40/444]
+Evaluate: [50/444]
+Evaluate: [60/444]
+Evaluate: [70/444]
+Evaluate: [80/444]
+Evaluate: [90/444]
+Evaluate: [100/444]
+Evaluate: [110/444]
+Evaluate: [120/444]
+Evaluate: [130/444]
+Evaluate: [140/444]
+Evaluate: [150/444]
+Evaluate: [160/444]
+Evaluate: [170/444]
+Evaluate: [180/444]
+Evaluate: [190/444]
+Evaluate: [200/444]
+Evaluate: [210/444]
+Evaluate: [220/444]
+Evaluate: [230/444]
+Evaluate: [240/444]
+Evaluate: [250/444]
+Evaluate: [260/444]
+Evaluate: [270/444]
+Evaluate: [280/444]
+Evaluate: [290/444]
+Evaluate: [300/444]
+Evaluate: [310/444]
+Evaluate: [320/444]
+Evaluate: [330/444]
+Evaluate: [340/444]
+Evaluate: [350/444]
+Evaluate: [360/444]
+Evaluate: [370/444]
+Evaluate: [380/444]
+Evaluate: [390/444]
+Evaluate: [400/444]
+Evaluate: [410/444]
+Evaluate: [420/444]
+Evaluate: [430/444]
+Evaluate: [440/444]
+Evaluate: [443/444]
+14 Jun 07:56    INFO  epoch 46 evaluating [time: 3.37s, valid_score: 0.328400]
+14 Jun 07:56    INFO  valid result: 
+recall@5 : 0.4305    recall@10 : 0.5021    recall@20 : 0.5731    recall@50 : 0.6595    mrr@5 : 0.3187    mrr@10 : 0.3284    mrr@20 : 0.3333    mrr@50 : 0.3361    ndcg@5 : 0.3466    ndcg@10 : 0.3699    ndcg@20 : 0.3878    ndcg@50 : 0.4051    precision@5 : 0.0861    precision@10 : 0.0502    precision@20 : 0.0287    precision@50 : 0.0132    
+14 Jun 07:56    INFO  Finished training, best eval result in epoch 35
+14 Jun 07:57    INFO  Loading model structure and parameters from /content/test_all/log/DuoRec/retailrocket/bs256-lmd0.1-sem0.1-us_x-Jun-14-2026_05-32-17-lr0.001-l20-tau1-dot-DPh0.5-DPa0.5/model.pth
+Evaluate: [0/747]
+Evaluate: [10/747]
+Evaluate: [20/747]
+Evaluate: [30/747]
+Evaluate: [40/747]
+Evaluate: [50/747]
+Evaluate: [60/747]
+Evaluate: [70/747]
+Evaluate: [80/747]
+Evaluate: [90/747]
+Evaluate: [100/747]
+Evaluate: [110/747]
+Evaluate: [120/747]
+Evaluate: [130/747]
+Evaluate: [140/747]
+Evaluate: [150/747]
+Evaluate: [160/747]
+Evaluate: [170/747]
+Evaluate: [180/747]
+Evaluate: [190/747]
+Evaluate: [200/747]
+Evaluate: [210/747]
+Evaluate: [220/747]
+Evaluate: [230/747]
+Evaluate: [240/747]
+Evaluate: [250/747]
+Evaluate: [260/747]
+Evaluate: [270/747]
+Evaluate: [280/747]
+Evaluate: [290/747]
+Evaluate: [300/747]
+Evaluate: [310/747]
+Evaluate: [320/747]
+Evaluate: [330/747]
+Evaluate: [340/747]
+Evaluate: [350/747]
+Evaluate: [360/747]
+Evaluate: [370/747]
+Evaluate: [380/747]
+Evaluate: [390/747]
+Evaluate: [400/747]
+Evaluate: [410/747]
+Evaluate: [420/747]
+Evaluate: [430/747]
+Evaluate: [440/747]
+Evaluate: [450/747]
+Evaluate: [460/747]
+Evaluate: [470/747]
+Evaluate: [480/747]
+Evaluate: [490/747]
+Evaluate: [500/747]
+Evaluate: [510/747]
+Evaluate: [520/747]
+Evaluate: [530/747]
+Evaluate: [540/747]
+Evaluate: [550/747]
+Evaluate: [560/747]
+Evaluate: [570/747]
+Evaluate: [580/747]
+Evaluate: [590/747]
+Evaluate: [600/747]
+Evaluate: [610/747]
+Evaluate: [620/747]
+Evaluate: [630/747]
+Evaluate: [640/747]
+Evaluate: [650/747]
+Evaluate: [660/747]
+Evaluate: [670/747]
+Evaluate: [680/747]
+Evaluate: [690/747]
+Evaluate: [700/747]
+Evaluate: [710/747]
+Evaluate: [720/747]
+Evaluate: [730/747]
+Evaluate: [740/747]
+Evaluate: [746/747]
+14 Jun 07:57    INFO  best valid : {'recall@5': np.float64(0.4318), 'recall@10': np.float64(0.5046), 'recall@20': np.float64(0.5752), 'recall@50': np.float64(0.6617), 'mrr@5': np.float64(0.321), 'mrr@10': np.float64(0.3308), 'mrr@20': np.float64(0.3357), 'mrr@50': np.float64(0.3385), 'ndcg@5': np.float64(0.3487), 'ndcg@10': np.float64(0.3722), 'ndcg@20': np.float64(0.3901), 'ndcg@50': np.float64(0.4074), 'precision@5': np.float64(0.0864), 'precision@10': np.float64(0.0505), 'precision@20': np.float64(0.0288), 'precision@50': np.float64(0.0132)}
+14 Jun 07:57    INFO  test result: {'recall@5': np.float64(0.4406), 'recall@10': np.float64(0.5067), 'recall@20': np.float64(0.5684), 'recall@50': np.float64(0.6449), 'mrr@5': np.float64(0.3359), 'mrr@10': np.float64(0.3448), 'mrr@20': np.float64(0.3491), 'mrr@50': np.float64(0.3515), 'ndcg@5': np.float64(0.362), 'ndcg@10': np.float64(0.3834), 'ndcg@20': np.float64(0.3991), 'ndcg@50': np.float64(0.4143), 'precision@5': np.float64(0.0881), 'precision@10': np.float64(0.0507), 'precision@20': np.float64(0.0284), 'precision@50': np.float64(0.0129)}
