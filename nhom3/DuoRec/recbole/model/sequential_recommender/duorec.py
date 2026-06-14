@@ -119,7 +119,9 @@ class DuoRec(SequentialRecommender):
                 sample_index = int(random.choice(targets_index))
                 sample_item_list = self.dataset.inter_feat[self.ITEM_SEQ][sample_index]
                 sample_item_length = self.dataset.inter_feat[self.ITEM_SEQ_LEN][sample_index]
-                if len(targets_index) == 1 or not torch.equal(cur_item_list, sample_item_list):
+                if len(targets_index) == 1 or not torch.equal(
+                    cur_item_list.cpu(), sample_item_list.cpu()
+                ):
                     sem_pos_lengths.append(sample_item_length)
                     sem_pos_seqs.append(sample_item_list)
                     picked = True
