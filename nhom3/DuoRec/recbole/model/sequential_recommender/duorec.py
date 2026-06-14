@@ -132,8 +132,8 @@ class DuoRec(SequentialRecommender):
         interaction.update(
             Interaction(
                 {
-                    "sem_aug": torch.stack(sem_pos_seqs).to(device),
-                    "sem_aug_lengths": torch.stack(sem_pos_lengths).to(device),
+                    "sem_aug": torch.stack([s.cpu() for s in sem_pos_seqs]).to(device),
+                    "sem_aug_lengths": torch.stack([l.cpu() for l in sem_pos_lengths]).to(device),
                 }
             )
         )

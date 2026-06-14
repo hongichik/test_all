@@ -1,0 +1,171 @@
+command line args [--dataset retailrocket --model DuoRec --config_files seq.yaml DuoRec.yaml] will not be used in RecBole
+14 Jun 05:10    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 2020
+state = INFO
+reproducibility = True
+data_path = /content/test_all/nhom3/DuoRec/dataset/retailrocket
+show_progress = True
+
+Training Hyper Parameters:
+checkpoint_dir = /content/test_all/saved
+epochs = 50
+train_batch_size = 256
+learner = adam
+learning_rate = 0.001
+training_neg_sample_num = 0
+training_neg_sample_distribution = uniform
+eval_step = 1
+stopping_step = 10
+clip_grad_norm = None
+weight_decay = 0
+draw_loss_pic = False
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_setting = TO_LS,full
+group_by_user = True
+split_ratio = [0.8, 0.1, 0.1]
+leave_one_num = 2
+real_time_process = False
+metrics = ['Recall', 'MRR', 'NDCG', 'Precision']
+topk = [5, 10, 20, 50]
+valid_metric = MRR@10
+eval_batch_size = 256
+metric_decimal_place = 4
+
+Dataset Hyper Parameters:
+field_separator = 	
+seq_separator =  
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = rating
+TIME_FIELD = timestamp
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = {'inter': ['user_id', 'item_id', 'rating', 'timestamp']}
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+lowest_val = None
+highest_val = None
+equal_val = None
+not_equal_val = None
+max_user_inter_num = None
+min_user_inter_num = 5
+max_item_inter_num = None
+min_item_inter_num = 5
+fields_in_same_space = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+
+Other Hyper Parameters: 
+worker = 0
+valid_metric_bigger = True
+n_layers = 2
+n_heads = 2
+hidden_size = 64
+inner_size = 256
+hidden_dropout_prob = 0.5
+attn_dropout_prob = 0.5
+hidden_act = gelu
+layer_norm_eps = 1e-12
+initializer_range = 0.02
+loss_type = CE
+lmd = 0.1
+lmd_sem = 0.1
+SSL_AUG = DuoRec
+rm_dup_inter = None
+filter_inter_by_user_or_item = True
+SOURCE_ID_FIELD = source_id
+TARGET_ID_FIELD = target_id
+benchmark_filename = None
+MODEL_TYPE = ModelType.SEQUENTIAL
+embedding_size = 64
+train_neg_sample_args = {'strategy': 'none'}
+eval_args = {'order': 'TO', 'split': {'LS': 'valid_and_test'}, 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}
+log_root = /content/test_all/log/
+tau = 1
+contrast = us_x
+sim = dot
+MODEL_INPUT_TYPE = InputType.POINTWISE
+eval_type = EvaluatorType.RANKING
+single_spec = True
+local_rank = 0
+device = cuda
+log_dir = /content/test_all/log/DuoRec/retailrocket/bs256-lmd0.1-sem0.1-us_x-Jun-14-2026_05-10-58-lr0.001-l20-tau1-dot-DPh0.5-DPa0.5
+
+
+14 Jun 05:11    INFO  retailrocket
+The number of users: 1404180
+Average actions of users: 1.8974162126053729
+The number of items: 234839
+Average actions of items: 11.345318900688985
+The number of inters: 2664312
+The sparsity of the dataset: 99.99919203587933%
+Remain Fields: ['user_id', 'item_id', 'rating', 'timestamp']
+14 Jun 05:11    INFO  [Training]: train_batch_size = [256] train_neg_sample_args: [{'strategy': 'none'}]
+14 Jun 05:11    INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'order': 'TO', 'split': {'LS': 'valid_and_test'}, 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+14 Jun 05:13    INFO  DuoRec(
+  (item_embedding): Embedding(234839, 64, padding_idx=0)
+  (position_embedding): Embedding(50, 64)
+  (trm_encoder): TransformerEncoder(
+    (layer): ModuleList(
+      (0-1): 2 x TransformerLayer(
+        (multi_head_attention): MultiHeadAttention(
+          (query): Linear(in_features=64, out_features=64, bias=True)
+          (key): Linear(in_features=64, out_features=64, bias=True)
+          (value): Linear(in_features=64, out_features=64, bias=True)
+          (attn_dropout): Dropout(p=0.5, inplace=False)
+          (dense): Linear(in_features=64, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (out_dropout): Dropout(p=0.5, inplace=False)
+        )
+        (feed_forward): FeedForward(
+          (dense_1): Linear(in_features=64, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+    )
+  )
+  (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+  (dropout): Dropout(p=0.5, inplace=False)
+  (loss_fct): CrossEntropyLoss()
+  (aug_nce_fct): CrossEntropyLoss()
+  (sem_aug_nce_fct): CrossEntropyLoss()
+)
+Trainable parameters: 15132992
+Train 0: [0/3734] loss=15.1650
+Traceback (most recent call last):
+  File "/content/test_all/nhom3/DuoRec/run_seq.py", line 83, in <module>
+    run_recbole(
+  File "/content/test_all/nhom3/DuoRec/recbole/quick_start/quick_start.py", line 58, in run_recbole
+    best_valid_score, best_valid_result = trainer.fit(
+                                          ^^^^^^^^^^^^
+  File "/content/test_all/nhom3/DuoRec/recbole/trainer/trainer.py", line 298, in fit
+    train_loss = self._train_epoch(train_data, epoch_idx, show_progress=show_progress)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/test_all/nhom3/DuoRec/recbole/trainer/trainer.py", line 177, in _train_epoch
+    losses = loss_func(interaction)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/test_all/nhom3/DuoRec/recbole/model/sequential_recommender/duorec.py", line 209, in calculate_loss
+    self._add_sem_aug(interaction)
+  File "/content/test_all/nhom3/DuoRec/recbole/model/sequential_recommender/duorec.py", line 135, in _add_sem_aug
+    "sem_aug": torch.stack(sem_pos_seqs).to(device),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but got tensors is on cuda:0, different from other tensors on cpu (when checking argument in method wrapper_CUDA_cat)
