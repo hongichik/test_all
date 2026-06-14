@@ -528,3 +528,53 @@ start training:  2026-06-14 02:53:01.307744
 [7650/7963] train loss: 4.8969
 [7700/7963] train loss: 4.9127
 [7750/7963] train loss: 5.1369
+[7800/7963] train loss: 4.9485
+[7850/7963] train loss: 5.2223
+[7900/7963] train loss: 5.5400
+[7950/7963] train loss: 4.8517
+[7962/7963] train loss: 4.6172
+	Loss:	39990.539
+start predicting:  2026-06-14 03:54:58.863701
+[0/754] predicting...
+[75/754] predicting...
+[150/754] predicting...
+[225/754] predicting...
+[300/754] predicting...
+[375/754] predicting...
+[450/754] predicting...
+[525/754] predicting...
+[600/754] predicting...
+[675/754] predicting...
+[750/754] predicting...
+[753/754] predicting...
+{'hit5': np.float64(48.56763925729443), 'mrr5': np.float64(36.3842175066313), 'hit10': np.float64(56.214854111405835), 'mrr10': np.float64(37.4080443981306), 'hit20': np.float64(63.4840848806366), 'mrr20': np.float64(37.91480357548689)}
+train_loss:	39990.5387	Recall@5: 48.5676	MRR5: 36.3842	Epoch: 2,  2
+train_loss:	39990.5387	Recall@10: 56.2149	MRR10: 37.4080	Epoch: 2,  2
+train_loss:	39990.5387	Recall@20: 63.4841	MRR20: 37.9148	Epoch: 2,  2
+-------------------------------------------------------
+epoch:  3
+start training:  2026-06-14 03:57:20.346141
+[0/7963] train loss: 4.9977
+[50/7963] train loss: 4.5647
+[100/7963] train loss: 4.5568
+[150/7963] train loss: 4.8185
+[200/7963] train loss: 4.7892
+[250/7963] train loss: 4.7521
+[300/7963] train loss: 4.5191
+[350/7963] train loss: 4.7730
+[400/7963] train loss: 4.8534
+[450/7963] train loss: 4.8839
+[500/7963] train loss: 4.5362
+[550/7963] train loss: 4.6762
+[600/7963] train loss: 4.4629
+[650/7963] train loss: 4.9452
+[700/7963] train loss: 4.9626
+[750/7963] train loss: 4.7988
+[800/7963] train loss: 4.9977
+[850/7963] train loss: 4.5541
+[900/7963] train loss: 4.9716
+[950/7963] train loss: 5.0443
+[1000/7963] train loss: 4.8793
+[1050/7963] train loss: 4.5420
+[1100/7963] train loss: 4.9767
+[1150/7963] train loss: 5.2577
