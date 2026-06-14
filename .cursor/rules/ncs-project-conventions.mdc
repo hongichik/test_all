@@ -59,6 +59,16 @@ Quy ước chung:
 
 Không ghi log rải rác trong thư mục bài toán. Dùng helper `ncs_paths.py` và `ncs_logging.py` ở root repo.
 
+### 2c. Git — code vs log (local vs Colab)
+
+| Loại | Quy tắc |
+|------|---------|
+| **Code** (`nhom*/`, `papers_only*/`, `scripts/`, `notebooks/`, …) | Theo Git — pull/push bình thường |
+| **Log/ LogMins/ chạy trên máy local** | Luôn theo disk máy này; **không commit** từ local (đã `.gitignore`) |
+| **Log từ Colab** (push lên Git) | Theo Git — kéo về bằng pull; Colab push: `git add -f Log/...` |
+
+Pull trên máy local: dùng `scripts/ncs_git_pull.sh` (backup log → pull → restore log local).
+
 ## 3. Quy tắc tập trung data
 
 Mọi data phải nằm tại:

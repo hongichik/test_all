@@ -2,6 +2,10 @@
 Data/
 Data_goc/
 
+# Log chạy trên máy local — không commit từ đây (Colab: git add -f Log/...)
+Log/
+LogMins/
+
 # Python
 __pycache__/
 *.pyc
