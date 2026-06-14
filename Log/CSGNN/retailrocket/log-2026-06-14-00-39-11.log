@@ -253,3 +253,17 @@ start training:  2026-06-14 00:40:04.878920
 [11950/12441] train loss: 5.4254
 [12000/12441] train loss: 4.3619
 [12050/12441] train loss: 4.9454
+[12100/12441] train loss: 4.6456
+[12150/12441] train loss: 4.5485
+[12200/12441] train loss: 4.8282
+[12250/12441] train loss: 4.4342
+[12300/12441] train loss: 5.3861
+[12350/12441] train loss: 4.2957
+[12400/12441] train loss: 5.5800
+[12440/12441] train loss: 4.5144
+/content/test_all/nhom2/CSGNN/model.py:339: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  print('\tLoss:\t%.3f' % total_loss, flush=True)
+	Loss:	63662.926
+start predicting:  2026-06-14 04:50:25.639712
+[0/1177] predicting...
