@@ -201,3 +201,950 @@ Evaluate: [30/39]
 Evaluate: [33/39]
 Evaluate: [36/39]
 Evaluate: [38/39]
+14 Jun 04:58    INFO  epoch 0 evaluating [time: 3.24s, valid_score: 0.380400]
+14 Jun 04:58    INFO  valid result: 
+recall@10 : 0.4802    recall@20 : 0.5046    mrr@10 : 0.3787    mrr@20 : 0.3804    
+14 Jun 04:58    INFO  Saving current best: /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Train 1: [0/351] loss=6.4171
+Train 1: [10/351] loss=6.3089
+Train 1: [20/351] loss=7.3025
+Train 1: [30/351] loss=7.0146
+Train 1: [40/351] loss=5.8463
+Train 1: [50/351] loss=5.6390
+Train 1: [60/351] loss=6.4340
+Train 1: [70/351] loss=6.1584
+Train 1: [80/351] loss=6.2898
+Train 1: [90/351] loss=5.8461
+Train 1: [100/351] loss=5.8782
+Train 1: [110/351] loss=5.5476
+Train 1: [120/351] loss=6.1201
+Train 1: [130/351] loss=5.5767
+Train 1: [140/351] loss=5.9421
+Train 1: [150/351] loss=6.3921
+Train 1: [160/351] loss=5.2233
+Train 1: [170/351] loss=6.1186
+Train 1: [180/351] loss=5.2458
+Train 1: [190/351] loss=5.3814
+Train 1: [200/351] loss=5.4477
+Train 1: [210/351] loss=5.6441
+Train 1: [220/351] loss=5.5279
+Train 1: [230/351] loss=6.1377
+Train 1: [240/351] loss=5.2131
+Train 1: [250/351] loss=5.3887
+Train 1: [260/351] loss=5.3664
+Train 1: [270/351] loss=5.0067
+Train 1: [280/351] loss=5.9760
+Train 1: [290/351] loss=5.9138
+Train 1: [300/351] loss=5.5728
+Train 1: [310/351] loss=5.1454
+Train 1: [320/351] loss=5.8713
+Train 1: [330/351] loss=5.4103
+Train 1: [340/351] loss=5.9658
+Train 1: [350/351] loss=4.6421
+14 Jun 04:59    INFO  epoch 1 training [time: 60.27s, train loss: 2062.0335]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 04:59    INFO  epoch 1 evaluating [time: 3.07s, valid_score: 0.394800]
+14 Jun 04:59    INFO  valid result: 
+recall@10 : 0.5364    recall@20 : 0.5817    mrr@10 : 0.3917    mrr@20 : 0.3948    
+14 Jun 04:59    INFO  Saving current best: /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Train 2: [0/351] loss=4.9635
+Train 2: [10/351] loss=4.9245
+Train 2: [20/351] loss=5.9403
+Train 2: [30/351] loss=5.7395
+Train 2: [40/351] loss=4.6804
+Train 2: [50/351] loss=4.5273
+Train 2: [60/351] loss=5.2594
+Train 2: [70/351] loss=5.0999
+Train 2: [80/351] loss=5.1928
+Train 2: [90/351] loss=4.8129
+Train 2: [100/351] loss=4.9112
+Train 2: [110/351] loss=4.5427
+Train 2: [120/351] loss=5.1790
+Train 2: [130/351] loss=4.6966
+Train 2: [140/351] loss=4.9518
+Train 2: [150/351] loss=5.4706
+Train 2: [160/351] loss=4.3319
+Train 2: [170/351] loss=5.2162
+Train 2: [180/351] loss=4.3949
+Train 2: [190/351] loss=4.4989
+Train 2: [200/351] loss=4.5810
+Train 2: [210/351] loss=4.7172
+Train 2: [220/351] loss=4.6961
+Train 2: [230/351] loss=5.2575
+Train 2: [240/351] loss=4.4483
+Train 2: [250/351] loss=4.5627
+Train 2: [260/351] loss=4.7077
+Train 2: [270/351] loss=4.3505
+Train 2: [280/351] loss=4.7856
+Train 2: [290/351] loss=4.8642
+Train 2: [300/351] loss=4.8688
+Train 2: [310/351] loss=4.4605
+Train 2: [320/351] loss=5.1645
+Train 2: [330/351] loss=4.7325
+Train 2: [340/351] loss=5.2976
+Train 2: [350/351] loss=3.7891
+14 Jun 05:00    INFO  epoch 2 training [time: 60.12s, train loss: 1728.6911]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:00    INFO  epoch 2 evaluating [time: 3.11s, valid_score: 0.400500]
+14 Jun 05:00    INFO  valid result: 
+recall@10 : 0.5588    recall@20 : 0.6144    mrr@10 : 0.3966    mrr@20 : 0.4005    
+14 Jun 05:00    INFO  Saving current best: /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Train 3: [0/351] loss=4.3104
+Train 3: [10/351] loss=4.2865
+Train 3: [20/351] loss=5.2803
+Train 3: [30/351] loss=5.0844
+Train 3: [40/351] loss=4.1453
+Train 3: [50/351] loss=3.9968
+Train 3: [60/351] loss=4.7538
+Train 3: [70/351] loss=4.6340
+Train 3: [80/351] loss=4.6954
+Train 3: [90/351] loss=4.3330
+Train 3: [100/351] loss=4.4854
+Train 3: [110/351] loss=4.1337
+Train 3: [120/351] loss=4.6654
+Train 3: [130/351] loss=4.2907
+Train 3: [140/351] loss=4.4760
+Train 3: [150/351] loss=5.0176
+Train 3: [160/351] loss=3.9003
+Train 3: [170/351] loss=4.7581
+Train 3: [180/351] loss=3.9679
+Train 3: [190/351] loss=4.0876
+Train 3: [200/351] loss=4.1418
+Train 3: [210/351] loss=4.2706
+Train 3: [220/351] loss=4.2892
+Train 3: [230/351] loss=4.8663
+Train 3: [240/351] loss=4.0400
+Train 3: [250/351] loss=4.1811
+Train 3: [260/351] loss=4.3326
+Train 3: [270/351] loss=4.0403
+Train 3: [280/351] loss=4.2381
+Train 3: [290/351] loss=4.3688
+Train 3: [300/351] loss=4.5324
+Train 3: [310/351] loss=4.1292
+Train 3: [320/351] loss=4.8126
+Train 3: [330/351] loss=4.3597
+Train 3: [340/351] loss=4.9135
+Train 3: [350/351] loss=3.1172
+14 Jun 05:01    INFO  epoch 3 training [time: 60.48s, train loss: 1571.6699]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:01    INFO  epoch 3 evaluating [time: 3.08s, valid_score: 0.402300]
+14 Jun 05:01    INFO  valid result: 
+recall@10 : 0.5681    recall@20 : 0.6283    mrr@10 : 0.3981    mrr@20 : 0.4023    
+14 Jun 05:01    INFO  Saving current best: /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Train 4: [0/351] loss=4.0510
+Train 4: [10/351] loss=3.9776
+Train 4: [20/351] loss=4.8902
+Train 4: [30/351] loss=4.8621
+Train 4: [40/351] loss=3.8651
+Train 4: [50/351] loss=3.7490
+Train 4: [60/351] loss=4.5112
+Train 4: [70/351] loss=4.3770
+Train 4: [80/351] loss=4.4491
+Train 4: [90/351] loss=4.1320
+Train 4: [100/351] loss=4.2254
+Train 4: [110/351] loss=3.8877
+Train 4: [120/351] loss=4.4861
+Train 4: [130/351] loss=4.0754
+Train 4: [140/351] loss=4.2241
+Train 4: [150/351] loss=4.7695
+Train 4: [160/351] loss=3.7168
+Train 4: [170/351] loss=4.5298
+Train 4: [180/351] loss=3.7786
+Train 4: [190/351] loss=3.9089
+Train 4: [200/351] loss=3.9365
+Train 4: [210/351] loss=4.0960
+Train 4: [220/351] loss=4.0620
+Train 4: [230/351] loss=4.6277
+Train 4: [240/351] loss=3.8752
+Train 4: [250/351] loss=3.9824
+Train 4: [260/351] loss=4.1294
+Train 4: [270/351] loss=3.8342
+Train 4: [280/351] loss=3.9558
+Train 4: [290/351] loss=4.0964
+Train 4: [300/351] loss=4.3068
+Train 4: [310/351] loss=3.9688
+Train 4: [320/351] loss=4.5885
+Train 4: [330/351] loss=4.1823
+Train 4: [340/351] loss=4.7467
+Train 4: [350/351] loss=2.6977
+14 Jun 05:02    INFO  epoch 4 training [time: 60.42s, train loss: 1491.6569]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:02    INFO  epoch 4 evaluating [time: 3.08s, valid_score: 0.402800]
+14 Jun 05:02    INFO  valid result: 
+recall@10 : 0.5715    recall@20 : 0.6349    mrr@10 : 0.3984    mrr@20 : 0.4028    
+14 Jun 05:02    INFO  Saving current best: /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Train 5: [0/351] loss=3.9172
+Train 5: [10/351] loss=3.8564
+Train 5: [20/351] loss=4.7494
+Train 5: [30/351] loss=4.6553
+Train 5: [40/351] loss=3.7468
+Train 5: [50/351] loss=3.6473
+Train 5: [60/351] loss=4.3369
+Train 5: [70/351] loss=4.2284
+Train 5: [80/351] loss=4.3373
+Train 5: [90/351] loss=3.9906
+Train 5: [100/351] loss=4.1307
+Train 5: [110/351] loss=3.7941
+Train 5: [120/351] loss=4.3175
+Train 5: [130/351] loss=3.9694
+Train 5: [140/351] loss=4.1137
+Train 5: [150/351] loss=4.6174
+Train 5: [160/351] loss=3.6115
+Train 5: [170/351] loss=4.3709
+Train 5: [180/351] loss=3.7003
+Train 5: [190/351] loss=3.7913
+Train 5: [200/351] loss=3.7816
+Train 5: [210/351] loss=3.9685
+Train 5: [220/351] loss=3.9353
+Train 5: [230/351] loss=4.5238
+Train 5: [240/351] loss=3.7482
+Train 5: [250/351] loss=3.9111
+Train 5: [260/351] loss=4.0273
+Train 5: [270/351] loss=3.7566
+Train 5: [280/351] loss=3.8086
+Train 5: [290/351] loss=4.0041
+Train 5: [300/351] loss=4.2215
+Train 5: [310/351] loss=3.8496
+Train 5: [320/351] loss=4.4387
+Train 5: [330/351] loss=4.0631
+Train 5: [340/351] loss=4.5907
+Train 5: [350/351] loss=2.3761
+14 Jun 05:03    INFO  epoch 5 training [time: 60.62s, train loss: 1446.2147]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:03    INFO  epoch 5 evaluating [time: 3.12s, valid_score: 0.403500]
+14 Jun 05:03    INFO  valid result: 
+recall@10 : 0.5724    recall@20 : 0.6381    mrr@10 : 0.3989    mrr@20 : 0.4035    
+14 Jun 05:03    INFO  Saving current best: /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Train 6: [0/351] loss=3.8369
+Train 6: [10/351] loss=3.7367
+Train 6: [20/351] loss=4.5815
+Train 6: [30/351] loss=4.5941
+Train 6: [40/351] loss=3.6799
+Train 6: [50/351] loss=3.5804
+Train 6: [60/351] loss=4.2736
+Train 6: [70/351] loss=4.1603
+Train 6: [80/351] loss=4.2513
+Train 6: [90/351] loss=3.9263
+Train 6: [100/351] loss=4.0194
+Train 6: [110/351] loss=3.7277
+Train 6: [120/351] loss=4.2817
+Train 6: [130/351] loss=3.8623
+Train 6: [140/351] loss=4.0183
+Train 6: [150/351] loss=4.5549
+Train 6: [160/351] loss=3.5519
+Train 6: [170/351] loss=4.3128
+Train 6: [180/351] loss=3.6186
+Train 6: [190/351] loss=3.7624
+Train 6: [200/351] loss=3.7327
+Train 6: [210/351] loss=3.8738
+Train 6: [220/351] loss=3.8756
+Train 6: [230/351] loss=4.3972
+Train 6: [240/351] loss=3.6771
+Train 6: [250/351] loss=3.8204
+Train 6: [260/351] loss=3.9986
+Train 6: [270/351] loss=3.6640
+Train 6: [280/351] loss=3.7427
+Train 6: [290/351] loss=3.9142
+Train 6: [300/351] loss=4.1300
+Train 6: [310/351] loss=3.8138
+Train 6: [320/351] loss=4.3574
+Train 6: [330/351] loss=4.0023
+Train 6: [340/351] loss=4.4849
+Train 6: [350/351] loss=2.4187
+14 Jun 05:04    INFO  epoch 6 training [time: 60.52s, train loss: 1417.9663]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:04    INFO  epoch 6 evaluating [time: 3.20s, valid_score: 0.404000]
+14 Jun 05:04    INFO  valid result: 
+recall@10 : 0.5744    recall@20 : 0.6396    mrr@10 : 0.3994    mrr@20 : 0.404    
+14 Jun 05:04    INFO  Saving current best: /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Train 7: [0/351] loss=3.8005
+Train 7: [10/351] loss=3.6757
+Train 7: [20/351] loss=4.5238
+Train 7: [30/351] loss=4.4694
+Train 7: [40/351] loss=3.5943
+Train 7: [50/351] loss=3.4944
+Train 7: [60/351] loss=4.1993
+Train 7: [70/351] loss=4.1066
+Train 7: [80/351] loss=4.1758
+Train 7: [90/351] loss=3.8944
+Train 7: [100/351] loss=3.9836
+Train 7: [110/351] loss=3.7067
+Train 7: [120/351] loss=4.1887
+Train 7: [130/351] loss=3.8369
+Train 7: [140/351] loss=3.9836
+Train 7: [150/351] loss=4.4743
+Train 7: [160/351] loss=3.5160
+Train 7: [170/351] loss=4.2094
+Train 7: [180/351] loss=3.5831
+Train 7: [190/351] loss=3.7049
+Train 7: [200/351] loss=3.6979
+Train 7: [210/351] loss=3.8128
+Train 7: [220/351] loss=3.8027
+Train 7: [230/351] loss=4.3474
+Train 7: [240/351] loss=3.6619
+Train 7: [250/351] loss=3.7648
+Train 7: [260/351] loss=3.9226
+Train 7: [270/351] loss=3.6091
+Train 7: [280/351] loss=3.7330
+Train 7: [290/351] loss=3.8549
+Train 7: [300/351] loss=4.0333
+Train 7: [310/351] loss=3.7304
+Train 7: [320/351] loss=4.2840
+Train 7: [330/351] loss=3.9280
+Train 7: [340/351] loss=4.3942
+Train 7: [350/351] loss=2.3830
+14 Jun 05:05    INFO  epoch 7 training [time: 60.48s, train loss: 1398.5653]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:05    INFO  epoch 7 evaluating [time: 3.06s, valid_score: 0.403900]
+14 Jun 05:05    INFO  valid result: 
+recall@10 : 0.5746    recall@20 : 0.6411    mrr@10 : 0.3993    mrr@20 : 0.4039    
+Train 8: [0/351] loss=3.7471
+Train 8: [10/351] loss=3.6618
+Train 8: [20/351] loss=4.4641
+Train 8: [30/351] loss=4.4362
+Train 8: [40/351] loss=3.5655
+Train 8: [50/351] loss=3.5074
+Train 8: [60/351] loss=4.1740
+Train 8: [70/351] loss=4.0833
+Train 8: [80/351] loss=4.1188
+Train 8: [90/351] loss=3.8388
+Train 8: [100/351] loss=3.9761
+Train 8: [110/351] loss=3.6766
+Train 8: [120/351] loss=4.1805
+Train 8: [130/351] loss=3.8279
+Train 8: [140/351] loss=3.9390
+Train 8: [150/351] loss=4.4508
+Train 8: [160/351] loss=3.4516
+Train 8: [170/351] loss=4.1426
+Train 8: [180/351] loss=3.5125
+Train 8: [190/351] loss=3.6504
+Train 8: [200/351] loss=3.6721
+Train 8: [210/351] loss=3.7932
+Train 8: [220/351] loss=3.7964
+Train 8: [230/351] loss=4.3190
+Train 8: [240/351] loss=3.6289
+Train 8: [250/351] loss=3.7417
+Train 8: [260/351] loss=3.8830
+Train 8: [270/351] loss=3.5950
+Train 8: [280/351] loss=3.6691
+Train 8: [290/351] loss=3.8309
+Train 8: [300/351] loss=4.0104
+Train 8: [310/351] loss=3.7043
+Train 8: [320/351] loss=4.2390
+Train 8: [330/351] loss=3.9074
+Train 8: [340/351] loss=4.3651
+Train 8: [350/351] loss=2.2124
+14 Jun 05:06    INFO  epoch 8 training [time: 60.57s, train loss: 1384.4364]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:06    INFO  epoch 8 evaluating [time: 3.14s, valid_score: 0.403800]
+14 Jun 05:06    INFO  valid result: 
+recall@10 : 0.5743    recall@20 : 0.642    mrr@10 : 0.3991    mrr@20 : 0.4038    
+Train 9: [0/351] loss=3.7208
+Train 9: [10/351] loss=3.6383
+Train 9: [20/351] loss=4.4165
+Train 9: [30/351] loss=4.4106
+Train 9: [40/351] loss=3.5600
+Train 9: [50/351] loss=3.4691
+Train 9: [60/351] loss=4.0813
+Train 9: [70/351] loss=4.0511
+Train 9: [80/351] loss=4.0964
+Train 9: [90/351] loss=3.8047
+Train 9: [100/351] loss=3.9414
+Train 9: [110/351] loss=3.6353
+Train 9: [120/351] loss=4.1600
+Train 9: [130/351] loss=3.7746
+Train 9: [140/351] loss=3.9491
+Train 9: [150/351] loss=4.3869
+Train 9: [160/351] loss=3.4623
+Train 9: [170/351] loss=4.1523
+Train 9: [180/351] loss=3.4875
+Train 9: [190/351] loss=3.6398
+Train 9: [200/351] loss=3.6347
+Train 9: [210/351] loss=3.7744
+Train 9: [220/351] loss=3.7311
+Train 9: [230/351] loss=4.2908
+Train 9: [240/351] loss=3.6020
+Train 9: [250/351] loss=3.7186
+Train 9: [260/351] loss=3.8856
+Train 9: [270/351] loss=3.5580
+Train 9: [280/351] loss=3.6303
+Train 9: [290/351] loss=3.8038
+Train 9: [300/351] loss=3.9632
+Train 9: [310/351] loss=3.6935
+Train 9: [320/351] loss=4.2047
+Train 9: [330/351] loss=3.8904
+Train 9: [340/351] loss=4.3468
+Train 9: [350/351] loss=2.2771
+14 Jun 05:07    INFO  epoch 9 training [time: 60.64s, train loss: 1373.7037]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:07    INFO  epoch 9 evaluating [time: 3.09s, valid_score: 0.404100]
+14 Jun 05:07    INFO  valid result: 
+recall@10 : 0.5747    recall@20 : 0.6419    mrr@10 : 0.3994    mrr@20 : 0.4041    
+14 Jun 05:07    INFO  Saving current best: /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Train 10: [0/351] loss=3.6995
+Train 10: [10/351] loss=3.5856
+Train 10: [20/351] loss=4.3723
+Train 10: [30/351] loss=4.3641
+Train 10: [40/351] loss=3.4780
+Train 10: [50/351] loss=3.4300
+Train 10: [60/351] loss=4.0705
+Train 10: [70/351] loss=4.0339
+Train 10: [80/351] loss=4.0775
+Train 10: [90/351] loss=3.7886
+Train 10: [100/351] loss=3.9313
+Train 10: [110/351] loss=3.6356
+Train 10: [120/351] loss=4.1540
+Train 10: [130/351] loss=3.7504
+Train 10: [140/351] loss=3.8877
+Train 10: [150/351] loss=4.3572
+Train 10: [160/351] loss=3.4273
+Train 10: [170/351] loss=4.0933
+Train 10: [180/351] loss=3.5014
+Train 10: [190/351] loss=3.6248
+Train 10: [200/351] loss=3.5944
+Train 10: [210/351] loss=3.7355
+Train 10: [220/351] loss=3.7481
+Train 10: [230/351] loss=4.2595
+Train 10: [240/351] loss=3.5746
+Train 10: [250/351] loss=3.6852
+Train 10: [260/351] loss=3.8282
+Train 10: [270/351] loss=3.5449
+Train 10: [280/351] loss=3.6194
+Train 10: [290/351] loss=3.7500
+Train 10: [300/351] loss=3.9317
+Train 10: [310/351] loss=3.6450
+Train 10: [320/351] loss=4.1970
+Train 10: [330/351] loss=3.8521
+Train 10: [340/351] loss=4.3073
+Train 10: [350/351] loss=2.1250
+14 Jun 05:08    INFO  epoch 10 training [time: 60.49s, train loss: 1365.2686]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:08    INFO  epoch 10 evaluating [time: 3.08s, valid_score: 0.404000]
+14 Jun 05:08    INFO  valid result: 
+recall@10 : 0.5748    recall@20 : 0.6425    mrr@10 : 0.3993    mrr@20 : 0.404    
+Train 11: [0/351] loss=3.6947
+Train 11: [10/351] loss=3.5681
+Train 11: [20/351] loss=4.3456
+Train 11: [30/351] loss=4.3206
+Train 11: [40/351] loss=3.4844
+Train 11: [50/351] loss=3.4267
+Train 11: [60/351] loss=4.0970
+Train 11: [70/351] loss=3.9832
+Train 11: [80/351] loss=4.0694
+Train 11: [90/351] loss=3.7645
+Train 11: [100/351] loss=3.9163
+Train 11: [110/351] loss=3.6234
+Train 11: [120/351] loss=4.0766
+Train 11: [130/351] loss=3.7541
+Train 11: [140/351] loss=3.8575
+Train 11: [150/351] loss=4.3531
+Train 11: [160/351] loss=3.4232
+Train 11: [170/351] loss=4.0620
+Train 11: [180/351] loss=3.4864
+Train 11: [190/351] loss=3.6078
+Train 11: [200/351] loss=3.6129
+Train 11: [210/351] loss=3.7395
+Train 11: [220/351] loss=3.6953
+Train 11: [230/351] loss=4.2394
+Train 11: [240/351] loss=3.5475
+Train 11: [250/351] loss=3.6862
+Train 11: [260/351] loss=3.8427
+Train 11: [270/351] loss=3.4891
+Train 11: [280/351] loss=3.6061
+Train 11: [290/351] loss=3.7720
+Train 11: [300/351] loss=3.9117
+Train 11: [310/351] loss=3.6305
+Train 11: [320/351] loss=4.1391
+Train 11: [330/351] loss=3.8409
+Train 11: [340/351] loss=4.2631
+Train 11: [350/351] loss=2.1970
+14 Jun 05:09    INFO  epoch 11 training [time: 60.43s, train loss: 1358.3711]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:09    INFO  epoch 11 evaluating [time: 3.34s, valid_score: 0.404300]
+14 Jun 05:09    INFO  valid result: 
+recall@10 : 0.5754    recall@20 : 0.6428    mrr@10 : 0.3996    mrr@20 : 0.4043    
+14 Jun 05:09    INFO  Saving current best: /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Train 12: [0/351] loss=3.6526
+Train 12: [10/351] loss=3.6016
+Train 12: [20/351] loss=4.3330
+Train 12: [30/351] loss=4.2919
+Train 12: [40/351] loss=3.4959
+Train 12: [50/351] loss=3.3983
+Train 12: [60/351] loss=4.0513
+Train 12: [70/351] loss=3.9617
+Train 12: [80/351] loss=4.0739
+Train 12: [90/351] loss=3.7317
+Train 12: [100/351] loss=3.8719
+Train 12: [110/351] loss=3.5884
+Train 12: [120/351] loss=4.0864
+Train 12: [130/351] loss=3.7376
+Train 12: [140/351] loss=3.8581
+Train 12: [150/351] loss=4.3126
+Train 12: [160/351] loss=3.4235
+Train 12: [170/351] loss=4.0780
+Train 12: [180/351] loss=3.4745
+Train 12: [190/351] loss=3.5695
+Train 12: [200/351] loss=3.5771
+Train 12: [210/351] loss=3.7114
+Train 12: [220/351] loss=3.6729
+Train 12: [230/351] loss=4.2223
+Train 12: [240/351] loss=3.5558
+Train 12: [250/351] loss=3.6827
+Train 12: [260/351] loss=3.7976
+Train 12: [270/351] loss=3.5088
+Train 12: [280/351] loss=3.6042
+Train 12: [290/351] loss=3.6998
+Train 12: [300/351] loss=3.9002
+Train 12: [310/351] loss=3.6297
+Train 12: [320/351] loss=4.1321
+Train 12: [330/351] loss=3.8427
+Train 12: [340/351] loss=4.2730
+Train 12: [350/351] loss=2.2235
+14 Jun 05:10    INFO  epoch 12 training [time: 60.57s, train loss: 1352.5999]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:10    INFO  epoch 12 evaluating [time: 3.10s, valid_score: 0.404000]
+14 Jun 05:10    INFO  valid result: 
+recall@10 : 0.5755    recall@20 : 0.6435    mrr@10 : 0.3992    mrr@20 : 0.404    
+Train 13: [0/351] loss=3.6325
+Train 13: [10/351] loss=3.5707
+Train 13: [20/351] loss=4.3248
+Train 13: [30/351] loss=4.2817
+Train 13: [40/351] loss=3.4698
+Train 13: [50/351] loss=3.3901
+Train 13: [60/351] loss=4.0227
+Train 13: [70/351] loss=3.9632
+Train 13: [80/351] loss=4.0554
+Train 13: [90/351] loss=3.7348
+Train 13: [100/351] loss=3.8262
+Train 13: [110/351] loss=3.5948
+Train 13: [120/351] loss=4.0678
+Train 13: [130/351] loss=3.6995
+Train 13: [140/351] loss=3.8912
+Train 13: [150/351] loss=4.2973
+Train 13: [160/351] loss=3.3973
+Train 13: [170/351] loss=4.0445
+Train 13: [180/351] loss=3.4552
+Train 13: [190/351] loss=3.5719
+Train 13: [200/351] loss=3.5638
+Train 13: [210/351] loss=3.7156
+Train 13: [220/351] loss=3.6580
+Train 13: [230/351] loss=4.2221
+Train 13: [240/351] loss=3.5100
+Train 13: [250/351] loss=3.6331
+Train 13: [260/351] loss=3.8424
+Train 13: [270/351] loss=3.4735
+Train 13: [280/351] loss=3.5573
+Train 13: [290/351] loss=3.7023
+Train 13: [300/351] loss=3.8409
+Train 13: [310/351] loss=3.6344
+Train 13: [320/351] loss=4.1403
+Train 13: [330/351] loss=3.8035
+Train 13: [340/351] loss=4.2749
+Train 13: [350/351] loss=2.2242
+14 Jun 05:11    INFO  epoch 13 training [time: 60.67s, train loss: 1347.4319]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:12    INFO  epoch 13 evaluating [time: 3.09s, valid_score: 0.403900]
+14 Jun 05:12    INFO  valid result: 
+recall@10 : 0.5754    recall@20 : 0.6428    mrr@10 : 0.3992    mrr@20 : 0.4039    
+Train 14: [0/351] loss=3.6543
+Train 14: [10/351] loss=3.5193
+Train 14: [20/351] loss=4.3014
+Train 14: [30/351] loss=4.2754
+Train 14: [40/351] loss=3.4518
+Train 14: [50/351] loss=3.3874
+Train 14: [60/351] loss=4.0098
+Train 14: [70/351] loss=3.9722
+Train 14: [80/351] loss=4.0160
+Train 14: [90/351] loss=3.7048
+Train 14: [100/351] loss=3.8467
+Train 14: [110/351] loss=3.5824
+Train 14: [120/351] loss=4.0455
+Train 14: [130/351] loss=3.7191
+Train 14: [140/351] loss=3.8427
+Train 14: [150/351] loss=4.2845
+Train 14: [160/351] loss=3.4156
+Train 14: [170/351] loss=4.0169
+Train 14: [180/351] loss=3.4599
+Train 14: [190/351] loss=3.5524
+Train 14: [200/351] loss=3.5587
+Train 14: [210/351] loss=3.6857
+Train 14: [220/351] loss=3.6534
+Train 14: [230/351] loss=4.2007
+Train 14: [240/351] loss=3.5256
+Train 14: [250/351] loss=3.6577
+Train 14: [260/351] loss=3.7699
+Train 14: [270/351] loss=3.4662
+Train 14: [280/351] loss=3.5510
+Train 14: [290/351] loss=3.6866
+Train 14: [300/351] loss=3.8593
+Train 14: [310/351] loss=3.6242
+Train 14: [320/351] loss=4.0877
+Train 14: [330/351] loss=3.7785
+Train 14: [340/351] loss=4.2249
+Train 14: [350/351] loss=2.1919
+14 Jun 05:13    INFO  epoch 14 training [time: 60.62s, train loss: 1342.4926]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:13    INFO  epoch 14 evaluating [time: 3.34s, valid_score: 0.404100]
+14 Jun 05:13    INFO  valid result: 
+recall@10 : 0.5755    recall@20 : 0.6432    mrr@10 : 0.3994    mrr@20 : 0.4041    
+Train 15: [0/351] loss=3.6305
+Train 15: [10/351] loss=3.5466
+Train 15: [20/351] loss=4.2953
+Train 15: [30/351] loss=4.2827
+Train 15: [40/351] loss=3.4293
+Train 15: [50/351] loss=3.3747
+Train 15: [60/351] loss=3.9911
+Train 15: [70/351] loss=3.9482
+Train 15: [80/351] loss=3.9956
+Train 15: [90/351] loss=3.7095
+Train 15: [100/351] loss=3.8435
+Train 15: [110/351] loss=3.5348
+Train 15: [120/351] loss=4.0512
+Train 15: [130/351] loss=3.6959
+Train 15: [140/351] loss=3.8316
+Train 15: [150/351] loss=4.2778
+Train 15: [160/351] loss=3.4100
+Train 15: [170/351] loss=4.0168
+Train 15: [180/351] loss=3.4157
+Train 15: [190/351] loss=3.5535
+Train 15: [200/351] loss=3.5632
+Train 15: [210/351] loss=3.6765
+Train 15: [220/351] loss=3.6538
+Train 15: [230/351] loss=4.1449
+Train 15: [240/351] loss=3.5280
+Train 15: [250/351] loss=3.6176
+Train 15: [260/351] loss=3.7805
+Train 15: [270/351] loss=3.4684
+Train 15: [280/351] loss=3.5375
+Train 15: [290/351] loss=3.6910
+Train 15: [300/351] loss=3.8293
+Train 15: [310/351] loss=3.6035
+Train 15: [320/351] loss=4.0698
+Train 15: [330/351] loss=3.7840
+Train 15: [340/351] loss=4.1735
+Train 15: [350/351] loss=2.1358
+14 Jun 05:14    INFO  epoch 15 training [time: 60.58s, train loss: 1338.6892]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:14    INFO  epoch 15 evaluating [time: 3.07s, valid_score: 0.403600]
+14 Jun 05:14    INFO  valid result: 
+recall@10 : 0.5749    recall@20 : 0.6429    mrr@10 : 0.3989    mrr@20 : 0.4036    
+Train 16: [0/351] loss=3.6038
+Train 16: [10/351] loss=3.5183
+Train 16: [20/351] loss=4.2432
+Train 16: [30/351] loss=4.2878
+Train 16: [40/351] loss=3.4355
+Train 16: [50/351] loss=3.3653
+Train 16: [60/351] loss=3.9915
+Train 16: [70/351] loss=3.9338
+Train 16: [80/351] loss=3.9907
+Train 16: [90/351] loss=3.7112
+Train 16: [100/351] loss=3.8301
+Train 16: [110/351] loss=3.5534
+Train 16: [120/351] loss=4.0221
+Train 16: [130/351] loss=3.7057
+Train 16: [140/351] loss=3.8321
+Train 16: [150/351] loss=4.2559
+Train 16: [160/351] loss=3.4031
+Train 16: [170/351] loss=3.9929
+Train 16: [180/351] loss=3.4250
+Train 16: [190/351] loss=3.5765
+Train 16: [200/351] loss=3.5486
+Train 16: [210/351] loss=3.6857
+Train 16: [220/351] loss=3.6511
+Train 16: [230/351] loss=4.1653
+Train 16: [240/351] loss=3.5141
+Train 16: [250/351] loss=3.6216
+Train 16: [260/351] loss=3.7579
+Train 16: [270/351] loss=3.4414
+Train 16: [280/351] loss=3.5326
+Train 16: [290/351] loss=3.6734
+Train 16: [300/351] loss=3.8275
+Train 16: [310/351] loss=3.5863
+Train 16: [320/351] loss=4.0564
+Train 16: [330/351] loss=3.7826
+Train 16: [340/351] loss=4.2060
+Train 16: [350/351] loss=2.0288
+14 Jun 05:15    INFO  epoch 16 training [time: 60.54s, train loss: 1335.3012]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:15    INFO  epoch 16 evaluating [time: 3.07s, valid_score: 0.403700]
+14 Jun 05:15    INFO  valid result: 
+recall@10 : 0.5748    recall@20 : 0.6427    mrr@10 : 0.3989    mrr@20 : 0.4037    
+Train 17: [0/351] loss=3.6329
+Train 17: [10/351] loss=3.5155
+Train 17: [20/351] loss=4.2577
+Train 17: [30/351] loss=4.2292
+Train 17: [40/351] loss=3.4287
+Train 17: [50/351] loss=3.3715
+Train 17: [60/351] loss=3.9599
+Train 17: [70/351] loss=3.9551
+Train 17: [80/351] loss=4.0043
+Train 17: [90/351] loss=3.6823
+Train 17: [100/351] loss=3.8169
+Train 17: [110/351] loss=3.5498
+Train 17: [120/351] loss=4.0105
+Train 17: [130/351] loss=3.6729
+Train 17: [140/351] loss=3.7911
+Train 17: [150/351] loss=4.2484
+Train 17: [160/351] loss=3.3725
+Train 17: [170/351] loss=3.9758
+Train 17: [180/351] loss=3.4376
+Train 17: [190/351] loss=3.5127
+Train 17: [200/351] loss=3.5242
+Train 17: [210/351] loss=3.6815
+Train 17: [220/351] loss=3.6665
+Train 17: [230/351] loss=4.1364
+Train 17: [240/351] loss=3.5006
+Train 17: [250/351] loss=3.6260
+Train 17: [260/351] loss=3.7620
+Train 17: [270/351] loss=3.4577
+Train 17: [280/351] loss=3.5293
+Train 17: [290/351] loss=3.6982
+Train 17: [300/351] loss=3.8400
+Train 17: [310/351] loss=3.5857
+Train 17: [320/351] loss=4.0562
+Train 17: [330/351] loss=3.7747
+Train 17: [340/351] loss=4.1656
+Train 17: [350/351] loss=2.1657
+14 Jun 05:16    INFO  epoch 17 training [time: 60.51s, train loss: 1332.1533]
+Evaluate: [0/39]
+Evaluate: [3/39]
+Evaluate: [6/39]
+Evaluate: [9/39]
+Evaluate: [12/39]
+Evaluate: [15/39]
+Evaluate: [18/39]
+Evaluate: [21/39]
+Evaluate: [24/39]
+Evaluate: [27/39]
+Evaluate: [30/39]
+Evaluate: [33/39]
+Evaluate: [36/39]
+Evaluate: [38/39]
+14 Jun 05:16    INFO  epoch 17 evaluating [time: 3.18s, valid_score: 0.403600]
+14 Jun 05:16    INFO  valid result: 
+recall@10 : 0.5745    recall@20 : 0.6424    mrr@10 : 0.3989    mrr@20 : 0.4036    
+14 Jun 05:16    INFO  Finished training, best eval result in epoch 11
+14 Jun 05:16    INFO  Loading model structure and parameters from /content/test_all/log/COREtrm/retailrocket/bs2048-lmdNone-semNone-None-Jun-14-2026_04-56-46-lr0.001-l20.0-tauNone-None-DPh0.5-DPa0.5/model.pth
+Evaluate: [0/37]
+Evaluate: [3/37]
+Evaluate: [6/37]
+Evaluate: [9/37]
+Evaluate: [12/37]
+Evaluate: [15/37]
+Evaluate: [18/37]
+Evaluate: [21/37]
+Evaluate: [24/37]
+Evaluate: [27/37]
+Evaluate: [30/37]
+Evaluate: [33/37]
+Evaluate: [36/37]
+14 Jun 05:16    INFO  best valid : {'recall@10': np.float64(0.5754), 'recall@20': np.float64(0.6428), 'mrr@10': np.float64(0.3996), 'mrr@20': np.float64(0.4043)}
+14 Jun 05:16    INFO  test result: {'recall@10': np.float64(0.554), 'recall@20': np.float64(0.6215), 'mrr@10': np.float64(0.3838), 'mrr@20': np.float64(0.3884)}
