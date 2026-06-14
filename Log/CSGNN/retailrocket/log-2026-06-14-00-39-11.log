@@ -12,3 +12,4 @@ start training:  2026-06-14 00:40:04.878920
 /content/test_all/nhom2/CSGNN/model.py:288: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
   one = torch.cuda.FloatTensor(neg1.shape[0]).fill_(1)
 [0/12441] train loss: 11.4850
+[50/12441] train loss: 9.7096
