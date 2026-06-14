@@ -13,7 +13,8 @@ def apply_torch_load_compat() -> None:
     _orig_load = torch.load
 
     def _load(*args, **kwargs):
-        kwargs.setdefault("weights_only", False)
+        # RecBole checkpoint = full pickle; PyTorch 2.6+ default weights_only=True sẽ fail.
+        kwargs["weights_only"] = False
         return _orig_load(*args, **kwargs)
 
     _load._ncs_patched = True

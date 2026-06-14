@@ -12,8 +12,12 @@ import sys
 
 _CORE_ROOT = Path(__file__).resolve().parent
 _REPO = Path(__file__).resolve().parents[2]
+_DUOREC_ROOT = _REPO / "nhom3" / "DuoRec"
+# RecBole vendored trong DuoRec có torch.load(..., weights_only=False); pip package trên Colab thì không.
+sys.path.insert(0, str(_DUOREC_ROOT))
 sys.path.insert(0, str(_REPO))
 from ncs_numpy_compat import apply_numpy_recbole_compat, apply_torch_load_compat
+from ncs_paths import data_dir
 
 apply_numpy_recbole_compat()
 apply_torch_load_compat()
@@ -53,8 +57,11 @@ def run_single_model(args):
         str(_CORE_ROOT / 'props/overall.yaml'),
         str(_CORE_ROOT / f'props/core_{args.model}.yaml'),
     ]
+    ds_path = data_dir('CORE', args.dataset)
+    if not ds_path.is_dir():
+        ds_path = _CORE_ROOT / 'dataset' / args.dataset
     config_dict = {
-        'data_path': str(_CORE_ROOT / 'dataset') + '/',
+        'data_path': str(ds_path) + '/',
         'train_neg_sample_args': None,
     }
     if os.environ.get('NCS_SMOKE'):
@@ -101,13 +108,18 @@ def run_single_model(args):
     # trainer loading and initialization
     trainer = get_trainer(config['MODEL_TYPE'], config['model'])(config, model)
 
-    # model training
-    best_valid_score, best_valid_result = trainer.fit(
-        train_data, valid_data, saved=True, show_progress=config['show_progress']
-    )
+    if args.eval_only:
+        logger.info(set_color('eval-only', 'yellow') + ': skip training, load best checkpoint')
+        best_valid_score, best_valid_result = 0.0, {}
+    else:
+        best_valid_score, best_valid_result = trainer.fit(
+            train_data, valid_data, saved=True, show_progress=config['show_progress']
+        )
 
-    # model evaluation
-    test_result = trainer.evaluate(test_data, load_best_model=True, show_progress=config['show_progress'])
+    apply_torch_load_compat()
+    test_result = trainer.evaluate(
+        test_data, load_best_model=True, show_progress=config['show_progress']
+    )
 
     logger.info(set_color('best valid ', 'yellow') + f': {best_valid_result}')
     logger.info(set_color('test result', 'yellow') + f': {test_result}')
@@ -124,6 +136,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, default='trm', help='ave or trm')
     parser.add_argument('--dataset', type=str, default='diginetica', help='diginetica, nowplaying, retailrocket, tmall, yoochoose')
+    parser.add_argument(
+        '--eval-only',
+        action='store_true',
+        help='Bỏ qua train, chỉ load checkpoint best và chạy test (sau khi train crash ở test)',
+    )
     args, _ = parser.parse_known_args()
 
     run_single_model(args)
