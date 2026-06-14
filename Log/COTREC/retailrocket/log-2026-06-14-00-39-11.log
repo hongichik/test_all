@@ -859,3 +859,295 @@ start training:  2026-06-14 04:59:58.377358
 [6000/7963] train loss: 5.3602
 [6050/7963] train loss: 5.2271
 [6100/7963] train loss: 5.0731
+[6150/7963] train loss: 4.6454
+[6200/7963] train loss: 5.1037
+[6250/7963] train loss: 4.9236
+[6300/7963] train loss: 4.8630
+[6350/7963] train loss: 5.0391
+[6400/7963] train loss: 5.2043
+[6450/7963] train loss: 5.0767
+[6500/7963] train loss: 4.8319
+[6550/7963] train loss: 5.3026
+[6600/7963] train loss: 4.8336
+[6650/7963] train loss: 5.1773
+[6700/7963] train loss: 5.0821
+[6750/7963] train loss: 4.8630
+[6800/7963] train loss: 5.5122
+[6850/7963] train loss: 4.7286
+[6900/7963] train loss: 5.2374
+[6950/7963] train loss: 4.9394
+[7000/7963] train loss: 5.4515
+[7050/7963] train loss: 4.8890
+[7100/7963] train loss: 4.9512
+[7150/7963] train loss: 5.0948
+[7200/7963] train loss: 4.7907
+[7250/7963] train loss: 5.0104
+[7300/7963] train loss: 4.5005
+[7350/7963] train loss: 5.0098
+[7400/7963] train loss: 4.9945
+[7450/7963] train loss: 5.3036
+[7500/7963] train loss: 4.9372
+[7550/7963] train loss: 5.3209
+[7600/7963] train loss: 5.4513
+[7650/7963] train loss: 5.0856
+[7700/7963] train loss: 4.6993
+[7750/7963] train loss: 5.2396
+[7800/7963] train loss: 5.1250
+[7850/7963] train loss: 5.1174
+[7900/7963] train loss: 5.5582
+[7950/7963] train loss: 4.9036
+[7962/7963] train loss: 4.8463
+	Loss:	39307.246
+start predicting:  2026-06-14 05:38:43.343214
+[0/754] predicting...
+[75/754] predicting...
+[150/754] predicting...
+[225/754] predicting...
+[300/754] predicting...
+[375/754] predicting...
+[450/754] predicting...
+[525/754] predicting...
+[600/754] predicting...
+[675/754] predicting...
+[750/754] predicting...
+[753/754] predicting...
+{'hit5': np.float64(48.778514588859416), 'mrr5': np.float64(36.85282935455349), 'hit10': np.float64(56.40716180371352), 'mrr10': np.float64(37.87727306218686), 'hit20': np.float64(63.710875331564985), 'mrr20': np.float64(38.38797752035406)}
+train_loss:	39307.2464	Recall@5: 48.7785	MRR5: 36.8528	Epoch: 4,  4
+train_loss:	39307.2464	Recall@10: 56.4072	MRR10: 37.8773	Epoch: 4,  4
+train_loss:	39307.2464	Recall@20: 63.7109	MRR20: 38.3880	Epoch: 4,  4
+-------------------------------------------------------
+epoch:  5
+start training:  2026-06-14 05:40:12.959761
+[0/7963] train loss: 4.6044
+[50/7963] train loss: 4.8390
+[100/7963] train loss: 4.8811
+[150/7963] train loss: 4.8260
+[200/7963] train loss: 4.9252
+[250/7963] train loss: 4.4004
+[300/7963] train loss: 4.6627
+[350/7963] train loss: 4.5361
+[400/7963] train loss: 4.6231
+[450/7963] train loss: 4.9578
+[500/7963] train loss: 5.1296
+[550/7963] train loss: 4.8582
+[600/7963] train loss: 5.0087
+[650/7963] train loss: 4.5990
+[700/7963] train loss: 4.8664
+[750/7963] train loss: 5.0450
+[800/7963] train loss: 4.7709
+[850/7963] train loss: 4.6825
+[900/7963] train loss: 4.7958
+[950/7963] train loss: 4.8939
+[1000/7963] train loss: 5.0397
+[1050/7963] train loss: 4.9606
+[1100/7963] train loss: 4.5538
+[1150/7963] train loss: 4.8911
+[1200/7963] train loss: 4.8214
+[1250/7963] train loss: 4.6283
+[1300/7963] train loss: 5.1281
+[1350/7963] train loss: 4.8542
+[1400/7963] train loss: 4.6759
+[1450/7963] train loss: 4.7246
+[1500/7963] train loss: 4.8902
+[1550/7963] train loss: 4.6667
+[1600/7963] train loss: 4.6489
+[1650/7963] train loss: 4.6295
+[1700/7963] train loss: 4.5092
+[1750/7963] train loss: 4.7020
+[1800/7963] train loss: 4.9784
+[1850/7963] train loss: 4.4674
+[1900/7963] train loss: 5.0489
+[1950/7963] train loss: 4.3788
+[2000/7963] train loss: 4.7011
+[2050/7963] train loss: 4.8717
+[2100/7963] train loss: 5.1238
+[2150/7963] train loss: 4.6495
+[2200/7963] train loss: 5.1788
+[2250/7963] train loss: 4.9765
+[2300/7963] train loss: 5.0817
+[2350/7963] train loss: 4.8791
+[2400/7963] train loss: 4.5736
+[2450/7963] train loss: 5.0700
+[2500/7963] train loss: 4.3922
+[2550/7963] train loss: 4.5818
+[2600/7963] train loss: 4.8141
+[2650/7963] train loss: 4.6194
+[2700/7963] train loss: 4.7232
+[2750/7963] train loss: 5.1376
+[2800/7963] train loss: 5.2177
+[2850/7963] train loss: 4.7454
+[2900/7963] train loss: 4.7003
+[2950/7963] train loss: 4.5859
+[3000/7963] train loss: 5.1094
+[3050/7963] train loss: 4.8381
+[3100/7963] train loss: 4.7541
+[3150/7963] train loss: 4.8571
+[3200/7963] train loss: 4.6423
+[3250/7963] train loss: 5.2270
+[3300/7963] train loss: 4.7770
+[3350/7963] train loss: 4.8884
+[3400/7963] train loss: 4.8676
+[3450/7963] train loss: 4.9846
+[3500/7963] train loss: 5.0847
+[3550/7963] train loss: 4.6842
+[3600/7963] train loss: 5.2462
+[3650/7963] train loss: 4.8133
+[3700/7963] train loss: 4.9093
+[3750/7963] train loss: 4.6690
+[3800/7963] train loss: 5.2180
+[3850/7963] train loss: 5.0832
+[3900/7963] train loss: 4.9404
+[3950/7963] train loss: 4.9498
+[4000/7963] train loss: 5.1857
+[4050/7963] train loss: 5.2547
+[4100/7963] train loss: 4.9934
+[4150/7963] train loss: 4.9654
+[4200/7963] train loss: 4.9585
+[4250/7963] train loss: 5.0577
+[4300/7963] train loss: 4.9332
+[4350/7963] train loss: 5.3648
+[4400/7963] train loss: 4.6578
+[4450/7963] train loss: 5.0496
+[4500/7963] train loss: 4.8893
+[4550/7963] train loss: 4.7611
+[4600/7963] train loss: 5.0586
+[4650/7963] train loss: 5.0778
+[4700/7963] train loss: 4.8298
+[4750/7963] train loss: 5.4306
+[4800/7963] train loss: 4.8300
+[4850/7963] train loss: 5.0812
+[4900/7963] train loss: 4.8238
+[4950/7963] train loss: 5.0507
+[5000/7963] train loss: 4.9818
+[5050/7963] train loss: 5.0143
+[5100/7963] train loss: 5.0020
+[5150/7963] train loss: 5.0183
+[5200/7963] train loss: 4.9385
+[5250/7963] train loss: 5.2129
+[5300/7963] train loss: 4.8605
+[5350/7963] train loss: 4.7315
+[5400/7963] train loss: 5.3582
+[5450/7963] train loss: 5.2042
+[5500/7963] train loss: 4.6408
+[5550/7963] train loss: 5.4160
+[5600/7963] train loss: 5.1115
+[5650/7963] train loss: 5.0420
+[5700/7963] train loss: 4.7074
+[5750/7963] train loss: 4.7633
+[5800/7963] train loss: 4.9616
+[5850/7963] train loss: 4.8636
+[5900/7963] train loss: 4.8010
+[5950/7963] train loss: 5.3431
+[6000/7963] train loss: 5.2333
+[6050/7963] train loss: 5.2400
+[6100/7963] train loss: 4.8457
+[6150/7963] train loss: 4.9898
+[6200/7963] train loss: 5.0412
+[6250/7963] train loss: 4.7156
+[6300/7963] train loss: 5.4065
+[6350/7963] train loss: 4.6617
+[6400/7963] train loss: 4.8717
+[6450/7963] train loss: 4.9062
+[6500/7963] train loss: 4.8347
+[6550/7963] train loss: 5.1236
+[6600/7963] train loss: 5.2752
+[6650/7963] train loss: 5.0627
+[6700/7963] train loss: 4.6683
+[6750/7963] train loss: 4.8933
+[6800/7963] train loss: 4.8197
+[6850/7963] train loss: 4.8201
+[6900/7963] train loss: 4.9247
+[6950/7963] train loss: 5.2700
+[7000/7963] train loss: 5.0377
+[7050/7963] train loss: 5.2588
+[7100/7963] train loss: 4.9570
+[7150/7963] train loss: 4.9653
+[7200/7963] train loss: 4.8932
+[7250/7963] train loss: 4.5957
+[7300/7963] train loss: 4.5661
+[7350/7963] train loss: 4.8250
+[7400/7963] train loss: 4.7908
+[7450/7963] train loss: 5.2121
+[7500/7963] train loss: 5.0202
+[7550/7963] train loss: 5.0679
+[7600/7963] train loss: 5.1685
+[7650/7963] train loss: 5.0494
+[7700/7963] train loss: 4.9906
+[7750/7963] train loss: 4.9289
+[7800/7963] train loss: 4.9918
+[7850/7963] train loss: 4.7992
+[7900/7963] train loss: 5.0280
+[7950/7963] train loss: 4.6620
+[7962/7963] train loss: 5.0786
+	Loss:	39102.672
+start predicting:  2026-06-14 06:17:06.419973
+[0/754] predicting...
+[75/754] predicting...
+[150/754] predicting...
+[225/754] predicting...
+[300/754] predicting...
+[375/754] predicting...
+[450/754] predicting...
+[525/754] predicting...
+[600/754] predicting...
+[675/754] predicting...
+[750/754] predicting...
+[753/754] predicting...
+{'hit5': np.float64(48.54376657824934), 'mrr5': np.float64(36.67670203359859), 'hit10': np.float64(56.14854111405836), 'mrr10': np.float64(37.69550018946571), 'hit20': np.float64(63.52122015915119), 'mrr20': np.float64(38.211955922410695)}
+train_loss:	39102.6724	Recall@5: 48.7785	MRR5: 36.8528	Epoch: 4,  4
+train_loss:	39102.6724	Recall@10: 56.4072	MRR10: 37.8773	Epoch: 4,  4
+train_loss:	39102.6724	Recall@20: 63.7109	MRR20: 38.3880	Epoch: 4,  4
+-------------------------------------------------------
+epoch:  6
+start training:  2026-06-14 06:18:36.780109
+[0/7963] train loss: 4.8990
+[50/7963] train loss: 4.6800
+[100/7963] train loss: 4.5937
+[150/7963] train loss: 4.6171
+[200/7963] train loss: 4.4626
+[250/7963] train loss: 4.9364
+[300/7963] train loss: 4.9417
+[350/7963] train loss: 4.6060
+[400/7963] train loss: 4.7482
+[450/7963] train loss: 4.8919
+[500/7963] train loss: 4.7448
+[550/7963] train loss: 4.8619
+[600/7963] train loss: 4.5873
+[650/7963] train loss: 4.9285
+[700/7963] train loss: 4.8720
+[750/7963] train loss: 4.9042
+[800/7963] train loss: 4.8898
+[850/7963] train loss: 4.5593
+[900/7963] train loss: 4.6825
+[950/7963] train loss: 4.8992
+[1000/7963] train loss: 5.0669
+[1050/7963] train loss: 4.7511
+[1100/7963] train loss: 5.0856
+[1150/7963] train loss: 4.7092
+[1200/7963] train loss: 4.7437
+[1250/7963] train loss: 4.7513
+[1300/7963] train loss: 4.4353
+[1350/7963] train loss: 4.8154
+[1400/7963] train loss: 4.7349
+[1450/7963] train loss: 4.7270
+[1500/7963] train loss: 4.6313
+[1550/7963] train loss: 4.5761
+[1600/7963] train loss: 5.1704
+[1650/7963] train loss: 4.7887
+[1700/7963] train loss: 5.0091
+[1750/7963] train loss: 4.8750
+[1800/7963] train loss: 4.6687
+[1850/7963] train loss: 4.8423
+[1900/7963] train loss: 5.0243
+[1950/7963] train loss: 4.9720
+[2000/7963] train loss: 4.6118
+[2050/7963] train loss: 5.0137
+[2100/7963] train loss: 4.4017
+[2150/7963] train loss: 4.7303
+[2200/7963] train loss: 4.9631
+[2250/7963] train loss: 4.8233
+[2300/7963] train loss: 4.6517
+[2350/7963] train loss: 4.9686
+[2400/7963] train loss: 5.2062
+[2450/7963] train loss: 4.9021
+[2500/7963] train loss: 4.8630
