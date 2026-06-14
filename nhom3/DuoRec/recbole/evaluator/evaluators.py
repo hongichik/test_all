@@ -47,6 +47,7 @@ class TopKEvaluator(GroupedEvaluator):
     def __init__(self, config, metrics):
         super().__init__(config, metrics)
 
+        self.config = config
         self.topk = config['topk']
         self._check_args()
 
@@ -65,14 +66,18 @@ class TopKEvaluator(GroupedEvaluator):
         user_len_list = interaction.user_len_list
 
         scores_matrix = self.get_score_matrix(scores_tensor, user_len_list)
-        scores_matrix = torch.flip(scores_matrix, dims=[-1])
         shape_matrix = torch.full((len(user_len_list), 1), scores_matrix.shape[1], device=scores_matrix.device)
+        max_k = max(self.topk)
 
-        # get topk
-        _, topk_idx = torch.topk(scores_matrix, max(self.topk), dim=-1)  # n_users x k
-
-        # pack top_idx and shape_matrix
-        result = torch.cat((topk_idx, shape_matrix), dim=1)
+        if self.full:
+            # Full-sort: top-k item ids vs ground-truth item id (no flip/padding trick).
+            _, topk_idx = torch.topk(scores_matrix, max_k, dim=-1)
+            positive_i = interaction[self.config['ITEM_ID_FIELD']].to(scores_matrix.device).unsqueeze(1)
+            result = torch.cat((topk_idx, positive_i, shape_matrix), dim=1)
+        else:
+            scores_matrix = torch.flip(scores_matrix, dims=[-1])
+            _, topk_idx = torch.topk(scores_matrix, max_k, dim=-1)
+            result = torch.cat((topk_idx, shape_matrix), dim=1)
         return result
 
     def evaluate(self, batch_matrix_list, eval_data):
@@ -88,15 +93,20 @@ class TopKEvaluator(GroupedEvaluator):
         """
         pos_len_list = eval_data.get_pos_len_list()
         batch_result = torch.cat(batch_matrix_list, dim=0).cpu().numpy()
+        max_k = max(self.topk)
 
-        # unpack top_idx and shape_matrix
-        topk_idx = batch_result[:, :-1]
-        shapes = batch_result[:, -1]
+        if self.full:
+            topk_idx = batch_result[:, :max_k]
+            positive_i = batch_result[:, max_k:max_k + 1]
+            pos_idx_matrix = (topk_idx == positive_i)
+        else:
+            topk_idx = batch_result[:, :-1]
+            shapes = batch_result[:, -1]
+            pos_idx_matrix = (topk_idx >= (shapes - pos_len_list).reshape(-1, 1))
 
         assert len(pos_len_list) == len(topk_idx)
-        # get metrics
         metric_dict = {}
-        result_list = self._calculate_metrics(pos_len_list, topk_idx, shapes)
+        result_list = self._calculate_metrics_from_pos_idx(pos_idx_matrix, pos_len_list)
         for metric, value in zip(self.metrics, result_list):
             for k in self.topk:
                 key = '{}@{}'.format(metric, k)
@@ -119,25 +129,14 @@ class TopKEvaluator(GroupedEvaluator):
         else:
             raise TypeError('The topk must be a integer, list')
 
-    def _calculate_metrics(self, pos_len_list, topk_idx, shapes):
-        """integrate the results of each batch and evaluate the topk metrics by users
-
-        Args:
-            pos_len_list (numpy.ndarray): a list of users' positive items
-            topk_idx (numpy.ndarray): a matrix which contains the index of the topk items for users
-            shapes (numpy.ndarray): a list which contains the columns of the padded batch matrix
-
-        Returns:
-            numpy.ndarray: a matrix which contains the metrics result
-
-        """
-        pos_idx_matrix = (topk_idx >= (shapes - pos_len_list).reshape(-1, 1))
+    def _calculate_metrics_from_pos_idx(self, pos_idx_matrix, pos_len_list):
+        """Compute top-k metrics from a bool hit matrix."""
         result_list = []
         for metric in self.metrics:
             metric_fuc = metrics_dict[metric.lower()]
             result = metric_fuc(pos_idx_matrix, pos_len_list)
-            result_list.append(result)  # n_users x len(metrics) x len(ranks)
-        result = np.stack(result_list, axis=0).mean(axis=1)  # len(metrics) x len(ranks)
+            result_list.append(result)
+        result = np.stack(result_list, axis=0).mean(axis=1)
         return result
 
     def __str__(self):
