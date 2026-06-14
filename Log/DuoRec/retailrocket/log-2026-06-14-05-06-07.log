@@ -117,3 +117,54 @@ Average actions of items: 11.345318900688985
 The number of inters: 2664312
 The sparsity of the dataset: 99.99919203587933%
 Remain Fields: ['user_id', 'item_id', 'rating', 'timestamp']
+14 Jun 05:07    INFO  [Training]: train_batch_size = [256] train_neg_sample_args: [{'strategy': 'none'}]
+14 Jun 05:07    INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'order': 'TO', 'split': {'LS': 'valid_and_test'}, 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+14 Jun 05:08    INFO  DuoRec(
+  (item_embedding): Embedding(234839, 64, padding_idx=0)
+  (position_embedding): Embedding(50, 64)
+  (trm_encoder): TransformerEncoder(
+    (layer): ModuleList(
+      (0-1): 2 x TransformerLayer(
+        (multi_head_attention): MultiHeadAttention(
+          (query): Linear(in_features=64, out_features=64, bias=True)
+          (key): Linear(in_features=64, out_features=64, bias=True)
+          (value): Linear(in_features=64, out_features=64, bias=True)
+          (attn_dropout): Dropout(p=0.5, inplace=False)
+          (dense): Linear(in_features=64, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (out_dropout): Dropout(p=0.5, inplace=False)
+        )
+        (feed_forward): FeedForward(
+          (dense_1): Linear(in_features=64, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+    )
+  )
+  (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+  (dropout): Dropout(p=0.5, inplace=False)
+  (loss_fct): CrossEntropyLoss()
+  (aug_nce_fct): CrossEntropyLoss()
+  (sem_aug_nce_fct): CrossEntropyLoss()
+)
+Trainable parameters: 15132992
+Traceback (most recent call last):
+  File "/content/test_all/nhom3/DuoRec/run_seq.py", line 78, in <module>
+    run_recbole(
+  File "/content/test_all/nhom3/DuoRec/recbole/quick_start/quick_start.py", line 58, in run_recbole
+    best_valid_score, best_valid_result = trainer.fit(
+                                          ^^^^^^^^^^^^
+  File "/content/test_all/nhom3/DuoRec/recbole/trainer/trainer.py", line 298, in fit
+    train_loss = self._train_epoch(train_data, epoch_idx, show_progress=show_progress)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/test_all/nhom3/DuoRec/recbole/trainer/trainer.py", line 177, in _train_epoch
+    losses = loss_func(interaction)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/test_all/nhom3/DuoRec/recbole/model/sequential_recommender/duorec.py", line 207, in calculate_loss
+    self._add_sem_aug(interaction)
+  File "/content/test_all/nhom3/DuoRec/recbole/model/sequential_recommender/duorec.py", line 122, in _add_sem_aug
+    if len(targets_index) == 1 or not torch.equal(cur_item_list, sample_item_list):
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected all tensors to be on the same device, but got other is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA__equal)
