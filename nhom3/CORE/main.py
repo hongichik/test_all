@@ -13,9 +13,10 @@ import sys
 _CORE_ROOT = Path(__file__).resolve().parent
 _REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_REPO))
-from ncs_numpy_compat import apply_numpy_recbole_compat
+from ncs_numpy_compat import apply_numpy_recbole_compat, apply_torch_load_compat
 
 apply_numpy_recbole_compat()
+apply_torch_load_compat()
 
 try:
     import pandas as pd

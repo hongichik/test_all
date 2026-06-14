@@ -37,7 +37,7 @@ from recbole.utils.utils import set_color
 
 
 def _progress_log_step(total, n_parts=20):
-    return max(1, total // n_parts)
+    return max(1, min(50, total // n_parts))
 
 
 class AbstractTrainer(object):
@@ -236,7 +236,7 @@ class Trainer(AbstractTrainer):
 
         """
         resume_file = str(resume_file)
-        checkpoint = torch.load(resume_file)
+        checkpoint = torch.load(resume_file, weights_only=False)
         self.start_epoch = checkpoint['epoch'] + 1
         self.cur_step = checkpoint['cur_step']
         self.best_valid_score = checkpoint['best_valid_score']
