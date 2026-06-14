@@ -13,3 +13,14 @@ start training:  2026-06-14 00:40:04.878920
   one = torch.cuda.FloatTensor(neg1.shape[0]).fill_(1)
 [0/12441] train loss: 11.4850
 [50/12441] train loss: 9.7096
+[100/12441] train loss: 8.1731
+[150/12441] train loss: 7.7760
+[200/12441] train loss: 6.6925
+[250/12441] train loss: 5.8184
+[300/12441] train loss: 6.6297
+[350/12441] train loss: 7.1853
+[400/12441] train loss: 6.2158
+[450/12441] train loss: 7.2662
+[500/12441] train loss: 7.6950
+[550/12441] train loss: 6.7327
+[600/12441] train loss: 7.3245
