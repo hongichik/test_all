@@ -94,6 +94,8 @@ def run_single_model(args):
     # logger initialization
     init_logger(config)
     logger = getLogger()
+    if not config['log_dir']:
+        config['log_dir'] = os.path.dirname(logger.handlers[0].baseFilename)
 
     logger.info(config)
 
