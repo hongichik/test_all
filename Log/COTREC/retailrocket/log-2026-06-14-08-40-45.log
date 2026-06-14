@@ -29,3 +29,8 @@ start training:  2026-06-14 08:41:01.822478
 [900/7963] train loss: 5.8221
 [950/7963] train loss: 5.9569
 [1000/7963] train loss: 5.6404
+[1050/7963] train loss: 5.4507
+[1100/7963] train loss: 5.9458
+[1150/7963] train loss: 5.4069
+[1200/7963] train loss: 5.3993
+[1250/7963] train loss: 5.7160
