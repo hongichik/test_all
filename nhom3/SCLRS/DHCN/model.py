@@ -70,25 +70,16 @@ class LineConv(Module):
         self.layers = layers
 
     def forward(self, item_embedding, D, A, session_item, session_len):
-        zeros = trans_to_cuda(torch.zeros(1, self.emb_size))
+        zeros = torch.zeros(1, self.emb_size, device=item_embedding.device)
         item_embedding = torch.cat([zeros, item_embedding], 0)
-        seq_h = [
-            torch.index_select(item_embedding, 0, session_item[i])
-            for i in range(len(session_item))
-        ]
-        seq_h1 = torch.stack(seq_h, dim=0)
-        session_emb_lgcn = torch.sum(seq_h1, 1) / session_len.float().unsqueeze(-1)
-        # session = [session_emb_lgcn] # (origin)
-        session = session_emb_lgcn  # 
+        seq_h1 = item_embedding[session_item]
+        session_emb_lgcn = seq_h1.sum(1) / session_len.float().clamp(min=1)
+        session = [session_emb_lgcn]
         DA = torch.mm(D, A).float()
-        for i in range(self.layers):
+        for _ in range(self.layers):
             session_emb_lgcn = torch.mm(DA, session_emb_lgcn)
-            # session.append(session_emb_lgcn)  # (origin)
-            session = torch.add(session_emb_lgcn, session)  # 
-        # session1 = trans_to_cuda(torch.tensor([item.cpu().detach().numpy() for item in session]))
-        # session_emb_lgcn = torch.sum(session1, 0)
-        # session_emb_lgcn = np.sum(session, 0)/ (self.layers+1)  # (origin)
-        session_emb_lgcn = session / (self.layers + 1)  # 
+            session.append(session_emb_lgcn)
+        session_emb_lgcn = torch.stack(session, dim=0).sum(0) / (self.layers + 1)
         return session_emb_lgcn
 
 
@@ -332,7 +323,7 @@ def find_k_largest(K, candidates):
 def forward(model, i, data):
     tar, session_len, session_item, reversed_sess_item, mask = data.get_slice(i)
     device = next(model.parameters()).device
-    A_hat, D_hat = data.get_overlap_tensors(session_item, device=device)
+    A_hat, D_hat = data.get_overlap_tensors(i, device=device)
     session_item = torch.as_tensor(session_item, dtype=torch.long, device=device)
     session_len = torch.as_tensor(session_len, dtype=torch.long, device=device)
     tar = torch.as_tensor(tar, dtype=torch.long, device=device)
@@ -349,7 +340,7 @@ def get_alignment_uniformity(model, data):
     seesion_collection, item_collection = [], []
     for i in tqdm.tqdm(slices):
         tar, session_len, session_item, reversed_sess_item, mask = data.get_slice(i)
-        A_hat, D_hat = data.get_overlap_tensors(session_item, device=next(model.parameters()).device)
+        A_hat, D_hat = data.get_overlap_tensors(i, device=next(model.parameters()).device)
         session_item = trans_to_cuda(torch.Tensor(session_item).long())
         session_len = trans_to_cuda(torch.Tensor(session_len).long())
         A_hat = trans_to_cuda(A_hat)

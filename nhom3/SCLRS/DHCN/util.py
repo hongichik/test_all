@@ -31,9 +31,40 @@ def split_validation(train_set, valid_portion):
 
     return (train_set_x, train_set_y), (valid_set_x, valid_set_y)
 
+
+def _jaccard_overlap(unique_lists):
+    n = len(unique_lists)
+    if n == 0:
+        return np.zeros((0, 0), dtype=np.float32), np.zeros((0, 0), dtype=np.float32)
+
+    cols = sorted({x for u in unique_lists for x in u})
+    col_idx = {c: j for j, c in enumerate(cols)}
+    m = max(len(cols), 1)
+    nnz = sum(len(u) for u in unique_lists)
+    if nnz == 0:
+        matrix = np.eye(n, dtype=np.float32)
+        return matrix, np.diag(1.0 / np.maximum(matrix.sum(axis=1), 1.0)).astype(np.float32)
+
+    rows = np.fromiter((i for i, u in enumerate(unique_lists) for _ in u), dtype=np.int32, count=nnz)
+    cols_i = np.fromiter((col_idx[x] for u in unique_lists for x in u), dtype=np.int32, count=nnz)
+    B = csr_matrix((np.ones(nnz, dtype=np.float32), (rows, cols_i)), shape=(n, m))
+    inter = (B @ B.T).toarray().astype(np.float32)
+    sizes = np.asarray(B.sum(axis=1)).ravel()
+    union = sizes[:, None] + sizes[None, :] - inter
+    matrix = np.divide(inter, union, out=np.zeros_like(inter), where=union > 0)
+    np.fill_diagonal(matrix, 1.0)
+    deg = matrix.sum(axis=1)
+    deg = np.where(deg > 0, deg, 1.0)
+    return matrix, np.diag(1.0 / deg).astype(np.float32)
+
+
 class Data():
     def __init__(self, data, shuffle=False, n_node=None):
         self.raw = np.array(data[0], dtype=object)
+        self._unique = [
+            list(dict.fromkeys(int(x) for x in s if x))
+            for s in self.raw
+        ]
         H_T = data_masks(self.raw, n_node)
         BH_T = H_T.T.multiply(1.0/H_T.sum(axis=1).reshape(1, -1))
         BH_T = BH_T.T
@@ -65,39 +96,18 @@ class Data():
         degree = np.diag(1.0/degree)
         return matrix, degree
 
-    def get_overlap_tensors(self, sessions, device=None):
-        """Jaccard overlap matrix on GPU (nhanh hơn get_overlap CPU)."""
+    def get_overlap(self, sessions):
+        unique_lists = [list(dict.fromkeys(x for x in s if x)) for s in sessions]
+        return _jaccard_overlap(unique_lists)
+
+    def get_overlap_tensors(self, row_indices, device=None):
         if device is None:
             device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        n = len(sessions)
-        if n == 0:
-            z = torch.zeros(0, 0, device=device)
-            return z, z
-
-        unique_lists = [list(dict.fromkeys(x for x in s if x)) for s in sessions]
-        max_u = max((len(u) for u in unique_lists), default=1)
-        padded = torch.zeros(n, max_u, dtype=torch.long, device=device)
-        mask = torch.zeros(n, max_u, dtype=torch.bool, device=device)
-        for i, u in enumerate(unique_lists):
-            if u:
-                padded[i, : len(u)] = torch.tensor(u, device=device, dtype=torch.long)
-                mask[i, : len(u)] = True
-
-        eq = (
-            (padded.unsqueeze(1).unsqueeze(3) == padded.unsqueeze(0).unsqueeze(2))
-            & mask.unsqueeze(1).unsqueeze(3)
-            & mask.unsqueeze(0).unsqueeze(2)
-        )
-        inter = eq.any(dim=3).sum(dim=2).float()
-        sizes = mask.sum(dim=1).float()
-        union = sizes.unsqueeze(1) + sizes.unsqueeze(0) - inter
-        matrix = torch.zeros(n, n, device=device, dtype=torch.float32)
-        valid = union > 0
-        matrix[valid] = inter[valid] / union[valid]
-        matrix.fill_diagonal_(1.0)
-        deg = matrix.sum(dim=1)
-        deg = torch.where(deg > 0, deg, torch.ones_like(deg))
-        return matrix, torch.diag(1.0 / deg)
+        unique_lists = [self._unique[int(idx)] for idx in row_indices]
+        matrix, degree = _jaccard_overlap(unique_lists)
+        A = torch.as_tensor(matrix, dtype=torch.float32, device=device)
+        D = torch.as_tensor(degree, dtype=torch.float32, device=device)
+        return A, D
 
     def generate_batch(self, batch_size):
         if self.shuffle:
@@ -105,6 +115,7 @@ class Data():
             np.random.shuffle(shuffled_arg)
             self.raw = self.raw[shuffled_arg]
             self.targets = self.targets[shuffled_arg]
+            self._unique = [self._unique[i] for i in shuffled_arg]
         n_batch = int(self.length / batch_size)
         if self.length % batch_size != 0:
             n_batch += 1

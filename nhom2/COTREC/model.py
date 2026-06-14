@@ -332,7 +332,7 @@ def train_test(model, train_data, test_data, epoch):
     total_loss = 0.0
     slices = train_data.generate_batch(model.batch_size)
     n_batches = len(slices)
-    log_step = max(1, n_batches // 20)
+    log_step = max(1, min(50, n_batches // 20))
     for j, i in enumerate(slices):
         model.zero_grad()
         tar, scores_item, con_loss, loss_item, loss_diff = forward(model, i, train_data, epoch, train=True)

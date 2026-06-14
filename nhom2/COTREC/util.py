@@ -3,6 +3,33 @@ from scipy.sparse import coo_matrix, csr_matrix
 from operator import itemgetter
 import random
 
+
+def _jaccard_overlap(unique_lists):
+    """Ma trận Jaccard (n,n) + degree — vectorized, ~ms cho batch 100."""
+    n = len(unique_lists)
+    if n == 0:
+        return np.zeros((0, 0), dtype=np.float32), np.zeros((0, 0), dtype=np.float32)
+
+    cols = sorted({x for u in unique_lists for x in u})
+    col_idx = {c: j for j, c in enumerate(cols)}
+    m = max(len(cols), 1)
+    nnz = sum(len(u) for u in unique_lists)
+    if nnz == 0:
+        matrix = np.eye(n, dtype=np.float32)
+        return matrix, np.diag(1.0 / np.maximum(matrix.sum(axis=1), 1.0)).astype(np.float32)
+
+    rows = np.fromiter((i for i, u in enumerate(unique_lists) for _ in u), dtype=np.int32, count=nnz)
+    cols_i = np.fromiter((col_idx[x] for u in unique_lists for x in u), dtype=np.int32, count=nnz)
+    B = csr_matrix((np.ones(nnz, dtype=np.float32), (rows, cols_i)), shape=(n, m))
+    inter = (B @ B.T).toarray().astype(np.float32)
+    sizes = np.asarray(B.sum(axis=1)).ravel()
+    union = sizes[:, None] + sizes[None, :] - inter
+    matrix = np.divide(inter, union, out=np.zeros_like(inter), where=union > 0)
+    np.fill_diagonal(matrix, 1.0)
+    deg = matrix.sum(axis=1)
+    deg = np.where(deg > 0, deg, 1.0)
+    return matrix, np.diag(1.0 / deg).astype(np.float32)
+
 def data_masks(all_sessions, n_node):
     adj = dict()
     for sess in all_sessions:
@@ -41,22 +68,8 @@ class Data():
         self.shuffle = shuffle
 
     def get_overlap(self, sessions):
-        matrix = np.zeros((len(sessions), len(sessions)))
-        for i in range(len(sessions)):
-            seq_a = set(sessions[i])
-            seq_a.discard(0)
-            for j in range(i+1, len(sessions)):
-                seq_b = set(sessions[j])
-                seq_b.discard(0)
-                overlap = seq_a.intersection(seq_b)
-                ab_set = seq_a | seq_b
-                matrix[i][j] = float(len(overlap))/float(len(ab_set))
-                matrix[j][i] = matrix[i][j]
-        # matrix = self.dropout(matrix, 0.2)
-        matrix = matrix + np.diag([1.0]*len(sessions))
-        degree = np.sum(np.array(matrix), 1)
-        degree = np.diag(1.0/degree)
-        return matrix, degree
+        unique_lists = [list(dict.fromkeys(int(x) for x in s if x)) for s in sessions]
+        return _jaccard_overlap(unique_lists)
 
     def generate_batch(self, batch_size):
         if self.shuffle:

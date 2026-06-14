@@ -322,11 +322,10 @@ def forward(model, i, data):
 
 def train_test(model, train_data, test_data):
     print('start training: ', datetime.datetime.now(), flush=True)
-    torch.autograd.set_detect_anomaly(True)
     total_loss = 0.0
     slices = train_data.generate_batch(model.batch_size)
     n_batches = len(slices)
-    log_step = max(1, n_batches // 20)
+    log_step = max(1, min(50, n_batches // 20))
     for j, i in enumerate(slices):
         model.zero_grad()
         targets, scores, con_loss = forward(model, i, train_data)
