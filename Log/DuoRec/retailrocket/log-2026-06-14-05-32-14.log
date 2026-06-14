@@ -1,0 +1,249 @@
+command line args [--dataset retailrocket --model DuoRec --config_files seq.yaml DuoRec.yaml] will not be used in RecBole
+14 Jun 05:32    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 2020
+state = INFO
+reproducibility = True
+data_path = /content/test_all/nhom3/DuoRec/dataset/retailrocket
+show_progress = True
+
+Training Hyper Parameters:
+checkpoint_dir = /content/test_all/saved
+epochs = 50
+train_batch_size = 256
+learner = adam
+learning_rate = 0.001
+training_neg_sample_num = 0
+training_neg_sample_distribution = uniform
+eval_step = 1
+stopping_step = 10
+clip_grad_norm = None
+weight_decay = 0
+draw_loss_pic = False
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_setting = TO_LS,full
+group_by_user = True
+split_ratio = [0.8, 0.1, 0.1]
+leave_one_num = 2
+real_time_process = False
+metrics = ['Recall', 'MRR', 'NDCG', 'Precision']
+topk = [5, 10, 20, 50]
+valid_metric = MRR@10
+eval_batch_size = 256
+metric_decimal_place = 4
+
+Dataset Hyper Parameters:
+field_separator = 	
+seq_separator =  
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = rating
+TIME_FIELD = timestamp
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = {'inter': ['user_id', 'item_id', 'rating', 'timestamp']}
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+lowest_val = None
+highest_val = None
+equal_val = None
+not_equal_val = None
+max_user_inter_num = None
+min_user_inter_num = 5
+max_item_inter_num = None
+min_item_inter_num = 5
+fields_in_same_space = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+
+Other Hyper Parameters: 
+worker = 0
+valid_metric_bigger = True
+n_layers = 2
+n_heads = 2
+hidden_size = 64
+inner_size = 256
+hidden_dropout_prob = 0.5
+attn_dropout_prob = 0.5
+hidden_act = gelu
+layer_norm_eps = 1e-12
+initializer_range = 0.02
+loss_type = CE
+lmd = 0.1
+lmd_sem = 0.1
+SSL_AUG = DuoRec
+rm_dup_inter = None
+filter_inter_by_user_or_item = True
+SOURCE_ID_FIELD = source_id
+TARGET_ID_FIELD = target_id
+benchmark_filename = None
+MODEL_TYPE = ModelType.SEQUENTIAL
+embedding_size = 64
+train_neg_sample_args = {'strategy': 'none'}
+eval_args = {'order': 'TO', 'split': {'LS': 'valid_and_test'}, 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}
+log_root = /content/test_all/log/
+tau = 1
+contrast = us_x
+sim = dot
+MODEL_INPUT_TYPE = InputType.POINTWISE
+eval_type = EvaluatorType.RANKING
+single_spec = True
+local_rank = 0
+device = cuda
+log_dir = /content/test_all/log/DuoRec/retailrocket/bs256-lmd0.1-sem0.1-us_x-Jun-14-2026_05-32-17-lr0.001-l20-tau1-dot-DPh0.5-DPa0.5
+
+
+14 Jun 05:32    INFO  retailrocket
+The number of users: 1404180
+Average actions of users: 1.8974162126053729
+The number of items: 234839
+Average actions of items: 11.345318900688985
+The number of inters: 2664312
+The sparsity of the dataset: 99.99919203587933%
+Remain Fields: ['user_id', 'item_id', 'rating', 'timestamp']
+14 Jun 05:33    INFO  [Training]: train_batch_size = [256] train_neg_sample_args: [{'strategy': 'none'}]
+14 Jun 05:33    INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'order': 'TO', 'split': {'LS': 'valid_and_test'}, 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+14 Jun 05:35    INFO  DuoRec(
+  (item_embedding): Embedding(234839, 64, padding_idx=0)
+  (position_embedding): Embedding(50, 64)
+  (trm_encoder): TransformerEncoder(
+    (layer): ModuleList(
+      (0-1): 2 x TransformerLayer(
+        (multi_head_attention): MultiHeadAttention(
+          (query): Linear(in_features=64, out_features=64, bias=True)
+          (key): Linear(in_features=64, out_features=64, bias=True)
+          (value): Linear(in_features=64, out_features=64, bias=True)
+          (attn_dropout): Dropout(p=0.5, inplace=False)
+          (dense): Linear(in_features=64, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (out_dropout): Dropout(p=0.5, inplace=False)
+        )
+        (feed_forward): FeedForward(
+          (dense_1): Linear(in_features=64, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+    )
+  )
+  (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+  (dropout): Dropout(p=0.5, inplace=False)
+  (loss_fct): CrossEntropyLoss()
+  (aug_nce_fct): CrossEntropyLoss()
+  (sem_aug_nce_fct): CrossEntropyLoss()
+)
+Trainable parameters: 15132992
+Train 0: [0/3734] loss=15.0535
+Train 0: [10/3734] loss=14.9111
+Train 0: [20/3734] loss=14.6081
+Train 0: [30/3734] loss=13.9963
+Train 0: [40/3734] loss=12.9133
+Train 0: [50/3734] loss=12.5888
+Train 0: [60/3734] loss=12.3086
+Train 0: [70/3734] loss=12.6507
+Train 0: [80/3734] loss=11.8780
+Train 0: [90/3734] loss=12.1773
+Train 0: [100/3734] loss=12.4682
+Train 0: [110/3734] loss=11.7392
+Train 0: [120/3734] loss=11.7887
+Train 0: [130/3734] loss=12.7252
+Train 0: [140/3734] loss=11.5414
+Train 0: [150/3734] loss=11.9001
+Train 0: [160/3734] loss=11.1612
+Train 0: [170/3734] loss=12.7548
+Train 0: [180/3734] loss=12.2300
+Train 0: [190/3734] loss=11.9082
+Train 0: [200/3734] loss=11.8995
+Train 0: [210/3734] loss=11.8710
+Train 0: [220/3734] loss=13.0064
+Train 0: [230/3734] loss=11.9333
+Train 0: [240/3734] loss=12.0905
+Train 0: [250/3734] loss=11.3677
+Train 0: [260/3734] loss=11.7704
+Train 0: [270/3734] loss=10.6934
+Train 0: [280/3734] loss=11.5635
+Train 0: [290/3734] loss=11.6900
+Train 0: [300/3734] loss=11.3749
+Train 0: [310/3734] loss=12.0538
+Train 0: [320/3734] loss=11.8732
+Train 0: [330/3734] loss=12.3489
+Train 0: [340/3734] loss=11.8395
+Train 0: [350/3734] loss=11.8859
+Train 0: [360/3734] loss=11.2841
+Train 0: [370/3734] loss=11.5594
+Train 0: [380/3734] loss=11.4600
+Train 0: [390/3734] loss=11.0902
+Train 0: [400/3734] loss=11.7405
+Train 0: [410/3734] loss=11.7819
+Train 0: [420/3734] loss=11.6091
+Train 0: [430/3734] loss=11.7573
+Train 0: [440/3734] loss=11.6954
+Train 0: [450/3734] loss=11.1951
+Train 0: [460/3734] loss=11.5726
+Train 0: [470/3734] loss=11.8051
+Train 0: [480/3734] loss=12.2403
+Train 0: [490/3734] loss=11.8623
+Train 0: [500/3734] loss=11.3723
+Train 0: [510/3734] loss=11.3759
+Train 0: [520/3734] loss=11.8142
+Train 0: [530/3734] loss=11.6391
+Train 0: [540/3734] loss=11.6008
+Train 0: [550/3734] loss=11.3240
+Train 0: [560/3734] loss=11.6605
+Train 0: [570/3734] loss=11.8145
+Train 0: [580/3734] loss=11.0360
+Train 0: [590/3734] loss=11.8411
+Train 0: [600/3734] loss=11.3812
+Train 0: [610/3734] loss=11.2536
+Train 0: [620/3734] loss=11.9595
+Train 0: [630/3734] loss=11.0770
+Train 0: [640/3734] loss=11.5626
+Train 0: [650/3734] loss=11.9415
+Train 0: [660/3734] loss=11.7045
+Train 0: [670/3734] loss=11.8946
+Train 0: [680/3734] loss=11.4407
+Train 0: [690/3734] loss=11.0779
+Train 0: [700/3734] loss=11.1212
+Train 0: [710/3734] loss=11.6065
+Train 0: [720/3734] loss=10.9906
+Train 0: [730/3734] loss=11.3679
+Train 0: [740/3734] loss=9.9949
+Train 0: [750/3734] loss=11.2877
+Train 0: [760/3734] loss=11.4811
+Train 0: [770/3734] loss=11.5303
+Train 0: [780/3734] loss=11.6669
+Train 0: [790/3734] loss=11.4961
+Train 0: [800/3734] loss=11.1617
+Train 0: [810/3734] loss=11.7796
+Train 0: [820/3734] loss=11.5090
+Train 0: [830/3734] loss=11.5901
+Train 0: [840/3734] loss=11.5230
+Train 0: [850/3734] loss=11.7719
+Train 0: [860/3734] loss=11.4524
+Train 0: [870/3734] loss=11.3759
+Train 0: [880/3734] loss=10.8415
+Train 0: [890/3734] loss=11.0402
+Train 0: [900/3734] loss=12.0658
+Train 0: [910/3734] loss=11.5188
+Train 0: [920/3734] loss=11.5168
+Train 0: [930/3734] loss=11.1294
+Train 0: [940/3734] loss=11.3406
+Train 0: [950/3734] loss=11.1191
+Train 0: [960/3734] loss=11.2671
