@@ -1,4 +1,21 @@
-"""Shim NumPy 2.x cho RecBole (vẫn gọi np.float_, np.unicode_, ...)."""
+"""Shim runtime cho RecBole trên NumPy 2.x và PyTorch 2.6+."""
+
+
+def apply_torch_load_compat() -> None:
+    """RecBole checkpoint dùng pickle protocol 4 — PyTorch 2.6+ mặc định weights_only=True."""
+    import torch
+
+    if getattr(torch.load, "_ncs_patched", False):
+        return
+
+    _orig_load = torch.load
+
+    def _load(*args, **kwargs):
+        kwargs.setdefault("weights_only", False)
+        return _orig_load(*args, **kwargs)
+
+    _load._ncs_patched = True
+    torch.load = _load
 
 
 def apply_numpy_recbole_compat() -> None:
