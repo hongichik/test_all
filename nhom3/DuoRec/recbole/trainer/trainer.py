@@ -37,7 +37,7 @@ from recbole.utils.utils import set_color
 
 
 def _progress_log_step(total, n_parts=20):
-    return max(1, total // n_parts)
+    return max(1, min(50, total // n_parts))
 
 
 class AbstractTrainer(object):
