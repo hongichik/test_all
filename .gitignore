@@ -2,17 +2,23 @@
 Data/
 Data_goc/
 
-# Log chạy trên máy local — không commit (NCS: Log/, LogMins/)
+# NCS log kết quả — LogMins/<bài toán>/<dataset>/DD-MM-YYYY.log
 LogMins/
 
-# RecBole runtime (CORE/DuoRec): log/, saved/, checkpoint — không push
+# RecBole runtime (DuoRec/CORE) — checkpoint + log nội bộ, KHÔNG commit
+#   log/DuoRec/<dataset>/bs.../log.txt + model.pth  (~61MB)
+#   log/COREtrm/<dataset>/bs.../log.txt + model.pth
+#   saved/  (checkpoint_dir mặc định)
+# Lưu ý: Log/ (chữ L hoa) = log quá trình NCS — VẪN commit bình thường
 log/
 saved/
 *.pth
 **/model.pth
+log/**/log.txt
 nhom3/CORE/log/
 nhom3/CORE/saved/
 nhom3/DuoRec/log/
+nhom3/DuoRec/saved/
 papers_only/**/log/
 
 # Python
