@@ -61,9 +61,17 @@ def run_single_model(args):
     if not ds_path.is_dir():
         ds_path = _CORE_ROOT / 'dataset' / args.dataset
     # RecBole tự nối data_path + dataset → trỏ thư mục cha (Data/CORE/ hoặc .../dataset/)
+    # RecBole vendored (DuoRec) cần eval_args.mode; alias tránh CUDA OOB lúc test.
     config_dict = {
         'data_path': str(ds_path.parent) + '/',
         'train_neg_sample_args': None,
+        'alias_of_item_id': ['item_id_list'],
+        'eval_args': {
+            'order': 'TO',
+            'split': {'RS': [0.8, 0.1, 0.1]},
+            'group_by': 'user',
+            'mode': {'valid': 'full', 'test': 'full'},
+        },
     }
     if os.environ.get('NCS_SMOKE'):
         config_files.append(str(_REPO / 'config' / 'smoke_1epoch.yaml'))
