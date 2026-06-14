@@ -1,0 +1,39 @@
+[ 15:49:59 Sat Jun 13 2026 ] [INFO] Namespace(dataset='retailrocket', epoch=30, batchSize=100, embSize=100, l2=1e-05, lr=0.001, layer=3, beta=0.01, filter=False, saved_models_path='output/test', temperature=0.1, item_cl_loss_weight=0.1, sess_cl_loss_weight=0.1, sampled_item_size=None, top_k=10, use_item_cl_loss=False, use_sess_cl_loss=False, random_search=False, remove_original_cl_loss=False)
+/home/hongnguyen/test_all/nhom3/SCLRS/DHCN/util.py:41: RuntimeWarning: divide by zero encountered in divide
+  DH = H.T.multiply(1.0/H.sum(axis=1).reshape(1, -1))
+/home/hongnguyen/test_all/nhom3/SCLRS/DHCN/model.py:123: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:644.)
+  adjacency = torch.sparse.FloatTensor(i, v, torch.Size(shape))
+[ 15:50:03 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 15:50:03 Sat Jun 13 2026 ] [INFO] epoch: 0
+start training:  2026-06-13 15:50:03.020191
+train:   0%|          | 0/7963 [00:00<?, ?it/s]/home/hongnguyen/test_all/nhom3/SCLRS/DHCN/model.py:154: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /pytorch/torch/csrc/tensor/python_tensor.cpp:78.)
+  zeros = torch.cuda.FloatTensor(1, self.emb_size).fill_(0)
+train:   0%|          | 0/7963 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/DHCN/main.py", line 135, in <module>
+    main()
+    ~~~~^^
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/DHCN/main.py", line 110, in main
+    metrics, total_loss = train_test(model, train_data, test_data)
+                          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/DHCN/model.py", line 376, in train_test
+    targets, scores, con_loss = forward(model, i, train_data)
+                                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/DHCN/model.py", line 341, in forward
+    item_emb_hg, sess_emb_hgnn, con_loss = model(session_item, session_len, D_hat, A_hat, reversed_sess_item, mask)
+                                           ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hongnguyen/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hongnguyen/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/DHCN/model.py", line 242, in forward
+    session_emb_lg = self.LineGraph(self.embedding.weight, D, A, session_item, session_len)
+  File "/home/hongnguyen/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/hongnguyen/.local/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/DHCN/model.py", line 85, in forward
+    session_emb_lgcn = torch.mm(DA, session_emb_lgcn)
+RuntimeError: mat2 must be a matrix

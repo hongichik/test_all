@@ -1,0 +1,3 @@
+=== START SCL-DHCN 2026-06-13T15:53:13+00:00 ===
+CMD: python3 -u nhom3/SCLRS/DHCN/main.py --dataset retailrocket --epoch 30
+LOG: Log/SCL-DHCN/retailrocket/log-2026-06-13-15-53-13.log

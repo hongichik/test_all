@@ -1,0 +1,113 @@
+[ 15:53:14 Sat Jun 13 2026 ] [INFO] Namespace(dataset='retailrocket', epoch=30, batchSize=100, embSize=100, l2=1e-05, lr=0.001, layer=3, beta=0.01, filter=False, saved_models_path='output/test', temperature=0.1, item_cl_loss_weight=0.1, sess_cl_loss_weight=0.1, sampled_item_size=None, top_k=10, use_item_cl_loss=False, use_sess_cl_loss=False, random_search=False, remove_original_cl_loss=False)
+[ 15:53:18 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 15:53:18 Sat Jun 13 2026 ] [INFO] epoch: 0
+[ 16:21:50 Sat Jun 13 2026 ] [INFO] Saving model at epoch 0 ...
+[ 16:21:50 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(43.9920424403183), 'mrr5': np.float64(33.757382847038016), 'hit10': np.float64(51.07427055702918), 'mrr10': np.float64(34.705016630878696), 'hit20': np.float64(57.831564986737405), 'mrr20': np.float64(35.176768000657766)}
+[ 16:21:50 Sat Jun 13 2026 ] [INFO] train_loss:	51055.8906	Recall@5: 43.9920	MRR5: 33.7574	Epoch: 0,  0
+[ 16:21:50 Sat Jun 13 2026 ] [INFO] train_loss:	51055.8906	Recall@10: 51.0743	MRR10: 34.7050	Epoch: 0,  0
+[ 16:21:50 Sat Jun 13 2026 ] [INFO] train_loss:	51055.8906	Recall@20: 57.8316	MRR20: 35.1768	Epoch: 0,  0
+[ 16:21:50 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 16:21:50 Sat Jun 13 2026 ] [INFO] epoch: 1
+[ 16:41:47 Sat Jun 13 2026 ] [INFO] Saving model at epoch 1 ...
+[ 16:41:48 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(45.56896551724138), 'mrr5': np.float64(34.50859858532272), 'hit10': np.float64(52.819628647214856), 'mrr10': np.float64(35.47999242137173), 'hit20': np.float64(59.81962864721485), 'mrr20': np.float64(35.969199116974295)}
+[ 16:41:48 Sat Jun 13 2026 ] [INFO] train_loss:	43426.2344	Recall@5: 45.5690	MRR5: 34.5086	Epoch: 1,  1
+[ 16:41:48 Sat Jun 13 2026 ] [INFO] train_loss:	43426.2344	Recall@10: 52.8196	MRR10: 35.4800	Epoch: 1,  1
+[ 16:41:48 Sat Jun 13 2026 ] [INFO] train_loss:	43426.2344	Recall@20: 59.8196	MRR20: 35.9692	Epoch: 1,  1
+[ 16:41:48 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 16:41:48 Sat Jun 13 2026 ] [INFO] epoch: 2
+[ 17:06:29 Sat Jun 13 2026 ] [INFO] Saving model at epoch 2 ...
+[ 17:06:30 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(45.91114058355438), 'mrr5': np.float64(34.7068744473917), 'hit10': np.float64(53.310344827586206), 'mrr10': np.float64(35.69843111868974), 'hit20': np.float64(60.41379310344828), 'mrr20': np.float64(36.19421518416994)}
+[ 17:06:30 Sat Jun 13 2026 ] [INFO] train_loss:	41877.9609	Recall@5: 45.9111	MRR5: 34.7069	Epoch: 2,  2
+[ 17:06:30 Sat Jun 13 2026 ] [INFO] train_loss:	41877.9609	Recall@10: 53.3103	MRR10: 35.6984	Epoch: 2,  2
+[ 17:06:30 Sat Jun 13 2026 ] [INFO] train_loss:	41877.9609	Recall@20: 60.4138	MRR20: 36.1942	Epoch: 2,  2
+[ 17:06:30 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 17:06:30 Sat Jun 13 2026 ] [INFO] epoch: 3
+[ 17:33:27 Sat Jun 13 2026 ] [INFO] Saving model at epoch 3 ...
+[ 17:33:27 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(46.39787798408488), 'mrr5': np.float64(35.00280725022104), 'hit10': np.float64(54.04111405835543), 'mrr10': np.float64(36.03338491010904), 'hit20': np.float64(61.10742705570292), 'mrr20': np.float64(36.52739672455979)}
+[ 17:33:27 Sat Jun 13 2026 ] [INFO] train_loss:	40947.4219	Recall@5: 46.3979	MRR5: 35.0028	Epoch: 3,  3
+[ 17:33:27 Sat Jun 13 2026 ] [INFO] train_loss:	40947.4219	Recall@10: 54.0411	MRR10: 36.0334	Epoch: 3,  3
+[ 17:33:27 Sat Jun 13 2026 ] [INFO] train_loss:	40947.4219	Recall@20: 61.1074	MRR20: 36.5274	Epoch: 3,  3
+[ 17:33:27 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 17:33:27 Sat Jun 13 2026 ] [INFO] epoch: 4
+[ 18:02:33 Sat Jun 13 2026 ] [INFO] Saving model at epoch 4 ...
+[ 18:02:33 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(46.766578249336874), 'mrr5': np.float64(35.13019451812555), 'hit10': np.float64(54.352785145888596), 'mrr10': np.float64(36.152080965012004), 'hit20': np.float64(61.38594164456234), 'mrr20': np.float64(36.63976037766036)}
+[ 18:02:33 Sat Jun 13 2026 ] [INFO] train_loss:	40182.4453	Recall@5: 46.7666	MRR5: 35.1302	Epoch: 4,  4
+[ 18:02:33 Sat Jun 13 2026 ] [INFO] train_loss:	40182.4453	Recall@10: 54.3528	MRR10: 36.1521	Epoch: 4,  4
+[ 18:02:33 Sat Jun 13 2026 ] [INFO] train_loss:	40182.4453	Recall@20: 61.3859	MRR20: 36.6398	Epoch: 4,  4
+[ 18:02:33 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 18:02:33 Sat Jun 13 2026 ] [INFO] epoch: 5
+[ 18:31:11 Sat Jun 13 2026 ] [INFO] Saving model at epoch 5 ...
+[ 18:31:12 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.05039787798408), 'mrr5': np.float64(35.332824933687), 'hit10': np.float64(54.70159151193634), 'mrr10': np.float64(36.360185886910024), 'hit20': np.float64(61.76657824933687), 'mrr20': np.float64(36.85231397189689)}
+[ 18:31:12 Sat Jun 13 2026 ] [INFO] train_loss:	39643.1758	Recall@5: 47.0504	MRR5: 35.3328	Epoch: 5,  5
+[ 18:31:12 Sat Jun 13 2026 ] [INFO] train_loss:	39643.1758	Recall@10: 54.7016	MRR10: 36.3602	Epoch: 5,  5
+[ 18:31:12 Sat Jun 13 2026 ] [INFO] train_loss:	39643.1758	Recall@20: 61.7666	MRR20: 36.8523	Epoch: 5,  5
+[ 18:31:12 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 18:31:12 Sat Jun 13 2026 ] [INFO] epoch: 6
+[ 18:59:56 Sat Jun 13 2026 ] [INFO] Saving model at epoch 6 ...
+[ 18:59:56 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.177718832891244), 'mrr5': np.float64(35.384305923961094), 'hit10': np.float64(54.778514588859416), 'mrr10': np.float64(36.39934265925645), 'hit20': np.float64(61.86339522546419), 'mrr20': np.float64(36.891689302853194)}
+[ 18:59:56 Sat Jun 13 2026 ] [INFO] train_loss:	39261.3320	Recall@5: 47.1777	MRR5: 35.3843	Epoch: 6,  6
+[ 18:59:56 Sat Jun 13 2026 ] [INFO] train_loss:	39261.3320	Recall@10: 54.7785	MRR10: 36.3993	Epoch: 6,  6
+[ 18:59:56 Sat Jun 13 2026 ] [INFO] train_loss:	39261.3320	Recall@20: 61.8634	MRR20: 36.8917	Epoch: 6,  6
+[ 18:59:56 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 18:59:56 Sat Jun 13 2026 ] [INFO] epoch: 7
+[ 19:28:32 Sat Jun 13 2026 ] [INFO] Saving model at epoch 7 ...
+[ 19:28:32 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.46419098143236), 'mrr5': np.float64(35.549381078691425), 'hit10': np.float64(55.08885941644562), 'mrr10': np.float64(36.568702370426514), 'hit20': np.float64(62.070291777188324), 'mrr20': np.float64(37.0576443528671)}
+[ 19:28:32 Sat Jun 13 2026 ] [INFO] train_loss:	38890.3555	Recall@5: 47.4642	MRR5: 35.5494	Epoch: 7,  7
+[ 19:28:32 Sat Jun 13 2026 ] [INFO] train_loss:	38890.3555	Recall@10: 55.0889	MRR10: 36.5687	Epoch: 7,  7
+[ 19:28:32 Sat Jun 13 2026 ] [INFO] train_loss:	38890.3555	Recall@20: 62.0703	MRR20: 37.0576	Epoch: 7,  7
+[ 19:28:32 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 19:28:32 Sat Jun 13 2026 ] [INFO] epoch: 8
+[ 19:57:22 Sat Jun 13 2026 ] [INFO] Saving model at epoch 8 ...
+[ 19:57:22 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.41644562334217), 'mrr5': np.float64(35.58275862068966), 'hit10': np.float64(55.11671087533156), 'mrr10': np.float64(36.615020420192835), 'hit20': np.float64(62.30371352785146), 'mrr20': np.float64(37.11648091727277)}
+[ 19:57:22 Sat Jun 13 2026 ] [INFO] train_loss:	38592.2578	Recall@5: 47.4642	MRR5: 35.5828	Epoch: 7,  8
+[ 19:57:22 Sat Jun 13 2026 ] [INFO] train_loss:	38592.2578	Recall@10: 55.1167	MRR10: 36.6150	Epoch: 8,  8
+[ 19:57:22 Sat Jun 13 2026 ] [INFO] train_loss:	38592.2578	Recall@20: 62.3037	MRR20: 37.1165	Epoch: 8,  8
+[ 19:57:22 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 19:57:22 Sat Jun 13 2026 ] [INFO] epoch: 9
+[ 20:26:10 Sat Jun 13 2026 ] [INFO] Saving model at epoch 9 ...
+[ 20:26:10 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.608753315649864), 'mrr5': np.float64(35.69244031830239), 'hit10': np.float64(55.19230769230769), 'mrr10': np.float64(36.711210054313504), 'hit20': np.float64(62.213527851458885), 'mrr20': np.float64(37.20065755852376)}
+[ 20:26:10 Sat Jun 13 2026 ] [INFO] train_loss:	38346.5938	Recall@5: 47.6088	MRR5: 35.6924	Epoch: 9,  9
+[ 20:26:10 Sat Jun 13 2026 ] [INFO] train_loss:	38346.5938	Recall@10: 55.1923	MRR10: 36.7112	Epoch: 9,  9
+[ 20:26:10 Sat Jun 13 2026 ] [INFO] train_loss:	38346.5938	Recall@20: 62.3037	MRR20: 37.2007	Epoch: 8,  9
+[ 20:26:10 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 20:26:10 Sat Jun 13 2026 ] [INFO] epoch: 10
+[ 20:54:55 Sat Jun 13 2026 ] [INFO] Saving model at epoch 10 ...
+[ 20:54:56 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.671087533156495), 'mrr5': np.float64(35.656587091069845), 'hit10': np.float64(55.27984084880636), 'mrr10': np.float64(36.6740037261589), 'hit20': np.float64(62.29442970822281), 'mrr20': np.float64(37.162606407886024)}
+[ 20:54:56 Sat Jun 13 2026 ] [INFO] train_loss:	38108.2422	Recall@5: 47.6711	MRR5: 35.6924	Epoch: 10,  9
+[ 20:54:56 Sat Jun 13 2026 ] [INFO] train_loss:	38108.2422	Recall@10: 55.2798	MRR10: 36.7112	Epoch: 10,  9
+[ 20:54:56 Sat Jun 13 2026 ] [INFO] train_loss:	38108.2422	Recall@20: 62.3037	MRR20: 37.2007	Epoch: 8,  9
+[ 20:54:56 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 20:54:56 Sat Jun 13 2026 ] [INFO] epoch: 11
+[ 21:23:41 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.744031830238725), 'mrr5': np.float64(35.73461538461538), 'hit10': np.float64(55.220159151193634), 'mrr10': np.float64(36.736944760220624), 'hit20': np.float64(62.312997347480106), 'mrr20': np.float64(37.233505071699)}
+[ 21:23:41 Sat Jun 13 2026 ] [INFO] train_loss:	37911.0508	Recall@5: 47.7440	MRR5: 35.7346	Epoch: 11,  11
+[ 21:23:41 Sat Jun 13 2026 ] [INFO] train_loss:	37911.0508	Recall@10: 55.2798	MRR10: 36.7369	Epoch: 10,  11
+[ 21:23:41 Sat Jun 13 2026 ] [INFO] train_loss:	37911.0508	Recall@20: 62.3130	MRR20: 37.2335	Epoch: 11,  11
+[ 21:23:41 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 21:23:41 Sat Jun 13 2026 ] [INFO] epoch: 12
+[ 21:52:28 Sat Jun 13 2026 ] [INFO] Saving model at epoch 12 ...
+[ 21:52:28 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.698938992042436), 'mrr5': np.float64(35.62939876215738), 'hit10': np.float64(55.3368700265252), 'mrr10': np.float64(36.65342722411688), 'hit20': np.float64(62.298408488063664), 'mrr20': np.float64(37.14049453756162)}
+[ 21:52:28 Sat Jun 13 2026 ] [INFO] train_loss:	37740.0039	Recall@5: 47.7440	MRR5: 35.7346	Epoch: 11,  11
+[ 21:52:28 Sat Jun 13 2026 ] [INFO] train_loss:	37740.0039	Recall@10: 55.3369	MRR10: 36.7369	Epoch: 12,  11
+[ 21:52:28 Sat Jun 13 2026 ] [INFO] train_loss:	37740.0039	Recall@20: 62.3130	MRR20: 37.2335	Epoch: 11,  11
+[ 21:52:28 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 21:52:28 Sat Jun 13 2026 ] [INFO] epoch: 13
+[ 22:36:44 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.664456233421745), 'mrr5': np.float64(35.72168435013263), 'hit10': np.float64(55.22811671087533), 'mrr10': np.float64(36.73760157467054), 'hit20': np.float64(62.255968169761275), 'mrr20': np.float64(37.23002194071414)}
+[ 22:36:44 Sat Jun 13 2026 ] [INFO] train_loss:	37560.1094	Recall@5: 47.7440	MRR5: 35.7346	Epoch: 11,  11
+[ 22:36:44 Sat Jun 13 2026 ] [INFO] train_loss:	37560.1094	Recall@10: 55.3369	MRR10: 36.7376	Epoch: 12,  13
+[ 22:36:44 Sat Jun 13 2026 ] [INFO] train_loss:	37560.1094	Recall@20: 62.3130	MRR20: 37.2335	Epoch: 11,  11
+[ 22:36:44 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 22:36:44 Sat Jun 13 2026 ] [INFO] epoch: 14
+[ 23:24:52 Sat Jun 13 2026 ] [INFO] Saving model at epoch 14 ...
+[ 23:24:52 Sat Jun 13 2026 ] [INFO] {'hit5': np.float64(47.767904509283824), 'mrr5': np.float64(35.786560565870914), 'hit10': np.float64(55.3474801061008), 'mrr10': np.float64(36.801478358805944), 'hit20': np.float64(62.38461538461538), 'mrr20': np.float64(37.292656515644026)}
+[ 23:24:52 Sat Jun 13 2026 ] [INFO] train_loss:	37411.3867	Recall@5: 47.7679	MRR5: 35.7866	Epoch: 14,  14
+[ 23:24:52 Sat Jun 13 2026 ] [INFO] train_loss:	37411.3867	Recall@10: 55.3475	MRR10: 36.8015	Epoch: 14,  14
+[ 23:24:52 Sat Jun 13 2026 ] [INFO] train_loss:	37411.3867	Recall@20: 62.3846	MRR20: 37.2927	Epoch: 14,  14
+[ 23:24:52 Sat Jun 13 2026 ] [INFO] -------------------------------------------------------
+[ 23:24:52 Sat Jun 13 2026 ] [INFO] epoch: 15
+[ 00:13:02 Sun Jun 14 2026 ] [INFO] Saving model at epoch 15 ...
+[ 00:13:03 Sun Jun 14 2026 ] [INFO] {'hit5': np.float64(47.8474801061008), 'mrr5': np.float64(35.79336870026525), 'hit10': np.float64(55.45358090185677), 'mrr10': np.float64(36.812799987368955), 'hit20': np.float64(62.40848806366047), 'mrr20': np.float64(37.29693810226608)}
+[ 00:13:03 Sun Jun 14 2026 ] [INFO] train_loss:	37263.0078	Recall@5: 47.8475	MRR5: 35.7934	Epoch: 15,  15
+[ 00:13:03 Sun Jun 14 2026 ] [INFO] train_loss:	37263.0078	Recall@10: 55.4536	MRR10: 36.8128	Epoch: 15,  15
+[ 00:13:03 Sun Jun 14 2026 ] [INFO] train_loss:	37263.0078	Recall@20: 62.4085	MRR20: 37.2969	Epoch: 15,  15
+[ 00:13:03 Sun Jun 14 2026 ] [INFO] -------------------------------------------------------
+[ 00:13:03 Sun Jun 14 2026 ] [INFO] epoch: 16

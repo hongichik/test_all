@@ -1,0 +1,22 @@
+start training:  2026-06-13 15:50:13.257271
+  0%|          | 0/7963 [00:00<?, ?it/s]  0%|          | 0/7963 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/GCE-GNN/main.py", line 164, in <module>
+    main()
+    ~~~~^^
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/GCE-GNN/main.py", line 130, in main
+    results = train_test(model,
+                         train_data,
+    ...<5 lines>...
+                         item_cl_loss_weight=opt.item_cl_loss_weight,
+                         saved_models_path=opt.saved_models_path)
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/GCE-GNN/model.py", line 195, in train_test
+    targets, scores, item_embeddings = forward(model, data, use_item_cl_loss)  #
+                                       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/GCE-GNN/model.py", line 182, in forward
+    scores, item_embeddings = model.compute_scores(seq_hidden, mask, use_item_cl_loss)  #
+                              ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hongnguyen/test_all/nhom3/SCLRS/GCE-GNN/model.py", line 82, in compute_scores
+    nh = torch.matmul(torch.cat([pos_emb, hidden], -1), self.w_1)
+                      ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Sizes of tensors must match except in dimension 2. Expected size 200 but got size 277 for tensor number 1 in the list.
