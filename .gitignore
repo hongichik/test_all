@@ -2,9 +2,19 @@
 Data/
 Data_goc/
 
-# Log chạy trên máy local — không commit từ đây (Colab: git add -f Log/...)
+# Log chạy trên máy local — không commit (NCS: Log/, LogMins/)
 Log/
 LogMins/
+
+# RecBole runtime (CORE/DuoRec): log/, saved/, checkpoint — không push
+log/
+saved/
+*.pth
+**/model.pth
+nhom3/CORE/log/
+nhom3/CORE/saved/
+nhom3/DuoRec/log/
+papers_only/**/log/
 
 # Python
 __pycache__/
